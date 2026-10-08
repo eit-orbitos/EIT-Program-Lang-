@@ -1,0 +1,5 @@
+"""EIT Program Lang V2.7.4 — Restored Registry Query Runtime."""
+__version__ = "2.7.5"
+MODULE_ID = "EIT_PROGRAM_LANG_NOVA_Q_ANALYZER_V2_7_5"
+AUTHOR = "Mr. Toni Mladenovski"
+PROJECT_ORIGIN_DATE = "18 April 2026"
