@@ -1,6 +1,4 @@
-
 name: EIT Integrity Verification
-
 # EIT Program Lang — Continuity Transfer Protocol V0.1 CI
 # Reproduces, independently, on every push/PR:
 #   1. SHA256SUMS manifest check (file-level integrity)
