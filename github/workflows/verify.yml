@@ -1,0 +1,82 @@
+
+name: EIT Integrity Verification
+
+# EIT Program Lang — Continuity Transfer Protocol V0.1 CI
+# Reproduces, independently, on every push/PR:
+#   1. SHA256SUMS manifest check (file-level integrity)
+#   2. ARTIFACT_REGISTRY logical self-hash + registry <-> manifest binding
+#   3. Full pytest suite
+#   4. V2.7.4 query-runtime demo (6 checks) and V2.7.5 adversarial demo (8 checks)
+#
+# This workflow NEVER publishes, NEVER freezes, NEVER creates releases.
+# Governance: CANONICAL_FREEZE=NO, ZENODO_PUBLICATION=BLOCKED until final audit.
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: "3.12"
+
+      - name: Install pytest
+        run: pip install pytest
+
+      - name: Verify SHA256SUMS manifest
+        run: sha256sum -c SHA256SUMS
+
+      - name: Verify ARTIFACT_REGISTRY self-hash and manifest binding
+        run: |
+          python3 - <<'EOF'
+          import json, hashlib, sys
+
+          reg = json.load(open("ARTIFACT_REGISTRY.json"))
+          declared = reg.pop("registry_sha256")
+          recomputed = hashlib.sha256(
+              json.dumps(reg, sort_keys=True, ensure_ascii=False,
+                         separators=(",", ":")).encode()
+          ).hexdigest()
+          assert declared == recomputed, "REGISTRY SELF-HASH MISMATCH"
+
+          manifest = {}
+          for line in open("SHA256SUMS"):
+              h, p = line.split(None, 1)
+              manifest[p.strip().lstrip("* ")] = h
+
+          for entry in reg["files"]:
+              p = entry["path"]
+              assert p in manifest, f"MISSING IN SHA256SUMS: {p}"
+              assert manifest[p] == entry["sha256"], f"HASH BINDING MISMATCH: {p}"
+
+          print(f"registry self-hash OK: {declared}")
+          print(f"registry <-> manifest binding OK: {len(reg['files'])} entries")
+          EOF
+
+      - name: Run pytest suite
+        run: python3 -m pytest tests/ -q
+
+      - name: Run V2.7.4 query-runtime demo
+        run: python3 demo_v2_7_4.py
+
+      - name: Run V2.7.5 adversarial validation demo
+        run: python3 demo_v2_7_5.py
+
+      - name: Assert adversarial report is all-true
+        run: |
+          python3 - <<'EOF'
+          import json
+          report = json.load(open("dist/adversarial_validation_report.json"))
+          checks = {k: v for k, v in report.items() if k.startswith("f")}
+          failed = [k for k, v in checks.items() if v is not True]
+          assert not failed, f"ADVERSARIAL CHECKS FAILED: {failed}"
+          print(f"all {len(checks)} adversarial checks true")
+          EOF
