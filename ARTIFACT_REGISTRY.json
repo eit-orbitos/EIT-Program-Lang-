@@ -1,0 +1,124 @@
+{
+  "registry_type": "EIT_ARTIFACT_REGISTRY",
+  "registry_version": "0.2",
+  "self_reference_note": "ARTIFACT_REGISTRY.json does not list itself; its physical anchor is published out-of-band (chat/release notes).",
+  "project": "EIT Program Lang / CA-Lang / ASI_OS",
+  "author": "Toni Mladenovski",
+  "origin": "2026-04-18",
+  "current_artifact": "EIT_PROGRAM_LANG_V2.7.5",
+  "repo_scaffold": "GITHUB_CI_V0.2_SHA_PINNED",
+  "file_count": 26,
+  "files": [
+    {
+      "sha256": "9400ab31e07d5434a22a3fe287e9b445d898edd52deb16401180a2135a1d906c",
+      "path": "./.github/workflows/verify.yml"
+    },
+    {
+      "sha256": "212e40b40f8fd50f481c60be8417c533fa6b4c1cee562f112b29949f7fca92e5",
+      "path": "./.gitignore"
+    },
+    {
+      "sha256": "fa70af02d660c79497b0857deb6338669068adcc0734e4e8dc4a4ed57691ef04",
+      "path": "./CHANGELOG.md"
+    },
+    {
+      "sha256": "f9df0a2370ba713ddaf4fed1febcd10ddd8eda3b10b360f7300a4d801b7dd739",
+      "path": "./CONTINUITY.md"
+    },
+    {
+      "sha256": "783195413fde8a59d0e993a0d1f2877241ef3d917e127c469794fefd2ea0115e",
+      "path": "./README.md"
+    },
+    {
+      "sha256": "fabcc19278d1f8c02bd0b9aa8a4e77dc0077541c6c9c9cb9b47256bcc54bc58d",
+      "path": "./demo_v2_7_4.py"
+    },
+    {
+      "sha256": "286bb5fbbab4477b14aa4fa6353f630f4989d6603cf12e564332f1f661a381b4",
+      "path": "./demo_v2_7_5.py"
+    },
+    {
+      "sha256": "d7842a4180f4c42b12a15d377e1a7beddd6d6fa05ce8690b5b2cb874fdc03bae",
+      "path": "./eit_program_lang/__init__.py"
+    },
+    {
+      "sha256": "d2701c821859e2c5b46036c5abed547668f602981fb0c0993501446092a083d6",
+      "path": "./eit_program_lang/deep_mutation_guard.py"
+    },
+    {
+      "sha256": "5b02104cdf4c60d6f07ff33da3004055648d543f7862d398edda5532867e80d4",
+      "path": "./eit_program_lang/frozen_translation_lookup.py"
+    },
+    {
+      "sha256": "194efd46e377426477bc96e6855ab2dcf8672ba5839573296337d22236e8f0d7",
+      "path": "./eit_program_lang/integration_boundary.py"
+    },
+    {
+      "sha256": "8854c7fe0c0b04db3b6516de15e3ce34594199d963bdadcdae81c6cbec713168",
+      "path": "./eit_program_lang/integrity_verifier.py"
+    },
+    {
+      "sha256": "846132e64badce070fb2a31458ca7593c1b190c3ed2e78714bb7cede7615f55f",
+      "path": "./eit_program_lang/mutation_guard.py"
+    },
+    {
+      "sha256": "617704cdf6a3b8abd4cbe5edf7cc6319c1496777b9051e730683a119ddfd8cd0",
+      "path": "./eit_program_lang/receipt_verifier.py"
+    },
+    {
+      "sha256": "3adc0a52b66f60cc23cbd82bf66b016e3264ebd7777f2856f93dec4f8d9d539d",
+      "path": "./eit_program_lang/restored_query_receipt.py"
+    },
+    {
+      "sha256": "04b70f9e317659764af783802f626deb465ce5a4f625d27f980750980113b48b",
+      "path": "./eit_program_lang/restored_registry_index.py"
+    },
+    {
+      "sha256": "d050d7fdde738b65290c558b68370eb93a2caedb61ca8fbe33a4928a8401d832",
+      "path": "./eit_program_lang/restored_registry_query.py"
+    },
+    {
+      "sha256": "1f0639f10033d4854125620b2966e4823e76e1a44a02d15429dfd7347176af8f",
+      "path": "./eit_program_lang/unicode_normalization.py"
+    },
+    {
+      "sha256": "b7bfd0145ef68efe94e66d46e389b8e8bb0f98ed7398653cf64250edd617e713",
+      "path": "./tests/test_adversarial_integrity.py"
+    },
+    {
+      "sha256": "ac9a8c297cac1e7513d604e9422aa80989bf935d32eed50ca8c65d4f46f87273",
+      "path": "./tests/test_deep_mutation_guard.py"
+    },
+    {
+      "sha256": "bc1054ad3672df089385daf9b1e914f73fbefb45ad6c9331a2660e212c14c48c",
+      "path": "./tests/test_frozen_translation_lookup.py"
+    },
+    {
+      "sha256": "83b3fd18e02ff134607a587fd3fe9760ef3454ec3d7757b97ca467edd40e4bce",
+      "path": "./tests/test_integration_boundary.py"
+    },
+    {
+      "sha256": "f9f61a5fc67b42f2043ed033184293982807ced86d46dac8506251f964796463",
+      "path": "./tests/test_receipt_verifier.py"
+    },
+    {
+      "sha256": "33111696db207af2bf76c4ad492f5e29ec63a5c3bb6138b322036f276edf0478",
+      "path": "./tests/test_restored_query_roundtrip.py"
+    },
+    {
+      "sha256": "50ea263e31810d320af0661c03e6478fd6f72ab6107c61f27f5661dd80e5c526",
+      "path": "./tests/test_restored_registry_index.py"
+    },
+    {
+      "sha256": "e4e6edc10dcdae63b61d59f5a848c65d063ebce7d458c5840fb91c912dc72975",
+      "path": "./tests/test_translation_edge_cases.py"
+    }
+  ],
+  "governance": {
+    "canonical_freeze": false,
+    "zenodo": "BLOCKED",
+    "github_ci": "SCAFFOLDED",
+    "publication_authorization": "PENDING"
+  },
+  "registry_sha256": "7d18f8bc1d6c77dce915ba408507b3f5f0684097c00d1b5dd444515ad90098ab"
+}
