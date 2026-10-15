@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software or rely on it in research, please cite it as below
+  and identify Toni Mladenovski as the original author.
+  See CITATION-POLICY.md.
+type: software
+title: "EIT Program Lang — NOVA Q"
+abstract: >-
+  EIT Program Lang, part of the NOVA Q / EIT research framework:
+  restored registry query runtime with integrity and adversarial validation.
+  Development / validation pending; not a scientific validation claim.
+authors:
+  - family-names: Mladenovski
+    given-names: Toni
+    orcid: "https://orcid.org/0009-0009-8343-662X"
+    affiliation: "EITNetworks LLC"
+    website: "https://eitnetworks.org"
+repository-code: "https://github.com/eit-orbitos/EIT-Program-Lang-"
+url: "https://eitnetworks.org"
+license: PolyForm-Noncommercial-1.0.0
+version: "V2.7.5"
+keywords:
+  - NOVA Q
+  - EIT
+  - EIT Program Lang
+  - integrity verification
+  - registry query runtime
