@@ -5,7 +5,7 @@
 | 2026 (repository creation) → 2026-10-08 | All commits up to and including `2b7dd62` | **No explicit repository license.** No `LICENSE`, `COPYING` or license statement existed in any commit, and no BSD or other open-source license was granted for this repository. Default copyright applied, subject only to the permissions GitHub's Terms of Service give users of public repositories (viewing and forking on GitHub) and any statutory exceptions. |
 | From the commit that adds this file to `main` (merge commit SHA to be recorded below after merge) | That commit and later | Software: PolyForm Noncommercial 1.0.0. Documentation: CC BY-NC-SA 4.0. See `LICENSE-DOCUMENTATION.md`. |
 
-License start commit on `main`: `________` (to be filled in by the author after merge).
+License start commit on `main`: `a0c7026e9c7f1ee0d65e07e967237637b54d404a`.
 
 ## Preserved rights
 
