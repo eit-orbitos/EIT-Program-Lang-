@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this unpublished research candidate, cite this exact candidate and archive SHA-256 from its external audit receipt."
+title: "EIT Program Lang V2.7.7 RC12 — LIMITED research receipt-verifier candidate"
+authors:
+  - family-names: "Mladenovski"
+    given-names: "Toni"
+    orcid: "https://orcid.org/0009-0009-8343-662X"
+version: "2.7.7-rc12"
+license: "PolyForm-Noncommercial-1.0.0"
+repository-code: "https://github.com/eit-orbitos/EIT-Program-Lang-"
+abstract: "Prepared, unpublished software candidate. Ratified V0.6.0 release governance, immutable V0.5.9 verifier contract. RG6 and Phase 1 OPEN; Gate-4 NOT_SATISFIED. Software/documentary validation is not physical-law or external scientific validation."

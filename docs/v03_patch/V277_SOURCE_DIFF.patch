@@ -1,0 +1,864 @@
+--- a/successor_tree/eit_program_lang/eit_v277_builder_candidate.py
++++ b/successor_tree/eit_program_lang/eit_v277_builder_candidate.py
+@@ -41,7 +41,12 @@
+ 
+ 
+ # ---------- query (ported semantics: blob-id -> surface -> aliases -> sound_hint) ----------
+-def query_restored_registry(state, query, artifact_sha256=None):
++def query_restored_registry(state, query, artifact_sha256=None, *, s1_context=None):
++    if s1_context is not None:
++        return s1_context.run_builder(
++            state, query, None, artifact_sha256,
++            make_receipt=build_restored_query_receipt, safety=SAFETY_BLOCK,
++            operation="query")
+     records = _records(state)
+     projection = build_id_projection(records, nfc)
+     raw_id = resolve_id(projection, query, nfc)
+@@ -99,7 +104,12 @@
+ 
+ 
+ # ---------- translation lookup ----------
+-def lookup_translation_from_frozen_registry(state, source_query, target_script_family, artifact_sha256=None):
++def lookup_translation_from_frozen_registry(state, source_query, target_script_family, artifact_sha256=None, *, s1_context=None):
++    if s1_context is not None:
++        return s1_context.run_builder(
++            state, source_query, target_script_family, artifact_sha256,
++            make_receipt=build_restored_query_receipt, safety=SAFETY_BLOCK,
++            operation="translation")
+     records = _records(state)
+     source = _resolve_source(records, source_query)
+     if source is None:
+@@ -163,9 +173,14 @@
+     return receipt
+ 
+ 
+-def run_query_with_receipt(state, query, target_script_family=None, artifact_sha256=None):
++def run_query_with_receipt(state, query, target_script_family=None, artifact_sha256=None, *, s1_context=None):
+     """Convenience: query (+ optional translation), receipts attached per §8.1 copy matrix.
+     artifact_sha256 is the hash of the artifact AS SUPPLIED (parameter, not stored in it)."""
++    if s1_context is not None:
++        return s1_context.run_builder(
++            state, query, target_script_family, artifact_sha256,
++            make_receipt=build_restored_query_receipt, safety=SAFETY_BLOCK,
++            operation="joint")
+     # Preflight before either result or any receipt is built.
+     resolve_id(build_id_projection(_records(state), nfc), query, nfc)
+     qr = query_restored_registry(state, query, artifact_sha256)
+--- a/successor_tree/eit_program_lang/frozen_translation_lookup.py
++++ b/successor_tree/eit_program_lang/frozen_translation_lookup.py
+@@ -71,7 +71,13 @@
+     restored_state: Dict[str, Any],
+     source_query: str,
+     target_script_family: str,
++    *,
++    s1_context=None,
+ ) -> Dict[str, Any]:
++    if s1_context is not None:
++        return s1_context.run_runtime(
++            restored_state, source_query, target_script_family,
++            verify_integrity=verify_restored_state, safety=SAFETY_BLOCK)
+     # V2.7.6 — integrity gate: never serve from a tampered/unverifiable state.
+     integrity = verify_restored_state(restored_state)
+     if not integrity["verified"]:
+--- /dev/null
++++ b/successor_tree/eit_program_lang/s1_sp1_adapter.py
+@@ -0,0 +1,442 @@
++"""Author-only S1 adapter candidate: explicit core and owner callbacks, no loader.
++
++This module does not import project modules or establish a trusted owner root.
++Legacy B/T calls remain opt-in and unprotected. Logical return-boundary staging
++is not an OS transaction, producer authentication, or C3-E routing enforcement.
++Callback contracts and known evidence gaps are recorded in ADAPTER_NOTES.md.
++"""
++
++import copy
++import hashlib
++import json
++import types
++import unicodedata
++from asyncio import CancelledError as AsyncCancelledError
++from concurrent.futures import CancelledError as FutureCancelledError
++
++
++def _sha256_json(value):
++    # Unchanged compact state/packet/receipt hash domain, not artifact domain.
++    payload = json.dumps(value, sort_keys=True, ensure_ascii=False,
++                         separators=(",", ":"), default=str)
++    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
++
++
++def _artifact_sha256(value):
++    # Original artifact domain deliberately retains default JSON separators.
++    payload = json.dumps(value, sort_keys=True, ensure_ascii=False)
++    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
++
++
++def _teq(left, right):
++    """Exact native-type equality; bool is not an int and no custom hooks."""
++    if type(left) is not type(right):
++        return False
++    if type(left) is dict:
++        return (left.keys() == right.keys()
++                and all(_teq(left[key], right[key]) for key in left))
++    if type(left) is list:
++        return (len(left) == len(right)
++                and all(_teq(a, b) for a, b in zip(left, right)))
++    return left == right
++
++
++def _digest(value):
++    return (type(value) is str and len(value) == 64
++            and all(char in "0123456789abcdef" for char in value))
++
++
++class S1Adapter:
++    """One owner-configured context using the exact supplied core/error classes.
++
++    trusted_control_check() -> exact bool
++    binding_check(snapshot_copy, declared_layout, artifact_sha256) -> exact bool
++    builder_integrity_check(snapshot_copy) -> original-style integrity mapping
++
++    Runtime uses the unchanged T verify_restored_state callback instead. An
++    integrity mapping must contain exact-bool ``verified``; no truth coercion.
++    Copies passed to callbacks are private, not the operation snapshot. Owner
++    root/custody/loader and callback provenance are NOT established here.
++    """
++
++    def __init__(self, core, *, binding_check=None, builder_integrity_check=None,
++                 trusted_control_check=None):
++        # An invalid/missing core cannot supply its own typed readiness class.
++        if type(core) is not types.ModuleType:
++            raise TypeError("explicit S1 core module is required")
++        self.core = core
++        required = ("admit_native", "validate_identity", "validate_arguments",
++                    "validate_fields", "select_source", "select_target",
++                    "guard_output", "S1ResolutionError", "S1ControlStop",
++                    "S1ReadinessBlocked")
++        if not callable(getattr(core, "S1ReadinessBlocked", None)):
++            raise TypeError("core lacks its readiness exception")
++        if (any(not callable(getattr(core, name, None)) for name in required)
++                or not callable(binding_check)
++                or not callable(builder_integrity_check)
++                or not callable(trusted_control_check)):
++            raise core.S1ReadinessBlocked("owner callbacks/core configuration absent")
++        self._binding_check = binding_check
++        self._builder_integrity_check = builder_integrity_check
++        self._trusted_control_check = trusted_control_check
++
++    def _fail(self, reason, phase):
++        raise self.core.S1ResolutionError(reason, phase)
++
++    def _at(self, phase, operation):
++        try:
++            return operation()
++        except (self.core.S1ResolutionError, self.core.S1ControlStop,
++                self.core.S1ReadinessBlocked):
++            raise
++        except (TimeoutError, AsyncCancelledError, FutureCancelledError,
++                KeyboardInterrupt, SystemExit) as error:
++            raise self.core.S1ResolutionError("S1_OPERATION_ABORTED", phase) from error
++        except Exception as error:
++            raise self.core.S1ResolutionError("S1_INTERNAL_ERROR", phase) from error
++
++    def _trusted(self):
++        try:
++            accepted = self._trusted_control_check()
++        except BaseException as error:
++            raise self.core.S1ControlStop("trusted controls compromised") from error
++        if type(accepted) is not bool or not accepted:
++            raise self.core.S1ControlStop("trusted controls compromised")
++
++    def _owner_call(self, callback, *args):
++        # Owner callback failures are not semantic core rejections. Even a
++        # callback-raised S1ResolutionError must not forge a different phase.
++        try:
++            return callback(*args)
++        except (TimeoutError, AsyncCancelledError, FutureCancelledError,
++                KeyboardInterrupt, SystemExit):
++            raise
++        except Exception as error:
++            raise self.core.S1ResolutionError("S1_INTERNAL_ERROR", 2) from error
++
++    def _layout(self, state, layout):
++        container = state
++        path = (("frozen_artifact",) if layout == "runtime_nested" else ())
++        path += ("frozen_registry_snapshot", "registry_records")
++        for field in path:
++            if type(container) is not dict or field not in container:
++                self._fail("S1_INVALID_STATE", 2)
++            container = container[field]
++        if type(container) is not dict:
++            self._fail("S1_INVALID_STATE", 2)
++        return container
++
++    def _state_coherent(self, state, artifact_hash, layout):
++        if (not _digest(artifact_hash)
++                or state.get("frozen_artifact_sha256") != artifact_hash
++                or not _digest(state.get("restored_state_sha256"))):
++            return False
++        body = {key: value for key, value in state.items()
++                if key != "restored_state_sha256"}
++        if _sha256_json(body) != state["restored_state_sha256"]:
++            return False
++        if layout == "runtime_nested":
++            if _artifact_sha256(state["frozen_artifact"]) != artifact_hash:
++                return False
++        # Direct layout does not identify an artifact mapping to hash; that
++        # binding remains the explicit owner's obligation, never synthesized.
++        return True
++
++    def _prepare(self, state, artifact_hash, layout, integrity):
++        self._at(1, lambda: self.core.admit_native(state))
++        # Copy failure is an active Phase-1 failure, never lookup absence.
++        snapshot = self._at(1, lambda: copy.deepcopy(state))
++
++        def phase_two():
++            records = self._layout(snapshot, layout)
++            self._trusted()
++            effective_hash = (snapshot.get("frozen_artifact_sha256")
++                              if layout == "runtime_nested" else artifact_hash)
++            accepted = self._owner_call(self._binding_check, copy.deepcopy(snapshot),
++                                        layout, effective_hash)
++            if type(accepted) is not bool:
++                self._fail("S1_INTERNAL_ERROR", 2)
++            if not accepted:
++                # Integrity callback is deliberately NOT_INVOKED on denial.
++                self._fail("S1_INTEGRITY_DENIED", 2)
++            # M6 candidate rule: missing/body-incoherent state hash denies;
++            # callback approval never fabricates a hash or bypasses this rule.
++            if not self._state_coherent(snapshot, effective_hash, layout):
++                self._fail("S1_INTEGRITY_DENIED", 2)
++            checked = self._owner_call(integrity, copy.deepcopy(snapshot))
++            if type(checked) is not dict or type(checked.get("verified")) is not bool:
++                self._fail("S1_INTERNAL_ERROR", 2)
++            if not checked["verified"]:
++                self._fail("S1_INTEGRITY_DENIED", 2)
++            return records, effective_hash
++
++        records, effective_hash = self._at(2, phase_two)
++        return snapshot, records, effective_hash
++
++    def _decide(self, records, query, target, translation):
++        projection = self._at(3, lambda: self.core.validate_identity(records))
++
++        def arguments():
++            self.core.validate_arguments(query, target)
++            # None is wrapper omission only, never a valid direct T target.
++            if translation and target is None:
++                self._fail("S1_TARGET_ARGUMENT_INVALID", 4)
++
++        self._at(4, arguments)
++        self._at(5, lambda: self.core.validate_fields(records))
++        source_id = self._at(6, lambda: self.core.select_source(records, projection, query))
++        resolution = None
++        if translation and source_id is not None:
++            resolution = self._at(7, lambda: self.core.select_target(records, source_id, target))
++        return source_id, resolution
++
++    def _query(self, records, source_id, artifact_hash):
++        if source_id is None:
++            return {"status": "NO_MATCH", "found": False, "match_count": 0,
++                    "symbol_ids": [], "records": [],
++                    "frozen_artifact_sha256": artifact_hash}
++        record = records[source_id]
++        return {"status": "OK", "found": True, "match_count": 1,
++                "symbol_ids": [record["symbol_id"]],
++                "records": [copy.deepcopy(record)],
++                "frozen_artifact_sha256": artifact_hash}
++
++    def _translation(self, state, records, source_id, resolution, query,
++                     target_argument, artifact_hash, safety, runtime):
++        stamp = "2.7.6" if runtime else "2.7.7"
++        if source_id is None:
++            result = {"status": "NO_SOURCE_MATCH_IN_FROZEN_REGISTRY",
++                      "source_query": query, "target_script_family": target_argument,
++                      "frozen_artifact_sha256": artifact_hash,
++                      "translation_packet": None}
++        else:
++            source = records[source_id]
++            role = resolution["role"]
++            if resolution["status"] == "NO_TARGET":
++                result = {"status": "NO_TARGET_SCRIPT_MATCH_IN_FROZEN_REGISTRY",
++                          "source_symbol_id": source_id, "symbolic_role": role,
++                          "target_script_family": target_argument,
++                          "frozen_artifact_sha256": artifact_hash,
++                          "translation_packet": None}
++            elif resolution["status"] == "AMBIGUOUS":
++                result = {"status": "AMBIGUOUS_NO_SILENT_PICK",
++                          "source_symbol_id": source_id, "symbolic_role": role,
++                          "target_script_family": target_argument,
++                          "ambiguous_candidates": [
++                              {"symbol_id": raw_id,
++                               "visible_symbol": records[raw_id]["visible_symbol"]}
++                              for raw_id in resolution["candidates"]],
++                          "frozen_artifact_sha256": artifact_hash,
++                          "translation_packet": None}
++            elif resolution["status"] == "TRANSLATED":
++                target = records[resolution["chosen"]]
++                packet = {
++                    "packet_type": "FROZEN_REGISTRY_TRANSLATION_PACKET",
++                    "packet_version": stamp,
++                    "source_symbol_id": source_id,
++                    "target_symbol_id": target["symbol_id"],
++                    "source_script_family": source["script_family"],
++                    "target_script_family": target["script_family"],
++                    "source_visible_symbol": source["visible_symbol"],
++                    "target_visible_symbol": target["visible_symbol"],
++                    "symbolic_role": role,
++                    "meaning_invariant": copy.deepcopy(source.get("meaning_invariant", [])),
++                    "frozen_artifact_sha256": artifact_hash,
++                    "restored_state_sha256": state["restored_state_sha256"],
++                    "read_only": True, "boundary": copy.deepcopy(safety)}
++                packet["packet_sha256"] = _sha256_json(packet)
++                result = {"status": "TRANSLATED_FROM_FROZEN_REGISTRY",
++                          "source": copy.deepcopy(source), "target": copy.deepcopy(target),
++                          "translation_packet": packet,
++                          "frozen_artifact_sha256": artifact_hash,
++                          "restored_state_sha256": state["restored_state_sha256"]}
++            else:
++                self._fail("S1_INTERNAL_BINDING_ERROR", 8)
++        if runtime:
++            result["read_only"] = True
++            result["safety"] = copy.deepcopy(safety)
++        return result
++
++    def _coherent(self, state, records, source_id, resolution, query_result,
++                  translation_result, artifact_hash, query, target_argument, safety, runtime):
++        """M13/M15 candidate prepublication checks; not a verifier replacement."""
++        layout = "runtime_nested" if runtime else "builder_direct"
++        if not self._state_coherent(state, artifact_hash, layout):
++            self._fail("S1_INTERNAL_BINDING_ERROR", 8)
++        if source_id is not None and source_id not in records:
++            self._fail("S1_INTERNAL_BINDING_ERROR", 8)
++        if query_result is not None:
++            if not _teq(query_result, self._query(records, source_id, artifact_hash)):
++                self._fail("S1_INTERNAL_BINDING_ERROR", 8)
++        if translation_result is None:
++            return
++        packet = translation_result.get("translation_packet")
++        translated = (translation_result.get("status") == "TRANSLATED_FROM_FROZEN_REGISTRY")
++        if translated != (source_id is not None and resolution is not None
++                          and resolution["status"] == "TRANSLATED"):
++            self._fail("S1_INTERNAL_BINDING_ERROR", 8)
++        if translation_result.get("frozen_artifact_sha256") != artifact_hash:
++            self._fail("S1_INTERNAL_BINDING_ERROR", 8)
++        if not translated:
++            if packet is not None:
++                self._fail("S1_INTERNAL_BINDING_ERROR", 8)
++            if source_id is None:
++                expected_result = {
++                    "status": "NO_SOURCE_MATCH_IN_FROZEN_REGISTRY",
++                    "source_query": query, "target_script_family": target_argument,
++                    "frozen_artifact_sha256": artifact_hash, "translation_packet": None}
++            else:
++                expected_result = {
++                    "status": ("NO_TARGET_SCRIPT_MATCH_IN_FROZEN_REGISTRY"
++                               if resolution["status"] == "NO_TARGET"
++                               else "AMBIGUOUS_NO_SILENT_PICK"),
++                    "source_symbol_id": source_id, "symbolic_role": resolution["role"],
++                    "target_script_family": target_argument,
++                    "frozen_artifact_sha256": artifact_hash, "translation_packet": None}
++                if resolution["status"] == "AMBIGUOUS":
++                    expected_result["ambiguous_candidates"] = [
++                        {"symbol_id": raw_id,
++                         "visible_symbol": records[raw_id]["visible_symbol"]}
++                        for raw_id in resolution["candidates"]]
++                elif resolution["status"] != "NO_TARGET":
++                    self._fail("S1_INTERNAL_BINDING_ERROR", 8)
++            if runtime:
++                expected_result.update(read_only=True, safety=safety)
++            if not _teq(translation_result, expected_result):
++                self._fail("S1_INTERNAL_BINDING_ERROR", 8)
++            return
++        if type(packet) is not dict:
++            self._fail("S1_INTERNAL_BINDING_ERROR", 8)
++        source = records[source_id]
++        chosen = resolution["chosen"]
++        if chosen not in records or chosen not in resolution["candidates"]:
++            self._fail("S1_INTERNAL_BINDING_ERROR", 8)
++        target = records[chosen]
++        role = unicodedata.normalize("NFC", source["symbolic_role"]).upper()
++        family = unicodedata.normalize("NFC", target_argument).upper()
++        if (not role or role != resolution["role"]
++                or unicodedata.normalize("NFC", target["symbolic_role"]).upper() != role
++                or unicodedata.normalize("NFC", target["script_family"]).upper() != family
++                or not _teq(translation_result.get("source"), source)
++                or not _teq(translation_result.get("target"), target)
++                or translation_result.get("restored_state_sha256") != state["restored_state_sha256"]):
++            self._fail("S1_INTERNAL_BINDING_ERROR", 8)
++        expected = {
++            "packet_type": "FROZEN_REGISTRY_TRANSLATION_PACKET",
++            "packet_version": "2.7.6" if runtime else "2.7.7",
++            "source_symbol_id": source_id, "target_symbol_id": chosen,
++            "source_script_family": source["script_family"],
++            "target_script_family": target["script_family"],
++            "source_visible_symbol": source["visible_symbol"],
++            "target_visible_symbol": target["visible_symbol"],
++            "symbolic_role": role,
++            "meaning_invariant": source.get("meaning_invariant", []),
++            "frozen_artifact_sha256": artifact_hash,
++            "restored_state_sha256": state["restored_state_sha256"],
++            "read_only": True, "boundary": safety}
++        expected["packet_sha256"] = _sha256_json(expected)
++        if not _teq(packet, expected):
++            self._fail("S1_INTERNAL_BINDING_ERROR", 8)
++        expected_result = {
++            "status": "TRANSLATED_FROM_FROZEN_REGISTRY",
++            "source": source, "target": target, "translation_packet": expected,
++            "frozen_artifact_sha256": artifact_hash,
++            "restored_state_sha256": state["restored_state_sha256"]}
++        if runtime:
++            expected_result.update(read_only=True, safety=safety)
++        if not _teq(translation_result, expected_result):
++            self._fail("S1_INTERNAL_BINDING_ERROR", 8)
++
++    def _receipt(self, make_receipt, state, query_result, translation_result,
++                 artifact_hash, safety):
++        # Original builder receives copies; it cannot alter the pinned snapshot
++        # or the staged results used for coherence checks.
++        receipt = make_receipt(copy.deepcopy(state), copy.deepcopy(query_result),
++                               copy.deepcopy(translation_result), artifact_hash)
++        expected = {
++            "receipt_type": "EIT_RESTORED_REGISTRY_QUERY_RECEIPT",
++            "receipt_version": "2.7.7",
++            "module_id": "EIT_PROGRAM_LANG_NOVA_Q_ANALYZER_V2_7_7",
++            "author": "Mr. Toni Mladenovski", "project_origin_date": "18 April 2026",
++            "restored_state_id": state.get("restored_state_id"),
++            "release_id": state.get("release_id"),
++            "frozen_artifact_id": state.get("frozen_artifact_id"),
++            "frozen_artifact_sha256": artifact_hash,
++            "restored_state_sha256": state["restored_state_sha256"],
++            "current_version_id": state.get("current_version_id"),
++            "query_result": query_result, "translation_result": translation_result,
++            "boundary": safety}
++        if type(receipt) is not dict:
++            self._fail("S1_INTERNAL_BINDING_ERROR", 8)
++        # Do not inspect or compare hostile returned objects before admission.
++        self.core.guard_output(receipt)
++        if (set(receipt) != set(expected) | {"generated_at_utc", "receipt_sha256"}
++                or type(receipt.get("generated_at_utc")) is not str
++                or not receipt["generated_at_utc"]
++                or any(not _teq(receipt.get(key), value) for key, value in expected.items())
++                or receipt.get("receipt_sha256") != _sha256_json(
++                    {key: value for key, value in receipt.items() if key != "receipt_sha256"})):
++            self._fail("S1_INTERNAL_BINDING_ERROR", 8)
++        return receipt
++
++    def _publish(self, build):
++        def final_stage():
++            self._trusted()
++            try:
++                result = build()
++            except (self.core.S1ResolutionError, self.core.S1ControlStop,
++                    self.core.S1ReadinessBlocked):
++                raise
++            except (TimeoutError, AsyncCancelledError, FutureCancelledError,
++                    KeyboardInterrupt, SystemExit):
++                raise
++            except Exception as error:
++                raise self.core.S1ResolutionError("S1_OUTPUT_BUILD_ERROR", 8) from error
++            self.core.guard_output(result)
++            self._trusted()
++            return result
++        return self._at(8, final_stage)
++
++    def run_builder(self, state, query, target, artifact_sha256, *,
++                    make_receipt, safety, operation):
++        if operation not in ("query", "translation", "joint") or not callable(make_receipt):
++            raise self.core.S1ReadinessBlocked("invalid builder endpoint configuration")
++        snapshot, records, artifact_hash = self._prepare(
++            state, artifact_sha256, "builder_direct", self._builder_integrity_check)
++        translation = operation == "translation" or (operation == "joint" and target is not None)
++        source_id, resolution = self._decide(records, query, target, translation)
++
++        def build():
++            # Safety is the original endpoint constant, copied and guarded;
++            # never obtained from caller state or translated records.
++            boundary = copy.deepcopy(safety)
++            self.core.guard_output(boundary)
++            qr = self._query(records, source_id, artifact_hash) if operation != "translation" else None
++            tr = (self._translation(snapshot, records, source_id, resolution, query,
++                                    target, artifact_hash, boundary, False)
++                  if translation else None)
++            self._coherent(snapshot, records, source_id, resolution, qr, tr,
++                           artifact_hash, query, target, boundary, False)
++            if operation == "joint":
++                return self._receipt(make_receipt, snapshot, qr, tr or {}, artifact_hash, boundary)
++            return tr if operation == "translation" else qr
++
++        return self._publish(build)
++
++    def run_runtime(self, state, query, target, *, verify_integrity, safety):
++        if not callable(verify_integrity):
++            raise self.core.S1ReadinessBlocked("runtime integrity callback absent")
++        snapshot, records, artifact_hash = self._prepare(
++            state, None, "runtime_nested", verify_integrity)
++        source_id, resolution = self._decide(records, query, target, True)
++
++        def build():
++            boundary = copy.deepcopy(safety)
++            self.core.guard_output(boundary)
++            result = self._translation(snapshot, records, source_id, resolution, query,
++                                       target, artifact_hash, boundary, True)
++            self._coherent(snapshot, records, source_id, resolution, None, result,
++                           artifact_hash, query, target, boundary, True)
++            return result
++
++        return self._publish(build)
+--- /dev/null
++++ b/successor_tree/eit_program_lang/s1_sp1_core.py
+@@ -0,0 +1,354 @@
++"""S1/SP1 candidate pure producer semantics. NOT executed or released.
++
++No owner root, configuration, installed caller or scientific claim is supplied.
++The unchanged verifier remains the receipt authority in its exact scope.
++"""
++from __future__ import annotations
++
++import json
++import math
++import unicodedata
++
++MAX_TRANSPORT = 33_554_432
++MAX_DEPTH = 32
++MAX_VISITS = 262_144
++MAX_TEXT = 16_777_216
++MAX_RECORDS = 10_000
++MAX_ID = 1_024
++MAX_QUERY = 4_096
++MAX_TOKEN = 4_096
++MAX_ROLE = 256
++MAX_ALIASES = 128
++MAX_ALL_ALIASES = 65_536
++MAX_MEANING = 64
++MAX_DERIVED = 16_384
++MAX_OUTPUT = 33_554_432
++INT_MIN = -(2**63)
++INT_MAX = 2**63 - 1
++
++_REASONS = {
++    1: frozenset(('S1_INVALID_TRANSPORT', 'S1_INPUT_SHAPE_INVALID', 'S1_LIMIT_EXCEEDED')),
++    2: frozenset(('S1_INVALID_STATE', 'S1_INTEGRITY_DENIED')),
++    3: frozenset(('S1_IDENTITY_INVALID', 'S1_LIMIT_EXCEEDED',
++                  'S1_DERIVED_LIMIT_EXCEEDED', 'S1_CANONICAL_ID_COLLISION')),
++    4: frozenset(('S1_QUERY_INVALID', 'S1_ARGUMENT_LIMIT_EXCEEDED', 'S1_TARGET_ARGUMENT_INVALID')),
++    5: frozenset(('S1_RECORD_FIELDS_INVALID', 'S1_LIMIT_EXCEEDED', 'S1_DERIVED_LIMIT_EXCEEDED')),
++    6: frozenset(('S1_SOURCE_AMBIGUOUS',)),
++    7: frozenset(),
++    8: frozenset(('S1_INTERNAL_BINDING_ERROR', 'S1_OUTPUT_BUILD_ERROR', 'S1_OUTPUT_LIMIT_EXCEEDED')),
++}
++
++
++class S1ResolutionError(Exception):
++    """Exact reason+phase channel, never a receipt status or a genuine miss."""
++    def __init__(self, reason, phase):
++        if type(reason) is not str or type(phase) is not int or phase not in _REASONS:
++            raise ValueError('invalid S1 reason/phase contract')
++        if reason not in _REASONS[phase] and reason not in ('S1_INTERNAL_ERROR', 'S1_OPERATION_ABORTED'):
++            raise ValueError('reason not allowed at this phase')
++        self.reason = reason
++        self.phase = phase
++        super().__init__(reason, phase)
++
++
++class S1ControlStop(Exception):
++    """Trusted control compromise: GLOBAL_STOP, not an ordinary S1 response."""
++
++
++class S1ReadinessBlocked(Exception):
++    """Missing trusted bootstrap/control: no response and no invented Phase 0."""
++
++
++def _fail(reason, phase):
++    raise S1ResolutionError(reason, phase)
++
++
++def _utf8(text, phase, invalid):
++    if type(text) is not str:
++        _fail(invalid, phase)
++    try:
++        return text.encode('utf-8', errors='strict')
++    except UnicodeError:
++        _fail(invalid, phase)
++
++
++def admit_native(value):
++    """Inclusive per-root budgets; exact types, root1, value-only depth.
++
++    Active-path membership uses id(), not equality/hash of supplied objects.
++    Shared acyclic objects are visited again, never mistaken for cycles.
++    """
++    visits = 0
++    text_bytes = 0
++    active = set()
++
++    def visit(node, depth, key=False):
++        nonlocal visits, text_bytes
++        t = type(node)
++        # Recognize exact containers without invoking user hooks. Cycle wins
++        # over this occurrence's budget test, not over an earlier failure.
++        container = t is dict or t is list
++        if container and id(node) in active:
++            _fail('S1_INPUT_SHAPE_INVALID', 1)
++        if depth > MAX_DEPTH or visits >= MAX_VISITS:
++            _fail('S1_LIMIT_EXCEEDED', 1)
++        visits += 1
++        if t not in (dict, list, str, int, float, bool, type(None)):
++            _fail('S1_INPUT_SHAPE_INVALID', 1)
++        if key and t is not str:
++            _fail('S1_INPUT_SHAPE_INVALID', 1)
++        if t is str:
++            text_bytes += len(_utf8(node, 1, 'S1_INPUT_SHAPE_INVALID'))
++            if text_bytes > MAX_TEXT:
++                _fail('S1_LIMIT_EXCEEDED', 1)
++        elif t is int:
++            if node < INT_MIN or node > INT_MAX:
++                _fail('S1_INPUT_SHAPE_INVALID', 1)
++        elif t is float:
++            if not math.isfinite(node):
++                _fail('S1_INPUT_SHAPE_INVALID', 1)
++        elif container:
++            # Bound sorting/key-list allocation before building the key list.
++            minimum = len(node) * (2 if t is dict else 1)
++            if minimum > MAX_VISITS - visits:
++                _fail('S1_LIMIT_EXCEEDED', 1)
++            if t is dict:
++                for k in node:
++                    if type(k) is not str:
++                        _fail('S1_INPUT_SHAPE_INVALID', 1)
++            active.add(id(node))
++            try:
++                if t is dict:
++                    for k in sorted(node):
++                        visit(k, depth, key=True)  # keys add visits, not a value edge
++                        visit(node[k], depth + 1)
++                else:
++                    for child in node:
++                        visit(child, depth + 1)
++            finally:
++                active.remove(id(node))
++
++    visit(value, 1)
++    return value
++
++
++def decode_transport(raw):
++    """Strict bounded JSON transport. No file reads or native object hooks."""
++    if type(raw) is not bytes:
++        _fail('S1_INVALID_TRANSPORT', 1)
++    if len(raw) > MAX_TRANSPORT:
++        _fail('S1_LIMIT_EXCEEDED', 1)
++    try:
++        text = raw.decode('utf-8', errors='strict')
++    except UnicodeError:
++        _fail('S1_INVALID_TRANSPORT', 1)
++
++    def pairs(items):
++        result = {}
++        for k, v in items:
++            if k in result:
++                _fail('S1_INVALID_TRANSPORT', 1)
++            result[k] = v
++        return result
++
++    def constant(_):
++        _fail('S1_INVALID_TRANSPORT', 1)
++
++    try:
++        value = json.loads(text, object_pairs_hook=pairs, parse_constant=constant)
++    except S1ResolutionError:
++        raise
++    except RecursionError:
++        _fail('S1_LIMIT_EXCEEDED', 1)
++    except (ValueError, UnicodeError):
++        _fail('S1_INVALID_TRANSPORT', 1)
++    return admit_native(value)
++
++
++def _bounded(text, maximum, phase, invalid, limit):
++    encoded = _utf8(text, phase, invalid)
++    if len(encoded) > maximum:
++        _fail(limit, phase)
++    return text
++
++
++def _derived(text, phase, method='nfc'):
++    result = unicodedata.normalize('NFC', text)
++    if len(result.encode('utf-8')) > MAX_DERIVED:
++        _fail('S1_DERIVED_LIMIT_EXCEEDED', phase)
++    if method == 'lower':
++        result = result.lower()
++    elif method == 'upper':
++        result = result.upper()
++    if len(result.encode('utf-8')) > MAX_DERIVED:
++        _fail('S1_DERIVED_LIMIT_EXCEEDED', phase)
++    return result
++
++
++def validate_identity(records):
++    if type(records) is not dict:
++        _fail('S1_IDENTITY_INVALID', 3)
++    # Full structural pass before any NFC projection or query serving.
++    for raw, rec in records.items():
++        if type(raw) is not str or type(rec) is not dict:
++            _fail('S1_IDENTITY_INVALID', 3)
++        for k in rec:
++            if type(k) is not str:
++                _fail('S1_IDENTITY_INVALID', 3)
++        if 'symbol_id' not in rec or type(rec['symbol_id']) is not str or rec['symbol_id'] != raw:
++            _fail('S1_IDENTITY_INVALID', 3)
++    if len(records) > MAX_RECORDS:
++        _fail('S1_LIMIT_EXCEEDED', 3)
++    for raw in sorted(records):
++        _bounded(raw, MAX_ID, 3, 'S1_IDENTITY_INVALID', 'S1_LIMIT_EXCEEDED')
++    projection = {}
++    for raw in sorted(records):
++        key = _derived(raw, 3)
++        if key in projection:
++            _fail('S1_CANONICAL_ID_COLLISION', 3)
++        projection[key] = raw
++    return projection
++
++
++def validate_arguments(query, target=None):
++    _bounded(query, MAX_QUERY, 4, 'S1_QUERY_INVALID', 'S1_ARGUMENT_LIMIT_EXCEEDED')
++    if target is not None:
++        _bounded(target, MAX_ROLE, 4, 'S1_TARGET_ARGUMENT_INVALID', 'S1_ARGUMENT_LIMIT_EXCEEDED')
++
++
++def validate_fields(records):
++    alias_total = 0
++    required = (('visible_symbol', MAX_TOKEN), ('symbolic_role', MAX_ROLE), ('script_family', MAX_ROLE))
++    optional = ('aliases', 'sound_hint', 'meaning_invariant')
++    for raw in sorted(records):
++        rec = records[raw]
++        for name, maximum in required:
++            if name not in rec:
++                _fail('S1_RECORD_FIELDS_INVALID', 5)
++            _bounded(rec[name], maximum, 5, 'S1_RECORD_FIELDS_INVALID', 'S1_LIMIT_EXCEEDED')
++        for name in optional:
++            if name not in rec:
++                continue
++            field = rec[name]
++            if name == 'sound_hint':
++                _bounded(field, MAX_TOKEN, 5, 'S1_RECORD_FIELDS_INVALID', 'S1_LIMIT_EXCEEDED')
++                continue
++            if type(field) is not list:
++                _fail('S1_RECORD_FIELDS_INVALID', 5)
++            maximum = MAX_ALIASES if name == 'aliases' else MAX_MEANING
++            if len(field) > maximum:
++                _fail('S1_LIMIT_EXCEEDED', 5)
++            if name == 'aliases':
++                alias_total += len(field)
++                if alias_total > MAX_ALL_ALIASES:
++                    _fail('S1_LIMIT_EXCEEDED', 5)
++            for token in field:
++                _bounded(token, MAX_TOKEN, 5, 'S1_RECORD_FIELDS_INVALID', 'S1_LIMIT_EXCEEDED')
++    # Transform only after every raw selected field has passed.
++    for raw in sorted(records):
++        rec = records[raw]
++        _derived(rec['visible_symbol'], 5)
++        _derived(rec['symbolic_role'], 5, 'upper')
++        _derived(rec['script_family'], 5, 'upper')
++        for token in rec.get('aliases', []):
++            _derived(token, 5, 'lower')
++        if 'sound_hint' in rec:
++            _derived(rec['sound_hint'], 5, 'lower')
++
++
++def select_source(records, projection, query):
++    # Query normalization is a Phase-5 derivation, after raw fields passed.
++    nq = _derived(query, 5)
++    lq = _derived(query, 5, 'lower')
++    if nq in projection:
++        return projection[nq]
++    if query == '':
++        return None
++    tiers = ([], [], [])
++    for raw in sorted(records):
++        rec = records[raw]
++        visible = _derived(rec['visible_symbol'], 5)
++        if visible != '' and visible == nq:
++            tiers[0].append(raw)
++        if any(token != '' and token == lq for token in
++               (_derived(a, 5, 'lower') for a in rec.get('aliases', []))):
++            tiers[1].append(raw)
++        sound = _derived(rec.get('sound_hint', ''), 5, 'lower')
++        if sound != '' and sound == lq:
++            tiers[2].append(raw)
++    for ids in tiers:
++        if len(ids) > 1:
++            _fail('S1_SOURCE_AMBIGUOUS', 6)
++        if ids:
++            return ids[0]
++    return None
++
++
++def select_target(records, raw_source_id, target):
++    role = _derived(records[raw_source_id]['symbolic_role'], 5, 'upper')
++    family = _derived(target, 5, 'upper')
++    candidates = []
++    if role != '':
++        for raw in sorted(records):
++            rec = records[raw]
++            if (_derived(rec['symbolic_role'], 5, 'upper') == role and
++                    _derived(rec['script_family'], 5, 'upper') == family):
++                candidates.append(raw)
++    if not candidates:
++        return {'status': 'NO_TARGET', 'candidates': [], 'chosen': None, 'role': role}
++    surfaces = {_derived(records[raw]['visible_symbol'], 5) for raw in candidates}
++    if len(surfaces) > 1:
++        return {'status': 'AMBIGUOUS', 'candidates': candidates, 'chosen': None, 'role': role}
++    return {'status': 'TRANSLATED', 'candidates': candidates, 'chosen': candidates[0], 'role': role}
++
++
++def guard_output(value):
++    """Fail before return; output shape/depth uses unchanged §6.3 edge count.
++
++    D01 input budgets are not reapplied to duplicated receipt outputs. Output
++    total has its own 32MiB ceiling. Candidate output-depth mapping is Phase8
++    S1_OUTPUT_BUILD_ERROR, explicitly subject to IR04-P/O approval.
++    """
++    active = set()
++
++    def shape(node, depth):
++        t = type(node)
++        if depth > MAX_DEPTH or t not in (dict, list, str, int, float, bool, type(None)):
++            _fail('S1_OUTPUT_BUILD_ERROR', 8)
++        if t is int and not INT_MIN <= node <= INT_MAX:
++            _fail('S1_OUTPUT_BUILD_ERROR', 8)
++        if t is float and not math.isfinite(node):
++            _fail('S1_OUTPUT_BUILD_ERROR', 8)
++        if t is str:
++            _utf8(node, 8, 'S1_OUTPUT_BUILD_ERROR')
++        elif t in (dict, list):
++            if id(node) in active:
++                _fail('S1_OUTPUT_BUILD_ERROR', 8)
++            active.add(id(node))
++            try:
++                if t is dict:
++                    for k in node:
++                        if type(k) is not str:
++                            _fail('S1_OUTPUT_BUILD_ERROR', 8)
++                        _utf8(k, 8, 'S1_OUTPUT_BUILD_ERROR')
++                    for k in sorted(node):
++                        shape(node[k], depth + 1)
++                else:
++                    for item in node:
++                        shape(item, depth + 1)
++            finally:
++                active.remove(id(node))
++
++    shape(value, 1)
++    try:
++        encoder = json.JSONEncoder(sort_keys=True, ensure_ascii=False, separators=(',', ':'), allow_nan=False)
++        count = 0
++        for chunk in encoder.iterencode(value):
++            count += len(chunk.encode('utf-8', errors='strict'))
++            if count > MAX_OUTPUT:
++                _fail('S1_OUTPUT_LIMIT_EXCEEDED', 8)
++    except S1ResolutionError:
++        raise
++    except (ValueError, TypeError, UnicodeError, RecursionError):
++        _fail('S1_OUTPUT_BUILD_ERROR', 8)
++    return value

@@ -1,0 +1,3031 @@
+{
+ "profile_T8": {
+  "implementation": "CPython",
+  "version": [
+   3,
+   12,
+   15,
+   "final",
+   0
+  ],
+  "version_string": "3.12.15 (main, Oct 21 2026, 01:08:20) [GCC 14.2.0]",
+  "unidata_version": "15.0.0"
+ },
+ "pytest_exitstatus": 0,
+ "tests": [
+  {
+   "nodeid": "test_rg4.py::test_t9_inventory",
+   "row": "T9-INVENTORY",
+   "label": "SUPPORT",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {}
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC1-v277]",
+   "row": "NC1",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC1"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC1-v276]",
+   "row": "NC1",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC1": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC2-v277]",
+   "row": "NC2",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC2-omitted({})",
+     "NC2-None",
+     "NC2-key-absent"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC2-v276]",
+   "row": "NC2",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC2-omitted({})": "SATISFIED;v276_verified=True",
+     "NC2-None": "SATISFIED;v276_verified=True",
+     "NC2-key-absent": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC3-v277]",
+   "row": "NC3",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC3"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC3-v276]",
+   "row": "NC3",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC3": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC4a-v277]",
+   "row": "NC4a",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC4a"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC4a-v276]",
+   "row": "NC4a",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC4a": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC4b-v277]",
+   "row": "NC4b",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC4b"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC4b-v276]",
+   "row": "NC4b",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC4b": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC5-v277]",
+   "row": "NC5",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC5"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC5-v276]",
+   "row": "NC5",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC5": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC6-v277]",
+   "row": "NC6",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC6"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC6-v276]",
+   "row": "NC6",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC6": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC7-v277]",
+   "row": "NC7",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC7"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC7-v276]",
+   "row": "NC7",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC7": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC8-v277]",
+   "row": "NC8",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC8"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC8-v276]",
+   "row": "NC8",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC8": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC9-v277]",
+   "row": "NC9",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC9"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC9-v276]",
+   "row": "NC9",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC9": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC10-v277]",
+   "row": "NC10",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC10"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC10-v276]",
+   "row": "NC10",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC10": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC11-v277]",
+   "row": "NC11",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC11-role",
+     "NC11-family"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC11-v276]",
+   "row": "NC11",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC11-role": "SATISFIED;v276_verified=True",
+     "NC11-family": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC12-v277]",
+   "row": "NC12",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC12"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC12-v276]",
+   "row": "NC12",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC12": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC13-v277]",
+   "row": "NC13",
+   "label": "CONTROL_FOR_V277/NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC13-builder277"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC14-v277]",
+   "row": "NC14",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC14-None",
+     "NC14-5"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC14-v276]",
+   "row": "NC14",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC14-None": "SATISFIED;v276_verified=True",
+     "NC14-5": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC15-v277]",
+   "row": "NC15",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC15"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC15-v276]",
+   "row": "NC15",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC15": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC16-v277]",
+   "row": "NC16",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC16"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC16-v276]",
+   "row": "NC16",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC16": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC17-v277]",
+   "row": "NC17",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC17"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC17-v276]",
+   "row": "NC17",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC17": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC18-v277]",
+   "row": "NC18",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC18"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC18-v276]",
+   "row": "NC18",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC18": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC19-v277]",
+   "row": "NC19",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC19-self_translation",
+     "NC19-no_target",
+     "NC19-no_source",
+     "NC19-query_only",
+     "NC19-multi_hit_query"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC19-v276]",
+   "row": "NC19",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC19-self_translation": "SATISFIED;v276_verified=True",
+     "NC19-no_target": "SATISFIED;v276_verified=True",
+     "NC19-no_source": "SATISFIED;v276_verified=True",
+     "NC19-query_only": "SATISFIED;v276_verified=True",
+     "NC19-multi_hit_query": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC20-v277]",
+   "row": "NC20",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC20-default",
+     "NC20-strict"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC21-v277]",
+   "row": "NC21",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC21"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC21-v276]",
+   "row": "NC21",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC21": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC23-v277]",
+   "row": "NC23",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC23"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC23-v276]",
+   "row": "NC23",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC23": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC22-v277]",
+   "row": "NC22",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "NC22-base-2.7.6-builder",
+     "NC22-base-2.7.7-builder"
+    ],
+    "observations": {
+     "builder277_forged_equals_genuine_cross_family": true
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[NC22-v276]",
+   "row": "NC22",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "NC22-base-2.7.6-builder": "SATISFIED;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[A-v277]",
+   "row": "A",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "A"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[A-v276]",
+   "row": "A",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "A": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[B-v277]",
+   "row": "B",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "B"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[B-v276]",
+   "row": "B",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "B": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[B-full-v277]",
+   "row": "B-full",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "B-full"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[B-full-v276]",
+   "row": "B-full",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "B-full": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[C1-v277]",
+   "row": "C1",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "C1"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[C1-v276]",
+   "row": "C1",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "C1": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[C2-v277]",
+   "row": "C2",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "C2"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[C2-v276]",
+   "row": "C2",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "C2": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[C3-v277]",
+   "row": "C3",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "C3"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[C3-v276]",
+   "row": "C3",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "C3": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[E1-v277]",
+   "row": "E1",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "E1-True",
+     "E1-1.0"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[E1-v276]",
+   "row": "E1",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "E1-True": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "E1-1.0": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[E2-v277]",
+   "row": "E2",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "E2"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[E2-v276]",
+   "row": "E2",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "E2": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[E3-v277]",
+   "row": "E3",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "E3-match_count",
+     "E3-found"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[E3-v276]",
+   "row": "E3",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "E3-match_count": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "E3-found": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[R1-v277]",
+   "row": "R1",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "R1"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[R1-v276]",
+   "row": "R1",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "R1": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[R2-v277]",
+   "row": "R2",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "R2"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[R2-v276]",
+   "row": "R2",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "R2": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[R3-v277]",
+   "row": "R3",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "R3"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[R3-v276]",
+   "row": "R3",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "R3": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[R4-v277]",
+   "row": "R4",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "R4"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[R4-v276]",
+   "row": "R4",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "R4": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[M1-v277]",
+   "row": "M1",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "M1"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[M1-v276]",
+   "row": "M1",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "M1": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[M2-v277]",
+   "row": "M2",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "M2"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[M2-v276]",
+   "row": "M2",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "M2": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[M3-v277]",
+   "row": "M3",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "M3"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[M3-v276]",
+   "row": "M3",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "M3": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[M4-v277]",
+   "row": "M4",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "M4-translation",
+     "M4-query"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[M4-v276]",
+   "row": "M4",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "M4-translation": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "M4-query": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[M5-v277]",
+   "row": "M5",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "M5-removed",
+     "M5-altered"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[M5-v276]",
+   "row": "M5",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "M5-removed": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "M5-altered": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[M6-v277]",
+   "row": "M6",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "M6"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[M6-v276]",
+   "row": "M6",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "M6": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[M7-v277]",
+   "row": "M7",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "M7"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[M7-v276]",
+   "row": "M7",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "M7": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[M8-v277]",
+   "row": "M8",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "M8"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[M8-v276]",
+   "row": "M8",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "M8": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[M9-v277]",
+   "row": "M9",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "M9"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[M9-v276]",
+   "row": "M9",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "M9": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[S1-v277]",
+   "row": "S1",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "S1-receipt-None",
+     "S1-translation_result-[1]",
+     "S1-query_result-x",
+     "S1-artifact-str",
+     "S1-records-list"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[S1-v276]",
+   "row": "S1",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "S1-receipt-None": "RAISED:AttributeError",
+     "S1-translation_result-[1]": "RAISED:AttributeError",
+     "S1-query_result-x": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "S1-artifact-str": "ASSERTION_FAILS_ON_V276;v276_verified=False",
+     "S1-records-list": "ASSERTION_FAILS_ON_V276;v276_verified=False"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[S2-v277]",
+   "row": "S2",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "S2"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[S2-v276]",
+   "row": "S2",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "S2": "SATISFIED;v276_verified=False"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[S3-v277]",
+   "row": "S3",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "S3"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[S4-v277]",
+   "row": "S4",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "S4"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[S4a-v277]",
+   "row": "S4a",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "S4a"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[S4b-v277]",
+   "row": "S4b",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "S4b"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[S5-v277]",
+   "row": "S5",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "S5"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[N1-v277]",
+   "row": "N1",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "N1"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[N2-v277]",
+   "row": "N2",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "N2-artifact-default",
+     "N2-state-default",
+     "N2-artifact-strict",
+     "N2-state-strict"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[N3-v277]",
+   "row": "N3",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "N3-module-not-paired",
+     "N3-version-not-listed",
+     "N3-packet_version-differs",
+     "N3-timestamp-not-ISO",
+     "N3-timestamp-not-UTC"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[N4-v277]",
+   "row": "N4",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "N4-2.7.4",
+     "N4-2.7.6",
+     "N4-2.7.7-builder277"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[N5-v277]",
+   "row": "N5",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "N5"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[N6-v277]",
+   "row": "N6",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "N6-expected_artifact_sha256-short",
+     "N6-expected_artifact_sha256-uppercase",
+     "N6-expected_artifact_sha256-int",
+     "N6-expected_artifact_sha256-list",
+     "N6-expected_restored_state_sha256-short",
+     "N6-expected_restored_state_sha256-uppercase",
+     "N6-expected_restored_state_sha256-int",
+     "N6-expected_restored_state_sha256-list"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[R5-v277]",
+   "row": "R5",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "R5"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[R5-v276]",
+   "row": "R5",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "R5": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[R6-v277]",
+   "row": "R6",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "R6"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[R6-v276]",
+   "row": "R6",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "R6": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[P1-v277]",
+   "row": "P1",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "P1-packet-source",
+     "P1-packet-target",
+     "P1-result-source-NO_TARGET",
+     "P1-result-source-AMBIGUOUS"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[P1-v276]",
+   "row": "P1",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "P1-packet-source": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "P1-packet-target": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "P1-result-source-NO_TARGET": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "P1-result-source-AMBIGUOUS": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[P2-v277]",
+   "row": "P2",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "P2-packet-target-int",
+     "P2-result-source-int",
+     "P2-packet-target-None",
+     "P2-result-source-None",
+     "P2-packet-target-list",
+     "P2-result-source-list",
+     "P2-packet-target-dict",
+     "P2-result-source-dict"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[P2-v276]",
+   "row": "P2",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "P2-packet-target-int": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "P2-result-source-int": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "P2-packet-target-None": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "P2-result-source-None": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "P2-packet-target-list": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "P2-result-source-list": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "P2-packet-target-dict": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "P2-result-source-dict": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[T1-v277]",
+   "row": "T1",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "T1-tuple-receipt-top",
+     "T1-tuple-receipt-nested",
+     "T1-tuple-artifact-top",
+     "T1-tuple-artifact-record",
+     "T1-set-receipt-top",
+     "T1-set-receipt-nested",
+     "T1-set-artifact-top",
+     "T1-set-artifact-record",
+     "T1-bytes-receipt-top",
+     "T1-bytes-receipt-nested",
+     "T1-bytes-artifact-top",
+     "T1-bytes-artifact-record",
+     "T1-custom-receipt-top",
+     "T1-custom-receipt-nested",
+     "T1-custom-artifact-top",
+     "T1-custom-artifact-record",
+     "T1-dict-subclass-receipt-top",
+     "T1-dict-subclass-receipt-nested",
+     "T1-dict-subclass-artifact-top",
+     "T1-dict-subclass-artifact-record",
+     "T1-int-subclass-receipt-top",
+     "T1-int-subclass-receipt-nested",
+     "T1-int-subclass-artifact-top",
+     "T1-int-subclass-artifact-record",
+     "T1-str-subclass-receipt-top",
+     "T1-str-subclass-receipt-nested",
+     "T1-str-subclass-artifact-top",
+     "T1-str-subclass-artifact-record"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[T1r-v277]",
+   "row": "T1r",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "T1r-receipt-tuple",
+     "T1r-artifact-tuple",
+     "T1r-receipt-set",
+     "T1r-artifact-set",
+     "T1r-receipt-bytes",
+     "T1r-artifact-bytes",
+     "T1r-receipt-custom",
+     "T1r-artifact-custom",
+     "T1r-receipt-dict-subclass",
+     "T1r-artifact-dict-subclass",
+     "T1r-receipt-int-subclass",
+     "T1r-artifact-int-subclass",
+     "T1r-receipt-str-subclass",
+     "T1r-artifact-str-subclass"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[T2-v277]",
+   "row": "T2",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "T2-receipt-top",
+     "T2-query_result",
+     "T2-artifact-top",
+     "T2-artifact-record"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[T3-v277]",
+   "row": "T3",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "T3-cycle-receipt-root",
+     "T3-cycle-query_result",
+     "T3-cycle-artifact-root",
+     "T3-cycle-record",
+     "T3-depth33-receipt-root",
+     "T3-depth33-query_result",
+     "T3-depth33-artifact-root",
+     "T3-depth33-record"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[T4-v277]",
+   "row": "T4",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "T4-value-receipt",
+     "T4-key-receipt",
+     "T4-value-artifact",
+     "T4-key-artifact-hash-collides-frozen_registry_snapshot",
+     "T4-key-record",
+     "T4-key-receipt-hash-collides-query_result"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[T5-v277]",
+   "row": "T5",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "T5-str",
+     "T5-list",
+     "T5-None"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[T6-v277]",
+   "row": "T6",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "T6"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[T7-v277]",
+   "row": "T7",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "T7"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[T8-v277]",
+   "row": "T8",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "T8-state-int",
+     "T8-state-bool",
+     "T8-packet_version-number-strict",
+     "T8-packet_version-bool-strict"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[O1-v277]",
+   "row": "O1",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "O1"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[O2-v277]",
+   "row": "O2",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "O2"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[V1-v277]",
+   "row": "V1",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "V1",
+     "V1-legacy-rules-not-applied"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[V1-v276]",
+   "row": "V1",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "V1": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "V1-legacy-rules-not-applied": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[V2-v277]",
+   "row": "V2",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "V2-number",
+     "V2-None",
+     "V2-list"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[V2-v276]",
+   "row": "V2",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "V2-number": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "V2-None": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "V2-list": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[V3-v277]",
+   "row": "V3",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "V3-2.7.4-AMBIGUOUS",
+     "V3-2.7.4-INTEGRITY_CHECK_FAILED",
+     "V3-2.7.6-query-without-status"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[V3-v276]",
+   "row": "V3",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "V3-2.7.4-AMBIGUOUS": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "V3-2.7.4-INTEGRITY_CHECK_FAILED": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "V3-2.7.6-query-without-status": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[B1-v277]",
+   "row": "B1",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "B1"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[B1-v276]",
+   "row": "B1",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "B1": "RAISED:AttributeError"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[B2-v277]",
+   "row": "B2",
+   "label": "CONTROL",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "B2-absent",
+     "B2-empty"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[B2-v276]",
+   "row": "B2",
+   "label": "CONTROL",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "B2-absent": "SATISFIED;v276_verified=False",
+     "B2-empty": "SATISFIED;v276_verified=False"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[SM1-v277]",
+   "row": "SM1",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "SM1-str-False",
+     "SM1-str-True",
+     "SM1-int-0",
+     "SM1-int-1",
+     "SM1-None",
+     "SM1-list",
+     "SM1-custom-bool"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[SM2-v277]",
+   "row": "SM2",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "SM2"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[ST1-v277]",
+   "row": "ST1",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "ST1"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[ST1-v276]",
+   "row": "ST1",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "ST1": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[V4-v277]",
+   "row": "V4",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "V4"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[Q8a-v277]",
+   "row": "Q8a",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "Q8a"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[Q8a-v276]",
+   "row": "Q8a",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "Q8a": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[Q8b-v277]",
+   "row": "Q8b",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "Q8b"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[Q8b-v276]",
+   "row": "Q8b",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "Q8b": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[X3b-v277]",
+   "row": "X3b",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "X3b"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[X3b-v276]",
+   "row": "X3b",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "X3b": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[G0a-v277]",
+   "row": "G0a",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "G0a-source-without-symbol_id",
+     "G0a-record-without-symbol_id"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[G0a-v276]",
+   "row": "G0a",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "G0a-source-without-symbol_id": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "G0a-record-without-symbol_id": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[PR1-v277]",
+   "row": "PR1",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "PR1-G1.query.symbol_ids.key",
+     "PR1-G1.query.records.key",
+     "PR1-G1.query.records[0].symbol_id",
+     "PR1-G1.source.key",
+     "PR1-G1.source.symbol_id",
+     "PR1-G1.target.key",
+     "PR1-G1.target.symbol_id",
+     "PR1-G1.packet.source_symbol_id",
+     "PR1-G1.packet.target_symbol_id",
+     "PR1-G1.result.source_symbol_id.NO_TARGET",
+     "PR1-G1.result.source_symbol_id.AMBIGUOUS",
+     "PR1-G1.ambiguous_candidates.key",
+     "PR1-G1.ambiguous_candidates[0].symbol_id",
+     "PR1-G2.query.records[0].passed",
+     "PR1-G2.source.passed",
+     "PR1-G2.target.passed",
+     "PR1-G3.S-lines.passed",
+     "PR1-G3.G-lines.passed",
+     "PR1-G3.source_script_family.key",
+     "PR1-G3.target_script_family.key",
+     "PR1-G3.source_visible_symbol.key",
+     "PR1-G3.target_visible_symbol.key",
+     "PR1-G3.symbolic_role.key",
+     "PR1-G3.meaning_invariant.key",
+     "PR1-G4.role.passed",
+     "PR1-G4.role.key",
+     "PR1-G4.candidate[0].passed",
+     "PR1-G4.candidate[0].visible_symbol.key",
+     "PR1-G5.artifact-without-frozen_artifact_id",
+     "PR1-R1.passed(P.source_symbol_id)",
+     "PR1-R1.passed(P.target_symbol_id)",
+     "PR1-R2.passed(TR.source_symbol_id)",
+     "PR1-R2.target_script_family.key",
+     "PR1-R3.passed(TR.source_symbol_id)",
+     "PR1-R3.target_script_family.key",
+     "PR1-R3.ambiguous_candidates.key",
+     "PR1-R3.passed(candidate[0].symbol_id)"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[X4o-v277]",
+   "row": "X4o",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "X4o-packet_sha256",
+     "X4o-packet-frozen_artifact_sha256",
+     "X4o-result-frozen_artifact_sha256"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[O3-v277]",
+   "row": "O3",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "O3"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[F08a-v277]",
+   "row": "F08a",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "F08a"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[F08a-v276]",
+   "row": "F08a",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "F08a": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[F09a-v277]",
+   "row": "F09a",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "F09a-list",
+     "F09a-absent",
+     "F09a-str-differs"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[F09b-v277]",
+   "row": "F09b",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "F09b"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[F09b-v276]",
+   "row": "F09b",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "F09b": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[D1-v277]",
+   "row": "D1",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "D1"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[L2a1-v277]",
+   "row": "L2a1",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "L2a1"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[L2a2-v277]",
+   "row": "L2a2",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "L2a2",
+     "L2a2-target-side-still-runs"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[AN1-v277]",
+   "row": "AN1",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "AN1-default",
+     "AN1-strict"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[SC1-v277]",
+   "row": "SC1",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "SC1-no-expected",
+     "SC1-with-expected"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[CF1-v277]",
+   "row": "CF1",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "CF1"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[CF1-v276]",
+   "row": "CF1",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "CF1": "RAISED:UnicodeEncodeError"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[CF2-v277]",
+   "row": "CF2",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "CF2"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[CF2-v276]",
+   "row": "CF2",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "CF2": "RAISED:UnicodeEncodeError"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[CF3-v277]",
+   "row": "CF3",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "CF3"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[CF3-v276]",
+   "row": "CF3",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "CF3": "RAISED:UnicodeEncodeError"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[G3a-v277]",
+   "row": "G3a",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "G3a"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[G3a-v276]",
+   "row": "G3a",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "G3a": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[G3b-v277]",
+   "row": "G3b",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "G3b"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[G3b-v276]",
+   "row": "G3b",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "G3b": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[D2-v277]",
+   "row": "D2",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "D2"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[LQ1-v277]",
+   "row": "LQ1",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "LQ1-legacy",
+     "LQ1-current-status-deleted"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[LQ1-v276]",
+   "row": "LQ1",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "LQ1-legacy": "ASSERTION_FAILS_ON_V276;v276_verified=True",
+     "LQ1-current-status-deleted": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[CF2a-v277]",
+   "row": "CF2a",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "CF2a-deleted",
+     "CF2a-63-chars"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[BI1-v277]",
+   "row": "BI1",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "BI1-2**63",
+     "BI1--2**63-1",
+     "BI1-10**4300",
+     "BI1-list[10**4300]"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[BI2-v277]",
+   "row": "BI2",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "BI2-artifact-top",
+     "BI2-unreferenced-record"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[BI3-v277]",
+   "row": "BI3",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "BI3"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[BI4-v277]",
+   "row": "BI4",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "BI4-int-first",
+     "BI4-type-first"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[RT1-v277]",
+   "row": "RT1",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "RT1"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[X3c-v277]",
+   "row": "X3c",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "X3c-TRANSLATED_FROM_FROZEN_REGISTRY-deleted",
+     "X3c-TRANSLATED_FROM_FROZEN_REGISTRY-None",
+     "X3c-NO_SOURCE_MATCH_IN_FROZEN_REGISTRY-deleted",
+     "X3c-NO_SOURCE_MATCH_IN_FROZEN_REGISTRY-None",
+     "X3c-NO_TARGET_SCRIPT_MATCH_IN_FROZEN_REGISTRY-deleted",
+     "X3c-NO_TARGET_SCRIPT_MATCH_IN_FROZEN_REGISTRY-None",
+     "X3c-AMBIGUOUS_NO_SILENT_PICK-deleted",
+     "X3c-AMBIGUOUS_NO_SILENT_PICK-None"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[X6a-v277]",
+   "row": "X6a",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "X6a-i-one-candidate",
+     "X6a-ii-c0-no-visible_symbol",
+     "X6a-iii-c1-no-symbol_id",
+     "X6a-iv-c0-no-both"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[D3-v277]",
+   "row": "D3",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "D3-i-a",
+     "D3-ii-b",
+     "D3-iii-a-and-c"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[D4-v277]",
+   "row": "D4",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "D4-i",
+     "D4-ii",
+     "D4-iii",
+     "D4-iv"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[D5-v277]",
+   "row": "D5",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "D5"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[LQ2-v277]",
+   "row": "LQ2",
+   "label": "FAIL_FIRST",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "LQ2"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[LQ2-v276]",
+   "row": "LQ2",
+   "label": "FAIL_FIRST",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "failfirst",
+    "v276_kinds": {
+     "LQ2": "ASSERTION_FAILS_ON_V276;v276_verified=True"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[S4c-v277]",
+   "row": "S4c",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "S4c-wrong-type",
+     "S4c-genuine-type"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[S4d-v277]",
+   "row": "S4d",
+   "label": "NEW_API (primitive)",
+   "impl": "v277",
+   "outcome": "NOT_APPLICABLE",
+   "props": {
+    "observations": {
+     "outcome_basis": "authorization V0.2 §3.3: S4d NOT_APPLICABLE with reason",
+     "untested": "duplicate-stream behaviour of the collector was not tested against the implementation"
+    },
+    "not_applicable_reason": "the candidate exposes no separately callable collector: its only public callable is verify_restored_query_receipt (spec §0.2/§4.1); `_Collector` is a private underscore-prefixed implementation class without a contracted interface. Duplicate-stream behaviour NOT tested against the implementation (authorization V0.2 §3.3)",
+    "reason": "NOT_APPLICABLE: the candidate exposes no separately callable collector: its only public callable is verify_restored_query_receipt (spec §0.2/§4.1); `_Collector` is a private underscore-prefixed implementation class without a contracted interface. Duplicate-stream behaviour NOT tested against the implementation (authorization V0.2 §3.3)"
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[X6b-v277]",
+   "row": "X6b",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "X6b-i",
+     "X6b-ii-stale-hash-wrong-type"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[VS1-v277]",
+   "row": "VS1",
+   "label": "NEW_API",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "VS1-i-TRANSLATED",
+     "VS1-i-AMBIGUOUS",
+     "VS1-ii-TRANSLATED",
+     "VS1-ii-AMBIGUOUS",
+     "VS1-i+third-AMBIGUOUS",
+     "VS1-ii+third-AMBIGUOUS"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[K1-v277]",
+   "row": "K1",
+   "label": "KNOWN_RISK",
+   "impl": "v277",
+   "outcome": "RISK_PRESENT",
+   "props": {
+    "cases_executed": [
+     "K1"
+    ],
+    "observations": {
+     "verified": true,
+     "assurance": "ARTIFACT_AND_STATE_ANCHORED",
+     "failures": []
+    },
+    "risk_outcome": "RISK_PRESENT"
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-D6-v277]",
+   "row": "TX-D6",
+   "label": "TASKLET_EXTRA (D-6)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-D6-list",
+     "TX-D6-dict",
+     "TX-D6-int",
+     "TX-D6-None",
+     "TX-D6-short-str"
+    ],
+    "observations": {
+     "list": {
+      "returned_type": "list",
+      "same_object_as_input": true,
+      "equal_to_input": true
+     },
+     "dict": {
+      "returned_type": "dict",
+      "same_object_as_input": true,
+      "equal_to_input": true
+     },
+     "int": {
+      "returned_type": "int",
+      "same_object_as_input": true,
+      "equal_to_input": true
+     },
+     "None": {
+      "returned_type": "NoneType",
+      "same_object_as_input": true,
+      "equal_to_input": true
+     },
+     "short-str": {
+      "returned_type": "str",
+      "same_object_as_input": true,
+      "equal_to_input": true
+     }
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-L3-v277]",
+   "row": "TX-L3",
+   "label": "TASKLET_EXTRA (L-3)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-L3-genuine",
+     "TX-L3-L0-path",
+     "TX-L3-tampered",
+     "TX-L3-fresh-copy"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-Q4-v277]",
+   "row": "TX-Q4",
+   "label": "TASKLET_EXTRA (Q4 author decision)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-Q4-tampered",
+     "TX-Q4-genuine"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-DOC-v277]",
+   "row": "TX-DOC",
+   "label": "TASKLET_EXTRA (§4.5)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-DOC"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-BLD-v277]",
+   "row": "TX-BLD",
+   "label": "TASKLET_EXTRA (V1.1: candidate-builder hash cross-check, note B-4)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-BLD"
+    ],
+    "observations": {
+     "query+translation": {
+      "query_result_keys_missing_vs_v276": [
+       "index_sha256",
+       "mode",
+       "query",
+       "read_only",
+       "reason",
+       "safety"
+      ],
+      "translation_result_keys_missing_vs_v276": [
+       "read_only",
+       "safety"
+      ]
+     },
+     "self-translation": {
+      "query_result_keys_missing_vs_v276": [],
+      "translation_result_keys_missing_vs_v276": [
+       "read_only",
+       "safety"
+      ]
+     },
+     "query-only": {
+      "query_result_keys_missing_vs_v276": [
+       "index_sha256",
+       "mode",
+       "query",
+       "read_only",
+       "reason",
+       "safety"
+      ],
+      "translation_result_keys_missing_vs_v276": []
+     }
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-F1-v277]",
+   "row": "TX-F1",
+   "label": "TASKLET_EXTRA (RG-5 F1: §6.1 / H-1 / S-4)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-F1-scan-0.3",
+     "TX-F1-0.1a-strict_mode",
+     "TX-F1-0.1b-artifact-anchor",
+     "TX-F1-0.1c-state-anchor"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-F2-v277]",
+   "row": "TX-F2",
+   "label": "TASKLET_EXTRA (RG-5 F2: §7 1a.1, OQ-5)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-F2-upper-hex",
+     "TX-F2-x64",
+     "TX-F2-non-ascii-64"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-F2-v276]",
+   "row": "TX-F2",
+   "label": "TASKLET_EXTRA (RG-5 F2: §7 1a.1, OQ-5)",
+   "impl": "v276",
+   "outcome": "PASS",
+   "props": {
+    "v276_mode": "control",
+    "v276_kinds": {
+     "TX-F2-upper-hex": "SATISFIED;v276_verified=False",
+     "TX-F2-x64": "SATISFIED;v276_verified=False",
+     "TX-F2-non-ascii-64": "SATISFIED;v276_verified=False"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-F3-v277]",
+   "row": "TX-F3",
+   "label": "TASKLET_EXTRA (RG-5 F3: §9.1a Q.5)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-F3-found-missing",
+     "TX-F3-match_count-missing"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-F4-v277]",
+   "row": "TX-F4",
+   "label": "TASKLET_EXTRA (RG-5 F4: §5.2 P-7 G-3 order)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-F4-two-lines",
+     "TX-F4-all-six"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-T1-v277]",
+   "row": "TX-T1",
+   "label": "TASKLET_EXTRA (RG-5 T1: §9.2 G-3 per line, G-4)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-T1-G3-source_script_family",
+     "TX-T1-G3-target_script_family",
+     "TX-T1-G3-source_visible_symbol",
+     "TX-T1-G3-target_visible_symbol",
+     "TX-T1-G3-symbolic_role",
+     "TX-T1-G3-meaning_invariant",
+     "TX-T1-G4-role-NO_TARGET",
+     "TX-T1-G4-role-AMBIGUOUS",
+     "TX-T1-G4-candidate[0].visible_symbol",
+     "TX-T1-G4-candidate[1].visible_symbol"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-T2-v277]",
+   "row": "TX-T2",
+   "label": "TASKLET_EXTRA (RG-5 T2: §11.2 T-1 aliasing)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-T2-genuine-receipts-have-no-aliases",
+     "TX-T2-query-record-only",
+     "TX-T2-source-only"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-T3-v277]",
+   "row": "TX-T3",
+   "label": "TASKLET_EXTRA (RG-5 T3: §9.3 R-1 membership, stamp 2.7.4)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-T3-legacy-R1-membership"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-T4-v277]",
+   "row": "TX-T4",
+   "label": "TASKLET_EXTRA (RG-5 T4: §8.3 T.2, T-R2)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-T4-no-copy-with-expected",
+     "TX-T4-no-copy-no-expected",
+     "TX-T4-all-None-no-expected",
+     "TX-T4-all-None-with-expected"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-T5-v277]",
+   "row": "TX-T5",
+   "label": "TASKLET_EXTRA (RG-5 T5: exact outcomes for skip clauses)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-T5-M8-exact",
+     "TX-T5-Q3-skips-Q6",
+     "TX-T5-V3-2.7.4-AMBIGUOUS-exact",
+     "TX-T5-V3-2.7.4-ICF-exact"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-T6-v277]",
+   "row": "TX-T6",
+   "label": "TASKLET_EXTRA (RG-5 T6: smaller clauses)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-T6-G5-receipt-id-absent",
+     "TX-T6-T1-teq",
+     "TX-T6-L4.2-is",
+     "TX-T6-L2-NOT_EVALUATED",
+     "TX-T6-B2",
+     "TX-T6-receipt-not-mutated"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-F1b-v277]",
+   "row": "TX-F1b",
+   "label": "TASKLET_EXTRA (author decision F1 = (i), 2026-10-23 09:11)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-F1b-strict_mode",
+     "TX-F1b-artifact-anchor",
+     "TX-F1b-state-anchor",
+     "TX-F1b-nested-untrusted-key",
+     "TX-F1b-artifact-untrusted-key"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-F5-v277]",
+   "row": "TX-F5",
+   "label": "TASKLET_EXTRA (author decision F5 = (a), 2026-10-23 09:11)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-F5-strict-missing",
+     "TX-F5-nonstrict-missing",
+     "TX-F5-strict-present-control",
+     "TX-F5-strict-missing-builder277"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-N1-v277]",
+   "row": "TX-N1",
+   "label": "TASKLET_EXTRA (RG-5 re-check N1 / M61; spec §5.3 L4 row, §10.2 L4.4, §4.6; author decision F5 = (a))",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-N1-F5-strict-missing-L4",
+     "TX-N1-packet_version-differs-L4",
+     "TX-N1-strict-present-control-L4",
+     "TX-N1-F5-strict-missing-L4-builder277"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-N2a-v277]",
+   "row": "TX-N2a",
+   "label": "TASKLET_EXTRA (RG-5 re-check N2 / M36; spec §3.2 role_norm, §3.4, §9.2 G-3 / G-4, §9.3 R-1, §4.6)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-N2a-TR-mixed-forms",
+     "TX-N2a-TR-mixed-forms-strict",
+     "TX-N2a-TR-nfd-both",
+     "TX-N2a-NO_TARGET-nfd",
+     "TX-N2a-AMBIGUOUS-nfd",
+     "TX-N2a-TR-forged-unnormalized-role",
+     "TX-N2a-NO_TARGET-forged-unnormalized-role"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-N2b-v277]",
+   "row": "TX-N2b",
+   "label": "TASKLET_EXTRA (RG-5 re-check N2 / M55; spec §3.3 teq floats, §6.1 floats, H-3, §9.2 G-2 / G-3, §4.6)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-N2b-nan-field-genuine",
+     "TX-N2b-nan-field-genuine-strict",
+     "TX-N2b-nan-in-list-genuine",
+     "TX-N2b-inf-field-genuine-control",
+     "TX-N2b-nan-vs-zero-forged",
+     "TX-N2b-nan-vs-inf-forged",
+     "TX-N2b-inf-vs-neginf-forged"
+    ]
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[Z1-v277]",
+   "row": "Z1",
+   "label": "all",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "Z1"
+    ],
+    "observations": {
+     "note": "evaluated over every verifier call made through the case runner"
+    }
+   }
+  },
+  {
+   "nodeid": "test_rg4.py::test_row[TX-INV-v277]",
+   "row": "TX-INV",
+   "label": "TASKLET_EXTRA (result contract §4.2–§4.4, P-2, P-3, Q5)",
+   "impl": "v277",
+   "outcome": "PASS",
+   "props": {
+    "cases_executed": [
+     "TX-INV"
+    ]
+   }
+  }
+ ],
+ "z1": {
+  "checks": 379,
+  "violations": []
+ },
+ "result_contract": {
+  "checks": 383,
+  "violations": []
+ }
+}

@@ -1,0 +1,1 @@
+Read-only GitHub connection results for the exact full refs used by verify.yml. Ref existence/action.yml presence was checked; no action execution, tag-label mapping, signed provenance or full upstream audit is claimed. Runner ubuntu-24.04 is a moving image label, not an immutable image digest. Python patch is fixed to 3.12.15; actual GitHub availability remains untested.

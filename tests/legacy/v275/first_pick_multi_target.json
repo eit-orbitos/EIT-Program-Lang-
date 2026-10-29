@@ -1,0 +1,195 @@
+{
+ "artifact": {
+  "frozen_artifact_id": "FROZEN-LEG",
+  "frozen_registry_snapshot": {
+   "registry_records": {
+    "LAT-SRC": {
+     "symbol_id": "LAT-SRC",
+     "script_family": "LATIN",
+     "visible_symbol": "SOURCE",
+     "symbolic_role": "SOURCE_NODE",
+     "meaning_invariant": [
+      "source",
+      "origin"
+     ],
+     "aliases": [
+      "origin"
+     ]
+    },
+    "CYR-SRC": {
+     "symbol_id": "CYR-SRC",
+     "script_family": "CYRILLIC",
+     "visible_symbol": "ИЗВОР",
+     "symbolic_role": "SOURCE_NODE",
+     "meaning_invariant": [
+      "source",
+      "origin"
+     ],
+     "aliases": [
+      "извор"
+     ]
+    },
+    "LAT-BANK": {
+     "symbol_id": "LAT-BANK",
+     "script_family": "LATIN",
+     "visible_symbol": "BANK",
+     "symbolic_role": "BANK_NODE",
+     "meaning_invariant": [
+      "money"
+     ],
+     "aliases": []
+    },
+    "CYR-BANK2": {
+     "symbol_id": "CYR-BANK2",
+     "script_family": "CYRILLIC",
+     "visible_symbol": "БРЕГ",
+     "symbolic_role": "BANK_NODE",
+     "meaning_invariant": [
+      "river edge"
+     ],
+     "aliases": []
+    },
+    "CYR-BANK1": {
+     "symbol_id": "CYR-BANK1",
+     "script_family": "CYRILLIC",
+     "visible_symbol": "БАНКА",
+     "symbolic_role": "BANK_NODE",
+     "meaning_invariant": [
+      "money"
+     ],
+     "aliases": []
+    },
+    "LAT-OTHER": {
+     "symbol_id": "LAT-OTHER",
+     "script_family": "LATIN",
+     "visible_symbol": "OTHER",
+     "symbolic_role": "OTHER_NODE",
+     "meaning_invariant": [
+      "m-lat-other"
+     ],
+     "aliases": []
+    }
+   }
+  }
+ },
+ "receipt": {
+  "receipt_type": "EIT_RESTORED_REGISTRY_QUERY_RECEIPT",
+  "receipt_version": "2.7.4",
+  "generated_at_utc": "2026-10-23T13:37:06.402551+00:00",
+  "module_id": "EIT_PROGRAM_LANG_NOVA_Q_ANALYZER_V2_7_4",
+  "author": "Mr. Toni Mladenovski",
+  "project_origin_date": "18 April 2026",
+  "restored_state_id": "RS-LEG",
+  "release_id": "REL-LEG",
+  "frozen_artifact_id": "FROZEN-LEG",
+  "frozen_artifact_sha256": "b2c9cb07f6881da84545c1676fc9938ceec41f6df6890a4d314d530d28089abc",
+  "restored_state_sha256": "26e953777f72afe2f4228f72e2840652ee625642423ffa819737f1a9b48b7941",
+  "current_version_id": "V-LEG",
+  "query_result": {},
+  "translation_result": {
+   "status": "TRANSLATED_FROM_FROZEN_REGISTRY",
+   "source": {
+    "symbol_id": "LAT-BANK",
+    "script_family": "LATIN",
+    "visible_symbol": "BANK",
+    "symbolic_role": "BANK_NODE",
+    "meaning_invariant": [
+     "money"
+    ],
+    "aliases": []
+   },
+   "target": {
+    "symbol_id": "CYR-BANK2",
+    "script_family": "CYRILLIC",
+    "visible_symbol": "БРЕГ",
+    "symbolic_role": "BANK_NODE",
+    "meaning_invariant": [
+     "river edge"
+    ],
+    "aliases": []
+   },
+   "translation_packet": {
+    "packet_type": "FROZEN_REGISTRY_TRANSLATION_PACKET",
+    "packet_version": "2.7.4",
+    "source_symbol_id": "LAT-BANK",
+    "target_symbol_id": "CYR-BANK2",
+    "source_script_family": "LATIN",
+    "target_script_family": "CYRILLIC",
+    "source_visible_symbol": "BANK",
+    "target_visible_symbol": "БРЕГ",
+    "symbolic_role": "BANK_NODE",
+    "meaning_invariant": [
+     "money"
+    ],
+    "frozen_artifact_sha256": "b2c9cb07f6881da84545c1676fc9938ceec41f6df6890a4d314d530d28089abc",
+    "restored_state_sha256": "26e953777f72afe2f4228f72e2840652ee625642423ffa819737f1a9b48b7941",
+    "read_only": true,
+    "boundary": {
+     "restored_registry_query_runtime": true,
+     "read_only_query_mode": true,
+     "restored_registry_remains_frozen": true,
+     "mutation_guard_enforced": true,
+     "not_blockchain": true,
+     "not_legal_authority": true,
+     "not_official_linguistic_authority": true,
+     "not_perfect_translation_claim": true,
+     "zero_error_is_model_axiom": true,
+     "not_empirical_claim": true,
+     "not_biological_consciousness": true,
+     "not_sentience": true,
+     "not_asi_proof": true,
+     "not_physical_quantum_os": true,
+     "real_world_control": false,
+     "not_proof": true
+    },
+    "packet_sha256": "6b72c649c07dddbe732da5de8f8fd7f4cd11f995f7a8a23eeffd8f1084f39528"
+   },
+   "frozen_artifact_sha256": "b2c9cb07f6881da84545c1676fc9938ceec41f6df6890a4d314d530d28089abc",
+   "restored_state_sha256": "26e953777f72afe2f4228f72e2840652ee625642423ffa819737f1a9b48b7941",
+   "read_only": true,
+   "safety": {
+    "restored_registry_query_runtime": true,
+    "read_only_query_mode": true,
+    "restored_registry_remains_frozen": true,
+    "mutation_guard_enforced": true,
+    "not_blockchain": true,
+    "not_legal_authority": true,
+    "not_official_linguistic_authority": true,
+    "not_perfect_translation_claim": true,
+    "zero_error_is_model_axiom": true,
+    "not_empirical_claim": true,
+    "not_biological_consciousness": true,
+    "not_sentience": true,
+    "not_asi_proof": true,
+    "not_physical_quantum_os": true,
+    "real_world_control": false,
+    "not_proof": true
+   }
+  },
+  "boundary": {
+   "restored_registry_query_runtime": true,
+   "read_only_query_mode": true,
+   "restored_registry_remains_frozen": true,
+   "mutation_guard_enforced": true,
+   "not_blockchain": true,
+   "not_legal_authority": true,
+   "not_official_linguistic_authority": true,
+   "not_perfect_translation_claim": true,
+   "zero_error_is_model_axiom": true,
+   "not_empirical_claim": true,
+   "not_biological_consciousness": true,
+   "not_sentience": true,
+   "not_asi_proof": true,
+   "not_physical_quantum_os": true,
+   "real_world_control": false,
+   "not_proof": true
+  },
+  "receipt_sha256": "86003d2524c72aa114843deb9371eb8df0a09504ef536ea98dc64a08cded53d5"
+ },
+ "provenance": {
+  "commit": "2b7dd628de411b5bb421310ead16b998d61a7f54",
+  "package_version": "2.7.5",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "call": "lookup_translation_from_frozen_registry(st,'LAT-BANK','CYRILLIC') -> runtime took the first (insertion order) of CYR-BANK2, CYR-BANK1"
+ }
+}

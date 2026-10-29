@@ -1,0 +1,128 @@
+{
+  "author": "Toni Mladenovski",
+  "current_artifact": "EIT_PROGRAM_LANG_V2.7.6",
+  "file_count": 27,
+  "files": [
+    {
+      "path": "./.github/workflows/verify.yml",
+      "sha256": "565c9b15ec06f4780a6883ae91ae8907e901177b1092b60e091adbaaf44df30a"
+    },
+    {
+      "path": "./.gitignore",
+      "sha256": "212e40b40f8fd50f481c60be8417c533fa6b4c1cee562f112b29949f7fca92e5"
+    },
+    {
+      "path": "./CHANGELOG.md",
+      "sha256": "aa77c717510c2a4b81835de46b58e7d68a66d9bd4ee7f0f8836f2d5db775bcf5"
+    },
+    {
+      "path": "./CONTINUITY.md",
+      "sha256": "02d4f45e65b7f18614600fbc7a4fc1934c82a62830d0f8b6f3016a148df7c841"
+    },
+    {
+      "path": "./README.md",
+      "sha256": "285086db9df8df7a26959aae73dee1f698d7eeaf38f669ef2eab433af0dfa72e"
+    },
+    {
+      "path": "./demo_v2_7_4.py",
+      "sha256": "4379bf916d17e336a255b6401fd64b2042eb405fb174ae5a2da3270bcd70743b"
+    },
+    {
+      "path": "./demo_v2_7_5.py",
+      "sha256": "0c421d2428a513f36d0fe5d9746fdc097f91215ce5afec72d119f4f82537ceaf"
+    },
+    {
+      "path": "./eit_program_lang/__init__.py",
+      "sha256": "dd4d6375b33908ee1501a5144b72226c70722d1c3338181eac60dee831e8cd5b"
+    },
+    {
+      "path": "./eit_program_lang/deep_mutation_guard.py",
+      "sha256": "7eb6c5fa420d11282ce78a40bb5dbe6ab75055b1966097fcd0306accc8bdf4d7"
+    },
+    {
+      "path": "./eit_program_lang/frozen_translation_lookup.py",
+      "sha256": "f7ca5f242f9d20c92eacf6073eea7470f579cde95ca15108b011f042491edd2e"
+    },
+    {
+      "path": "./eit_program_lang/integration_boundary.py",
+      "sha256": "ccdad7ce98da4468edd31adf8f30922d55504b203594503e999b6755b8da2f18"
+    },
+    {
+      "path": "./eit_program_lang/integrity_verifier.py",
+      "sha256": "592636ee6c418b06cafd15ccf6b4841f60653ba06b1ec044655f7efd9009ae0e"
+    },
+    {
+      "path": "./eit_program_lang/mutation_guard.py",
+      "sha256": "80162699e13462137b406806bd3612db0fae0db48a6f8bb7b2ca5b905d2d674b"
+    },
+    {
+      "path": "./eit_program_lang/receipt_verifier.py",
+      "sha256": "4dc3c8b9f707617d874fb3663c9e94340b8b6b996fd444c00e85f014f9adb4e5"
+    },
+    {
+      "path": "./eit_program_lang/restored_query_receipt.py",
+      "sha256": "61702c62cdd5da8b47b00bf50ec22c289b4fa33f0a28d88f6c10e41a35c29a47"
+    },
+    {
+      "path": "./eit_program_lang/restored_registry_index.py",
+      "sha256": "42d23d910c409858a1c121aff63f3538678c7dfe1beee66d4dfcefa504a14165"
+    },
+    {
+      "path": "./eit_program_lang/restored_registry_query.py",
+      "sha256": "c6bbb36105dd4d155ea58d73cfca0fe8a719c777c1cdb38c259819012aa08546"
+    },
+    {
+      "path": "./eit_program_lang/unicode_normalization.py",
+      "sha256": "aa2249b15e13ba2f77fad4604a3e5dcf1aa464cfd1dd2cd9794d3a9fb68a4c9e"
+    },
+    {
+      "path": "./tests/test_adversarial_integrity.py",
+      "sha256": "b7bfd0145ef68efe94e66d46e389b8e8bb0f98ed7398653cf64250edd617e713"
+    },
+    {
+      "path": "./tests/test_deep_mutation_guard.py",
+      "sha256": "ac9a8c297cac1e7513d604e9422aa80989bf935d32eed50ca8c65d4f46f87273"
+    },
+    {
+      "path": "./tests/test_frozen_translation_lookup.py",
+      "sha256": "3c8c3bd3f6c4fa28c5a3489a9ff8da720bc53e9a06014433fe47e93162b389c7"
+    },
+    {
+      "path": "./tests/test_integration_boundary.py",
+      "sha256": "83b3fd18e02ff134607a587fd3fe9760ef3454ec3d7757b97ca467edd40e4bce"
+    },
+    {
+      "path": "./tests/test_receipt_verifier.py",
+      "sha256": "41cea8301f493aa07099fc6c1c08e3920256b134d92c959bedaac2310427b529"
+    },
+    {
+      "path": "./tests/test_restored_query_roundtrip.py",
+      "sha256": "08eda02cf1c48db26afdb1d57910f8dca7e50dbea21f21194e420ff16a645938"
+    },
+    {
+      "path": "./tests/test_restored_registry_index.py",
+      "sha256": "50ea263e31810d320af0661c03e6478fd6f72ab6107c61f27f5661dd80e5c526"
+    },
+    {
+      "path": "./tests/test_translation_edge_cases.py",
+      "sha256": "a35b226ae287355aaea43c8a21c95cabe77bcbcb0ff32a8849a055850f9cbfc6"
+    },
+    {
+      "path": "./tests/test_v276_regressions.py",
+      "sha256": "0a9594982fe99ebd2784b775f779387a5a7457e2d4919dfa46d31d0eae159257"
+    }
+  ],
+  "governance": {
+    "canonical_freeze": false,
+    "github_ci": "V2.7.5 ACTIVE @ 2b7dd62; V2.7.6 CANDIDATE NOT PUBLISHED",
+    "publication_authorization": "PENDING",
+    "zenodo": "BLOCKED"
+  },
+  "origin": "2026-04-18",
+  "project": "EIT Program Lang / CA-Lang / ASI_OS",
+  "registry_sha256": "e998db3b846667e8e1ea7c2d474015271c8659c9ba48e0998808052802c027f3",
+  "registry_type": "EIT_ARTIFACT_REGISTRY",
+  "registry_version": "0.2",
+  "repo_scaffold": "GITHUB_CI_V0.2_SHA_PINNED",
+  "self_reference_note": "ARTIFACT_REGISTRY.json does not list itself; its physical anchor is published out-of-band (chat/release notes)."
+}

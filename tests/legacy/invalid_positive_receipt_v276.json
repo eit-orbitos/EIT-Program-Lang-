@@ -1,0 +1,57 @@
+{
+ "artifact": {
+  "frozen_artifact_id": "FROZEN",
+  "frozen_registry_snapshot": {
+   "registry_records": {}
+  }
+ },
+ "receipt": {
+  "receipt_type": "EIT_RESTORED_REGISTRY_QUERY_RECEIPT",
+  "receipt_version": "2.7.6",
+  "generated_at_utc": "2026-10-23T13:37:06.449126+00:00",
+  "module_id": "EIT_PROGRAM_LANG_NOVA_Q_ANALYZER_V2_7_6",
+  "author": "Mr. Toni Mladenovski",
+  "project_origin_date": "18 April 2026",
+  "restored_state_id": "R",
+  "release_id": "REL",
+  "frozen_artifact_id": "FROZEN",
+  "frozen_artifact_sha256": "bb201fa90bff23607f541669fea5b62c9587ca998f8b68953a4f5787537f127e",
+  "restored_state_sha256": "ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+  "current_version_id": "V2",
+  "query_result": {
+   "query": "SOURCE",
+   "found": true
+  },
+  "translation_result": {
+   "status": "TRANSLATED_FROM_FROZEN_REGISTRY",
+   "translation_packet": {
+    "frozen_artifact_sha256": "bb201fa90bff23607f541669fea5b62c9587ca998f8b68953a4f5787537f127e"
+   }
+  },
+  "boundary": {
+   "restored_registry_query_runtime": true,
+   "read_only_query_mode": true,
+   "restored_registry_remains_frozen": true,
+   "mutation_guard_enforced": true,
+   "not_blockchain": true,
+   "not_legal_authority": true,
+   "not_official_linguistic_authority": true,
+   "not_perfect_translation_claim": true,
+   "zero_error_is_model_axiom": true,
+   "not_empirical_claim": true,
+   "not_biological_consciousness": true,
+   "not_sentience": true,
+   "not_asi_proof": true,
+   "not_physical_quantum_os": true,
+   "real_world_control": false,
+   "not_proof": true
+  },
+  "receipt_sha256": "a6e2d227a4e45fda4a339415a9fdde777325fa37d3db1eb0878f650da24dd2f0"
+ },
+ "provenance": {
+  "source": "EIT_V2_7_6.zip tests/test_receipt_verifier.py _artifact()/_receipt() (lines 10-33)",
+  "builder": "V2.7.6 build_restored_query_receipt",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "status": "RETIRED invalid positive fixture (D-1, F-2): negative evidence only"
+ }
+}

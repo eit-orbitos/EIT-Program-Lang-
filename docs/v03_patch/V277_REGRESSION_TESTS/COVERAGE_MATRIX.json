@@ -1,0 +1,249 @@
+{
+  "status": "AUTHOR_SUPPLIED_SYNTHETIC_ROUND_NOT_RUN",
+  "fixture_status": "SYNTHETIC_ONLY_AUTHOR_SUPPLIED",
+  "oracle_status": "PRODUCTION_APPROVAL_NOT_GRANTED",
+  "independent_evidence": false,
+  "coverage_scope": "targeted subset only, not full N1/N5/N6/N7 or other obligation closure",
+  "runner_preimport_guard": "Exact CPython3.12.15/Unicode15.0.0, explicit synthetic-only mode, authorization acknowledgement and source inventory/hash pins.",
+  "runner_incomplete_exit": "Selected synthetic skip => exit3; historical original placeholders are logged OUT_OF_SCOPE/NOT_TESTED and remain OPEN.",
+  "test_function_count_static_text": 53,
+  "count_method": "text search for indented def test_; not unittest discovery",
+  "baseline_zip_sha256": "df60039d15207ee526cd8045e5abea2694c781ccb7a27a15a285c2f42872168d",
+  "all_cases_require": [
+    "Actual direct author authorization for synthetic-only round",
+    "Exact independent offline profile and byte pins",
+    "Full pre/post inventories and raw logs for evidence"
+  ],
+  "by_blocker": {
+    "D01_DEPTH_AND_GRAPH": {
+      "tests": [
+        "test_depth32_inclusive_and_depth33_rejected",
+        "test_cycle_at_depth33_precedes_current_depth_failure",
+        "test_earlier_budget_failure_precedes_later_cycle",
+        "test_node_preallocation_limit_precedes_bad_child",
+        "test_shared_acyclic_counted_on_each_occurrence",
+        "test_keys_count_as_visits_and_text_but_not_depth",
+        "test_dictionary_key_at_depth32_adds_no_depth",
+        "test_exact_types_no_conversion_or_comparison_hooks",
+        "test_b_t_native_depth32_and33_extension_paths"
+      ],
+      "limitations": [
+        "native allocations preexist admission",
+        "not a timing/memory capacity claim",
+        "callback test controls are synthetic"
+      ],
+      "required_real_evidence": [
+        "independently committed boundary fixtures",
+        "actual B/T execution observations"
+      ]
+    },
+    "D01_TRANSPORT": {
+      "tests": [
+        "test_strict_transport_duplicate_nonfinite_utf8_surrogate",
+        "test_transport_recursion_is_typed_refusal_never_miss"
+      ],
+      "limitations": [
+        "native dictionaries cannot prove upstream duplicate-key rejection",
+        "escaped lone surrogate is rejected by post-parse native admission, unlike malformed UTF8 wire bytes"
+      ],
+      "required_real_evidence": [
+        "bound actual transport parser provenance",
+        "resource and cancellation behavior"
+      ]
+    },
+    "N1": {
+      "tests": [
+        "test_n1_global_tier_order_not_record_iteration",
+        "test_n1_complete_ties_and_per_record_dedup",
+        "test_empty_inert_no_trim_no_casefold_no_nfkc"
+      ],
+      "limitations": [
+        "representative permutations only",
+        "not original audit test_v277_proposed.py"
+      ],
+      "required_real_evidence": [
+        "complete independently specified V/A/H tier and Unicode lower oracles",
+        "actual installed consumer route"
+      ]
+    },
+    "N5": {
+      "tests": [
+        "test_n5_raw_nfc_ids_and_negative_equivalence",
+        "test_n5_collision_and_exact_identity_before_lookup",
+        "test_n5_translation_preserves_raw_ids_and_lexical_choice"
+      ],
+      "limitations": [
+        "raw ID and translation examples do not establish complete Unicode conformance",
+        "no independently proven derived-limit reachability fixture"
+      ],
+      "required_real_evidence": [
+        "exact NFC/collision/negative projection oracles",
+        "unchanged hash-domain and record preservation execution evidence"
+      ]
+    },
+    "N6": {
+      "tests": [
+        "test_n6_none_and_string_alias_whole_registry_rejection",
+        "test_optional_defaults_are_views_not_storage_edits",
+        "test_identity_then_arguments_then_all_fields"
+      ],
+      "limitations": [
+        "synthetic builder integrity permits later phase checks",
+        "real T IV can deny missing required fields at phase2; do not infer universal phase5"
+      ],
+      "required_real_evidence": [
+        "actual IV branch-conditioned field fixtures",
+        "required/optional field-count and length boundary suite"
+      ]
+    },
+    "N7": {
+      "tests": [
+        "test_n7_deepcopy_joint_single_source_and_no_aliasing",
+        "test_n7_private_snapshot_ignores_later_caller_mutation",
+        "test_n7_translation_structural_failure_never_builds_receipt",
+        "test_final_guard_failure_returns_no_receipt_to_caller"
+      ],
+      "limitations": [
+        "same-core select_source patch is test-only instrumentation",
+        "local lack of return is not external publication monitoring",
+        "no OS atomicity or process isolation claim"
+      ],
+      "required_real_evidence": [
+        "owner-bound actual sink and no-prefix observation",
+        "concurrency/cancellation/commit-boundary evidence"
+      ]
+    },
+    "AUDIT_M6": {
+      "definition": "restored_state_sha256 optional again",
+      "source": "docs/prior_evidence/CLAUDE_AUDIT_V2_7_6.md:293,324; docs/EIT_V277_P003_NORMATIVE_PATCH_SPEC_V0.6.0_DRAFT_V0.5.md:1091",
+      "tests": [
+        "test_m6_missing_hash_denies_before_integrity_or_serve"
+      ],
+      "limitations": [
+        "not the distinct RG4 M6 state-hash-copy row",
+        "candidate runs trusted-control and binding callbacks before missing-hash denial; integrity and serving are not invoked",
+        "does not kill original mutant or close original battery"
+      ],
+      "required_real_evidence": [
+        "original mutant definition and independent kill-test bytes",
+        "state-missing-hash serving observations on owner-bound paths"
+      ]
+    },
+    "AUDIT_M13": {
+      "definition": "Packet provenance check dropped",
+      "source": "docs/prior_evidence/CLAUDE_AUDIT_V2_7_6.md:300,327; docs/EIT_V277_P003_NORMATIVE_PATCH_SPEC_V0.6.0_DRAFT_V0.5.md:1094",
+      "tests": [
+        "test_m13_receipt_callback_packet_provenance_mutation_denied_before_return",
+        "test_m13_original_runtime_mutant_proposal_not_implemented",
+        "test_m13_synthetic_runtime_provenance_guard_kills_throwaway_mutant"
+      ],
+      "limitations": [
+        "explicit make_receipt injection only tests receipt-side wrong provenance with recomputed hashes",
+        "original runtime packet construction mutant has no public mutation injection; proposal explicitly skipped NOT_IMPLEMENTED",
+        "no original mutation-battery closure"
+      ],
+      "required_real_evidence": [
+        "exact original runtime mutant and kill test",
+        "approved staged runtime packet mutation seam or original mutant execution",
+        "actual no-publication sink monitoring"
+      ],
+      "v02_limit": "New candidate guard-removal controls; not authenticated original historical mutants."
+    },
+    "AUDIT_M15": {
+      "definition": "Required-field check dropped",
+      "source": "docs/prior_evidence/CLAUDE_AUDIT_V2_7_6.md:302,328; docs/EIT_V277_P003_NORMATIVE_PATCH_SPEC_V0.6.0_DRAFT_V0.5.md:1095",
+      "tests": [
+        "test_m15_receipt_callback_required_field_removal_denied_before_return",
+        "test_m15_original_required_record_check_mutant_proposal_not_implemented",
+        "test_m15_synthetic_required_field_guard_kills_throwaway_mutant"
+      ],
+      "limitations": [
+        "explicit make_receipt callback drops restored_state_id and recomputes receipt hash",
+        "original audit proposed record_missing_required_field kill test is not this receipt mutation",
+        "original mutant case explicitly skipped NOT_IMPLEMENTED",
+        "no original mutation-battery closure"
+      ],
+      "required_real_evidence": [
+        "original required-field mutant and original record kill-test bytes",
+        "independent runtime/builder serving observations"
+      ],
+      "v02_limit": "New candidate guard-removal controls; not authenticated original historical mutants."
+    },
+    "IR04_P_O": {
+      "tests": [
+        "test_output_depth32_and33",
+        "test_output_exact_serialized_bytes_not_just_text",
+        "test_builder_envelope_overrun_and_runtime_smaller_envelope"
+      ],
+      "limitations": [
+        "candidate phase8 mapping is not accepted oracle",
+        "T result source nesting is shallower than T input; do not invent a mirrored T depth-overrun expectation"
+      ],
+      "required_real_evidence": [
+        "owner-approved output serialization/depth mapping",
+        "complete actual publication boundary evidence"
+      ]
+    },
+    "LEGACY_AND_LIMITED_EMPTY_ROLE": {
+      "tests": [
+        "test_baseline_empty_role_prediction_not_corrected_oracle",
+        "test_s1_empty_role_no_target_separate_from_legacy_prediction",
+        "test_legacy_runtime_fake_integrity_preserves_denial_status",
+        "test_opt_in_public_builder_and_runtime_routes"
+      ],
+      "limitations": [
+        "baseline case skipped without explicit --baseline",
+        "legacy B member pinned, full immutable baseline dependency tree still requires owner custody/pins",
+        "static baseline empty-role translation prediction is UNAPPROVED",
+        "fake legacy T IV patch is test-only module attribute patch",
+        "legacy calls remain opt-in unprotected and no Q/L/U/V/IV/I compatibility suite execution is claimed"
+      ],
+      "required_real_evidence": [
+        "immutable full baseline comparator",
+        "actual route migration inventory",
+        "unchanged component regression suite under separately scoped authorization"
+      ]
+    },
+    "ORDERING_CONTROLS": {
+      "tests": [
+        "test_missing_callbacks_is_readiness_not_phase0",
+        "test_phase1_before_callbacks_and_layout",
+        "test_layout_denial_before_controls_or_alternate_layout",
+        "test_binding_denial_does_not_invoke_integrity",
+        "test_compromised_control_is_global_stop_not_domain_refusal",
+        "test_integrity_denial_before_identity_query_fields",
+        "test_integrity_exception_or_non_boolean_return_is_internal_error",
+        "test_runtime_integrity_denial_precedes_source_resolution",
+        "test_runtime_direct_none_target_is_invalid_not_query_only",
+        "test_builder_translation_direct_none_target_is_invalid"
+      ],
+      "limitations": [
+        "test double approval is not genuine root configuration",
+        "no imported source or executed callback in this authoring run"
+      ],
+      "required_real_evidence": [
+        "genuine owner callback/root/core/caller/route provenance",
+        "typed failure and no-publication traces",
+        "timeout/cancellation and compromised-control invalid-return/exception cases"
+      ]
+    }
+  },
+  "selected_synthetic_functions_static": 51,
+  "production_closure_requirements": [
+    "Separate IR04-P and IR04-O dispositions",
+    "Real owner bindings",
+    "Original item-specific criteria and \u00a713/\u00a714A evidence"
+  ],
+  "v03_diagnostics": {
+    "tests": [
+      "test_v03_builder_depth31_and32_fit_unchanged_receipt_envelope",
+      "test_v03_runtime_depth32_input_has_depth29_output",
+      "test_v03_native_depth33_is_phase1_not_output_phase8",
+      "test_v03_final_guard_rejects_poststaging_depth33_before_builder_return",
+      "test_v03_shared_publication_guard_boundary_and_removal_control"
+    ],
+    "status": "PROPOSED_NOT_RUN",
+    "original_test_preserved": true,
+    "known_original_oracle_conflict": "Still selected; not skipped or expected-failed."
+  }
+}

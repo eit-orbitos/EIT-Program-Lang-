@@ -1,0 +1,8 @@
+$ sha256sum --strict -c SHA256SUMS.txt
+exit 1
+sha256sum: WARNING: 1 computed checksum did NOT match
+
+$ python3 tests/selfcheck_v277_v05.py -> exit 0
+$ python3 tests/selfcheck_v277_v06_regressions.py -> exit 0
+$ python3 tests/selfcheck_v277_v07_fixes.py -> exit 0
+$ python3 -m pytest tests/test_receipt_verifier.py tests/test_legacy_v275_fixtures.py -> NOT RUN in this sandbox (pytest not installed). Reference run: Claude (RG-5 reviewer), isolated environment, V0.5-V0.7: 35 passed. To bind pytest evidence to rc9 hashes, run CI in an environment with pytest.

@@ -1,0 +1,215 @@
+{
+  "project": "NOVA Q / EIT Program Lang V2.7.7",
+  "author": "Mr. Toni Mladenovski",
+  "status": "TARGETED_FIX_CANDIDATE",
+  "baseline_sha256": "df60039d15207ee526cd8045e5abea2694c781ccb7a27a15a285c2f42872168d",
+  "source_delta": [
+    {
+      "path": "successor_tree/eit_program_lang/eit_v277_builder_candidate.py",
+      "action": "MODIFY",
+      "baseline_sha256": "3c1f3ac799211c298d378ad87556975c38447023f92cc3d18d4bda7dd48ab331",
+      "candidate_sha256": "fe305aabe6e4b773ceef5100d8d4eed7a9820f8ba199735e0d3d7cce504be590",
+      "size_bytes": 10189
+    },
+    {
+      "path": "successor_tree/eit_program_lang/frozen_translation_lookup.py",
+      "action": "MODIFY",
+      "baseline_sha256": "6b8d649e58ae4ff694d9bec0a9a8aa13b269cc5f6d73a1868ddf1b8159081d63",
+      "candidate_sha256": "6c7bf16547f527782a746371fa5fc375b1b38c1c873e8178b145312eb1bf89b7",
+      "size_bytes": 6274
+    },
+    {
+      "path": "successor_tree/eit_program_lang/s1_sp1_adapter.py",
+      "action": "ADD",
+      "baseline_sha256": null,
+      "candidate_sha256": "caf16413d42a3ffa737b2ea719c38c7d882d27aea5183163c9c52f10542641a3",
+      "size_bytes": 23058
+    },
+    {
+      "path": "successor_tree/eit_program_lang/s1_sp1_core.py",
+      "action": "ADD",
+      "baseline_sha256": null,
+      "candidate_sha256": "a2a9551e9354ee4912aa98567b57685ef4d6fdcbd6721fcf466193185123c7b6",
+      "size_bytes": 13053
+    }
+  ],
+  "blockers": [
+    {
+      "blocker": "D01",
+      "status": "FIXED_AND_TESTABLE",
+      "meaning": "Named candidate synthetic assertions authored; external execution NOT_RUN here. Full closure remains OPEN.",
+      "scope_limit": "Candidate S1 endpoint behavior only, pending independent verification.",
+      "execution": "NOT_RUN",
+      "closure": "OPEN",
+      "required_next": "Exact IR04-P review, distinct IR04-O oracle/fixture approval, scoped Kimi execution and item-specific acceptance evidence."
+    },
+    {
+      "blocker": "D04",
+      "status": "FIXED_AND_TESTABLE",
+      "meaning": "Named candidate synthetic assertions authored; external execution NOT_RUN here. Full closure remains OPEN.",
+      "scope_limit": "Candidate S1 endpoint behavior only, pending independent verification.",
+      "execution": "NOT_RUN",
+      "closure": "OPEN",
+      "required_next": "Exact IR04-P review, distinct IR04-O oracle/fixture approval, scoped Kimi execution and item-specific acceptance evidence."
+    },
+    {
+      "blocker": "D07",
+      "status": "NEEDS_AUTHORIZATION",
+      "meaning": "Candidate source/regression authored; unexecuted, not verified fixed or closed.",
+      "scope_limit": "S1 B/T subset only; Q/shared helper and original mutation-battery duties not globally fixed. D07 is an obligation map, not code closure.",
+      "execution": "NOT_RUN",
+      "closure": "OPEN",
+      "required_next": "Exact IR04-P review, distinct IR04-O oracle/fixture approval, scoped Kimi execution and item-specific acceptance evidence."
+    },
+    {
+      "blocker": "N-1",
+      "status": "FIXED_AND_TESTABLE",
+      "meaning": "Named candidate synthetic assertions authored; external execution NOT_RUN here. Full closure remains OPEN.",
+      "scope_limit": "Candidate S1 endpoint behavior only, pending independent verification.",
+      "execution": "NOT_RUN",
+      "closure": "OPEN",
+      "required_next": "Exact IR04-P review, distinct IR04-O oracle/fixture approval, scoped Kimi execution and item-specific acceptance evidence."
+    },
+    {
+      "blocker": "N-5",
+      "status": "FIXED_AND_TESTABLE",
+      "meaning": "Named candidate synthetic assertions authored; external execution NOT_RUN here. Full closure remains OPEN.",
+      "scope_limit": "S1 B/T subset only; Q/shared helper and original mutation-battery duties not globally fixed. D07 is an obligation map, not code closure.",
+      "execution": "NOT_RUN",
+      "closure": "OPEN",
+      "required_next": "Exact IR04-P review, distinct IR04-O oracle/fixture approval, scoped Kimi execution and item-specific acceptance evidence."
+    },
+    {
+      "blocker": "N-6",
+      "status": "FIXED_AND_TESTABLE",
+      "meaning": "Named candidate synthetic assertions authored; external execution NOT_RUN here. Full closure remains OPEN.",
+      "scope_limit": "S1 B/T subset only; Q/shared helper and original mutation-battery duties not globally fixed. D07 is an obligation map, not code closure.",
+      "execution": "NOT_RUN",
+      "closure": "OPEN",
+      "required_next": "Exact IR04-P review, distinct IR04-O oracle/fixture approval, scoped Kimi execution and item-specific acceptance evidence."
+    },
+    {
+      "blocker": "N-7",
+      "status": "FIXED_AND_TESTABLE",
+      "meaning": "Named candidate synthetic assertions authored; external execution NOT_RUN here. Full closure remains OPEN.",
+      "scope_limit": "S1 B/T subset only; Q/shared helper and original mutation-battery duties not globally fixed. D07 is an obligation map, not code closure.",
+      "execution": "NOT_RUN",
+      "closure": "OPEN",
+      "required_next": "Exact IR04-P review, distinct IR04-O oracle/fixture approval, scoped Kimi execution and item-specific acceptance evidence."
+    },
+    {
+      "blocker": "M6",
+      "status": "FIXED_AND_TESTABLE",
+      "meaning": "Named candidate synthetic assertions authored; external execution NOT_RUN here. Full closure remains OPEN.",
+      "scope_limit": "Candidate S1 endpoint behavior only, pending independent verification.",
+      "execution": "NOT_RUN",
+      "closure": "OPEN",
+      "required_next": "Exact IR04-P review, distinct IR04-O oracle/fixture approval, scoped Kimi execution and item-specific acceptance evidence."
+    },
+    {
+      "blocker": "M13",
+      "status": "FIXED_AND_TESTABLE",
+      "meaning": "Named candidate synthetic assertions authored; external execution NOT_RUN here. Full closure remains OPEN.",
+      "scope_limit": "S1 B/T subset only; Q/shared helper and original mutation-battery duties not globally fixed. D07 is an obligation map, not code closure.",
+      "execution": "NOT_RUN",
+      "closure": "OPEN",
+      "required_next": "Exact IR04-P review, distinct IR04-O oracle/fixture approval, scoped Kimi execution and item-specific acceptance evidence."
+    },
+    {
+      "blocker": "M15",
+      "status": "FIXED_AND_TESTABLE",
+      "meaning": "Named candidate synthetic assertions authored; external execution NOT_RUN here. Full closure remains OPEN.",
+      "scope_limit": "S1 B/T subset only; Q/shared helper and original mutation-battery duties not globally fixed. D07 is an obligation map, not code closure.",
+      "execution": "NOT_RUN",
+      "closure": "OPEN",
+      "required_next": "Exact IR04-P review, distinct IR04-O oracle/fixture approval, scoped Kimi execution and item-specific acceptance evidence."
+    },
+    {
+      "blocker": "BASELINE_LIMITED_EMPTY_ROLE",
+      "status": "FIXED_AND_TESTABLE",
+      "meaning": "Named candidate synthetic assertions authored; external execution NOT_RUN here. Full closure remains OPEN.",
+      "scope_limit": "Candidate S1 endpoint behavior only, pending independent verification.",
+      "execution": "NOT_RUN",
+      "closure": "OPEN",
+      "required_next": "Exact IR04-P review, distinct IR04-O oracle/fixture approval, scoped Kimi execution and item-specific acceptance evidence."
+    },
+    {
+      "blocker": "F01",
+      "status": "NEEDS_OWNER_EVIDENCE",
+      "reason": "19 actual owner bindings incomplete, all operative values null.",
+      "closure": "OPEN"
+    },
+    {
+      "blocker": "IR04-P",
+      "status": "NEEDS_AUTHORIZATION",
+      "reason": "Candidate plan material supplied; no independent exact-plan approval.",
+      "closure": "OPEN"
+    },
+    {
+      "blocker": "IR04-O",
+      "status": "NEEDS_AUTHORIZATION",
+      "reason": "New executable regression fixtures are candidate oracles, not approved or executed.",
+      "closure": "OPEN"
+    },
+    {
+      "blocker": "C3-E",
+      "status": "NEEDS_OWNER_EVIDENCE",
+      "reason": "No deployed enforcing consumer/root/routing; runtime stamp preserved 2.7.6.",
+      "closure": "OPEN"
+    },
+    {
+      "blocker": "LIVE_INSTALLATION_AND_EXECUTION",
+      "status": "NEEDS_AUTHORIZATION",
+      "reason": "Only the exact synthetic-only Kimi round is author-authorized; live installation/production/closure execution not authorized.",
+      "closure": "OPEN"
+    }
+  ],
+  "no_project_execution": true,
+  "no_compile_or_import_or_test_collection": true,
+  "independence": "Tasklet authored core, adapter and tests, including internal contributors; no independent execution. Kimi is not represented by an internal worker.",
+  "candidate_design_qualifications": [
+    "Opt-in only; legacy route remains outside S1 protection.",
+    "Mandatory state-body hash check and callback contract require IR04-P/O review.",
+    "Output depth/shape reason and serialized byte domain are candidate mappings.",
+    "No full original mutant battery or broad release regression result is claimed.",
+    "No authenticated owner deployment, root, workspace, loader or class-identity evidence."
+  ],
+  "governance": {
+    "F01": "0/19 VERIFIED",
+    "N-1": "OPEN_BLOCKING",
+    "N-5": "FINAL_CLOSURE_PENDING",
+    "R-2": "RISK_PRESENT/NOT_MITIGATED",
+    "B4": "NOT_CLOSED",
+    "RG6": "OPEN",
+    "Gate-4": "NOT_SATISFIED",
+    "Formal_Freeze": "NO",
+    "GitHub": "HOLD",
+    "Zenodo": "BLOCKED"
+  },
+  "version": "V0.3",
+  "author_scope_record": "AUTHOR_SYNTHETIC_SCOPE_RECORD.md",
+  "IR04_P": "PENDING_PRODUCTION_CLOSURE_REVIEW",
+  "IR04_O": "PRODUCTION_ORACLE_APPROVAL_NOT_GRANTED",
+  "selected_synthetic_round": "AUTHOR_AUTHORIZED_FOR_KIMI_EXACT_BYTES",
+  "source_delta_from_V01": [],
+  "test_functions_static": 53,
+  "selected_synthetic_functions_static": 51,
+  "historical_original_mutant_placeholders_out_of_scope": [
+    "test_m13_original_runtime_mutant_proposal_not_implemented",
+    "test_m15_original_required_record_check_mutant_proposal_not_implemented"
+  ],
+  "attributed_V01_external_run": "Kimi reported BLOCKED_BY_SUITE_GATE, 0 tests; raw transcript not supplied or locally verified.",
+  "execution_status": "EXECUTION_PENDING_KIMI",
+  "governance_freeze": "NOT_AUTHORIZED",
+  "project_execution": "NOT_RUN",
+  "source_fix_claimed": false,
+  "source_delta_from_V02": [],
+  "identified_cause": "Original builder fixture and receipt both have depth32; test erroneously expects output-depth refusal.",
+  "original_failing_oracle_unchanged": true,
+  "expected_existing_suite_result": "Known oracle-conflict assertion remains failing until separately corrected; no green result claimed.",
+  "target_blocker_status": "FAILED_WITH_REPRODUCER",
+  "reproducer_scope": "Supplied Kimi original assertion failure; not evidence of a missing source guard.",
+  "oracle_correction_status": "NEEDS_AUTHORIZATION",
+  "new_tests_status": "PROPOSED_DIAGNOSTICS_NOT_RUN",
+  "remaining_action": "Explicit exact-oracle correction or contrary path evidence; no repeated D01/D04/CN design acceptance requested."
+}

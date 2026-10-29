@@ -1,0 +1,29 @@
+{
+  "upload_type": "software",
+  "title": "EIT Program Lang V2.7.7 — Research Candidate R2 (NOT FINAL, known blockers listed)",
+  "creators": [
+    {
+      "name": "Mladenovski, Toni",
+      "orcid": "0009-0009-8343-662X"
+    }
+  ],
+  "version": "2.7.7-research.1",
+  "description": "RESEARCH_CANDIDATE — NOT FINAL — KNOWN BLOCKERS LISTED. Unpublished research software candidate: EIT Program Lang V2.7.7 receipt verifier. Code = V2.7.7 Tasklet Fix Candidate V0.3 (archive SHA-256 b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027) unchanged; verifier contract P0-03 V0.5.9 (3fc10557032bfb2ab4acf2953f9654c5bdc0f32db43aee7cfdd69fd0d384f27c). Status: FINAL_V277_RELEASE HOLD; C3-E NOT_IMPLEMENTED; F01 0/19 operationally verified; B4 NOT_CLOSED; RG6 OPEN; Gate-4 NOT_SATISFIED. 55 derived blockers and 13 audit findings are listed in KNOWN_LIMITATIONS.md and docs/audit/. Known: preserved oracle-conflict test FAIL (50/51); P0-03 §2 formal deviation; R-1/R-2/R-3/R-5 can yield verified=True; a verifier PASS does not authenticate a producer, replay a query or prove a physical event. SOFTWARE / DOCUMENTARY VALIDATION ≠ PHYSICAL LAW ≠ EXTERNAL SCIENTIFIC VALIDATION. R2 excludes six historical internal Tasklet-path documents; file names and original hashes disclosed in docs/release/R2_AUD06_PUBLIC_EXCLUSIONS.md. Independently replayed R1 outcomes are prior R1-only evidence; R2 runtime NOT_RUN and has not been published.",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "access_right": "open",
+  "keywords": [
+    "receipt verification",
+    "provenance anchoring",
+    "research software",
+    "deterministic validation",
+    "research candidate"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/eit-orbitos/EIT-Program-Lang-",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "PRE-DEPOSIT R2 DRAFT — NOT SUBMITTED. Six documentary AUD-06 exclusions are disclosed in docs/release/R2_AUD06_PUBLIC_EXCLUSIONS.md; R1 remains separately preserved. Independent R2 runtime replay NOT_RUN. Original R1 Tasklet replay does not transfer to new R2 archive hash. No DOI/date claimed. No publication/implementation GO. Software licensing PolyForm Noncommercial 1.0.0; author documentation CC BY-NC-SA 4.0 subject to LICENSE-SCOPE.md; third-party rights retained."
+}

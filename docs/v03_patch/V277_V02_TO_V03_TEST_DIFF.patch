@@ -1,0 +1,66 @@
+--- V0.2/V277_REGRESSION_TESTS/test_s1_regressions.py
++++ V0.3/V277_REGRESSION_TESTS/test_s1_regressions.py
+@@ -564,6 +564,63 @@
+                 self.error("S1_OUTPUT_BUILD_ERROR", 8, self.build, state)
+ 
+ 
++class EnvelopeDiagnosticV03Tests(Harness):
++    """Additional proposed oracles; original V0.2 failure remains unchanged."""
++
++    @staticmethod
++    def value_depth(node):
++        if type(node) is dict:
++            return 1 + max((EnvelopeDiagnosticV03Tests.value_depth(v) for v in node.values()), default=0)
++        if type(node) is list:
++            return 1 + max((EnvelopeDiagnosticV03Tests.value_depth(v) for v in node), default=0)
++        return 1
++
++    def test_v03_builder_depth31_and32_fit_unchanged_receipt_envelope(self):
++        for maximum in (31, 32):
++            with self.subTest(input_and_receipt_depth=maximum):
++                state = state_for()
++                state["frozen_registry_snapshot"]["registry_records"]["src"]["extension"] = nested(maximum - 4)
++                seal_synthetic(state)
++                self.assertEqual(self.value_depth(state), maximum)
++                result = self.build(state)
++                self.assertEqual(self.value_depth(result), maximum)
++
++    def test_v03_runtime_depth32_input_has_depth29_output(self):
++        state = state_for(runtime=True)
++        state["frozen_artifact"]["frozen_registry_snapshot"]["registry_records"]["src"]["extension"] = nested(32 - 5)
++        seal_synthetic(state)
++        self.assertEqual(self.value_depth(state), 32)
++        result = self.runtime(state)
++        self.assertEqual(self.value_depth(result), 29)
++
++    def test_v03_native_depth33_is_phase1_not_output_phase8(self):
++        state = state_for()
++        state["frozen_registry_snapshot"]["registry_records"]["src"]["extension"] = nested(33 - 4)
++        seal_synthetic(state)
++        self.assertEqual(self.value_depth(state), 33)
++        self.error("S1_LIMIT_EXCEEDED", 1, self.build, state)
++
++    def test_v03_final_guard_rejects_poststaging_depth33_before_builder_return(self):
++        adapter = self.adapter()
++        original = adapter._receipt
++        def perturb(*args, **kwargs):
++            result = original(*args, **kwargs)
++            result["synthetic_poststaging_probe"] = nested(32)
++            return result
++        with patch.object(adapter, "_receipt", perturb):
++            self.error("S1_OUTPUT_BUILD_ERROR", 8, self.build, state_for(), adapter=adapter)
++
++    def test_v03_shared_publication_guard_boundary_and_removal_control(self):
++        adapter = self.adapter()
++        accepted = nested(32)
++        refused = nested(33)
++        self.assertIs(adapter._publish(lambda: accepted), accepted)
++        self.error("S1_OUTPUT_BUILD_ERROR", 8, adapter._publish, lambda: refused)
++        # Deliberate throwaway in-memory control only. No source file edit.
++        with patch.object(self.c, "guard_output", lambda value: value):
++            self.assertIs(adapter._publish(lambda: refused), refused)
++
++
+ class PinnedLegacyBaselineTests(Harness):
+     def test_baseline_empty_role_prediction_not_corrected_oracle(self):
+         if CONTEXT.baseline is None:

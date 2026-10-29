@@ -1,0 +1,19 @@
+V0.7 PACKAGE VERIFICATION LOG (Kimi, 2026-10-23T14:17:00.878765+00:00)
+ZIP: KIMI_V277_PACKAGE_V0.7.zip = 41def444… (24814 B, CRC PASS, 8 entries)
+Bound digests from directive — all MATCH:
+  verifier   97b1d148d11490e2105dc4ceee68d1fc19ac72bff79378fe866e97db6bd072ca
+  builder    3d401c47e49f9abb5f94d95480bf6dff157e0be17ff0b0eadbfcac86d6898cec
+  companion  4ba6556ac456601bf9d91608f28ba950b619c51ac123598aeeb480d24444ad65
+  package    41def444b7ab1e855a7131a1652f57525f29a6d78a544e4f27ce83c1a7cdd9e0
+Per-entry digests (same as SHA256SUMS_V0.7_PACKAGE.txt):
+     3934  e4cb97385a8f98c7c1f02bbd8e26c99c3523bce899b38b4bcba2142d9fbab865  SHA256SUMS_V0.8.txt
+    39665  97b1d148d11490e2105dc4ceee68d1fc19ac72bff79378fe866e97db6bd072ca  receipt_verifier_v277_candidate.py
+     8582  3d401c47e49f9abb5f94d95480bf6dff157e0be17ff0b0eadbfcac86d6898cec  eit_v277_builder_candidate.py
+     9974  385836b5e4e9d8602afcb2da5e4d1edad068596c9af8d541b3ad96c38b9611d5  selfcheck_v277_v05.py
+     6011  63acd5be1961021d43c9a55db79e28301de87a1726216e0555ae466747c3fdb8  selfcheck_v277_v06_regressions.py
+     5569  65024f0ba1b55aa06e1c5bd4ad05156e390bfd698d30c7935fe469a09a4c347d  selfcheck_v277_v07_fixes.py
+     2631  777842865e952f0b4bf3a7200f5ba3e445472fefcf0c6329e6b1ab0abcf44d19  SELFCHECK_OUTPUT_V07.log
+     1980  a28f5e07ddd14f0a3b4f312cfb18c3dfeeee3845c2388809418775ab97520507  CANDIDATE_STATUS_V0.7.md
+Note: this manifest describes the EXISTING V0.7 ZIP. It is not a repackaged ZIP.
+Any repackaging would produce a different ZIP digest and would be recorded separately.
+Prior SHA256SUMS_V0.8.txt is superseded for this package (stale V0.6 reference); preserved as history.

@@ -1,0 +1,1157 @@
+[
+ {
+  "id": "M01",
+  "desc": "1a.2 receipt-hash comparison disabled",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-F2@v277:FAIL",
+   "TX-Q4@v277:FAIL",
+   "X6b@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 1,
+  "existing_v277_failed": [
+   "tests/test_receipt_verifier.py::test_tampered_receipt_detected"
+  ],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if h != rs:  # 1a.2",
+   "new": "if False:  # 1a.2"
+  }
+ },
+ {
+  "id": "M02",
+  "desc": "1b.2 packet-hash comparison disabled",
+  "killed": true,
+  "rows_failing_v277": [
+   "A@v277:FAIL",
+   "S3@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if hp != ps:  # 1b.2",
+   "new": "if False:  # 1b.2"
+  }
+ },
+ {
+  "id": "M03",
+  "desc": "B.2 receipt artifact-hash copy not checked",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-T6@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 1,
+  "existing_v277_failed": [
+   "tests/test_receipt_verifier.py::test_provenance_mismatch_detected"
+  ],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if not teq(receipt.get(\"frozen_artifact_sha256\"), AH):  # B.2",
+   "new": "if False:  # B.2"
+  }
+ },
+ {
+  "id": "M04",
+  "desc": "B.3 packet artifact-hash copy not checked",
+  "killed": true,
+  "rows_failing_v277": [
+   "X4o@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if packet_is_mapping and not teq(P.get(\"frozen_artifact_sha256\"), AH):  # B.3",
+   "new": "if False:  # B.3"
+  }
+ },
+ {
+  "id": "M05",
+  "desc": "B.5 ICF exemption removed (translation copy demanded even for INTEGRITY_CHECK_FAILED)",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-T5@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if tr and tr.get(\"status\") != \"INTEGRITY_CHECK_FAILED\":  # B.5",
+   "new": "if tr:  # B.5"
+  }
+ },
+ {
+  "id": "M06",
+  "desc": "B.4 ICF exemption removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-T5@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if qr and qr.get(\"status\") != \"INTEGRITY_CHECK_FAILED\":  # B.4",
+   "new": "if qr:  # B.4"
+  }
+ },
+ {
+  "id": "M07",
+  "desc": "A.2 anchor mismatch ignored",
+  "killed": true,
+  "rows_failing_v277": [
+   "N2@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if AH != expected_artifact_sha256:  # A.2",
+   "new": "if False:  # A.2"
+  }
+ },
+ {
+  "id": "M08",
+  "desc": "T.1 state-copy disagreement ignored",
+  "killed": true,
+  "rows_failing_v277": [
+   "M6@v277:FAIL",
+   "T8@v277:FAIL",
+   "TX-T6@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if len(copies) >= 2 and not all(teq(copies[0], c) for c in copies[1:]):  # T.1",
+   "new": "if False:  # T.1"
+  }
+ },
+ {
+  "id": "M09",
+  "desc": "T.2 passes when no applicable copy exists",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-T4@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if not copies or not all(teq(c, expected_restored_state_sha256) for c in copies):  # T.2",
+   "new": "if copies and not all(teq(c, expected_restored_state_sha256) for c in copies):  # T.2"
+  }
+ },
+ {
+  "id": "M10",
+  "desc": "T.1 uses == instead of teq",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-T6@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "not all(teq(copies[0], c) for c in copies[1:]):  # T.1",
+   "new": "not all(copies[0] == c for c in copies[1:]):  # T.1"
+  }
+ },
+ {
+  "id": "M11",
+  "desc": "V.1 removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "V1@v277:FAIL",
+   "V2@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if not (\"receipt_version\" in receipt and type(receipt[\"receipt_version\"]) is str):  # V.1",
+   "new": "if False:  # V.1"
+  }
+ },
+ {
+  "id": "M12",
+  "desc": "Q.5 removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "C3@v277:FAIL",
+   "TX-F3@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if not teq(qr[\"symbol_ids\"], [rec[\"symbol_id\"] for rec in qr[\"records\"]]):",
+   "new": "if False:"
+  }
+ },
+ {
+  "id": "M13",
+  "desc": "REVERT F3: Q.5 skipped when another Q.4 key is missing",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-F3@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "            if \"symbol_ids\" in qr and \"records\" in qr \\\n               and all",
+   "new": "            if not missing_q and \"symbol_ids\" in qr and \"records\" in qr \\\n               and all"
+  }
+ },
+ {
+  "id": "M14",
+  "desc": "Q.8 removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "Q8a@v277:FAIL",
+   "Q8b@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if (qr[\"status\"] == \"OK\") != ok_expected:",
+   "new": "if False:"
+  }
+ },
+ {
+  "id": "M15",
+  "desc": "Q.3 does not stop Q.4-Q.8",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-T5@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "            qr_stopped = True\n        if not qr_stopped:",
+   "new": "            pass\n        if not qr_stopped:"
+  }
+ },
+ {
+  "id": "M16",
+  "desc": "X.3 removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "M3@v277:FAIL",
+   "X3b@v277:FAIL",
+   "X3c@v277:FAIL",
+   "Z1@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "elif packet_is_mapping != (stt == \"TRANSLATED_FROM_FROZEN_REGISTRY\"):  # X.3",
+   "new": "elif False:  # X.3"
+  }
+ },
+ {
+  "id": "M17",
+  "desc": "X.5 removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "C1@v277:FAIL",
+   "D2@v277:FAIL",
+   "D5@v277:FAIL",
+   "L2a2@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if not teq(tr[side][\"symbol_id\"], P[pk]):",
+   "new": "if False:"
+  }
+ },
+ {
+  "id": "M18",
+  "desc": "X.6 count threshold 2 -> 1",
+  "killed": true,
+  "rows_failing_v277": [
+   "X6a@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if len(cands) < 2:  # X.6 count",
+   "new": "if len(cands) < 1:  # X.6 count"
+  }
+ },
+ {
+  "id": "M19",
+  "desc": "G-2 query records not compared",
+  "killed": true,
+  "rows_failing_v277": [
+   "E1@v277:FAIL",
+   "E2@v277:FAIL",
+   "LQ1@v277:FAIL",
+   "O2@v277:FAIL",
+   "O3@v277:FAIL",
+   "TX-N2b@v277:FAIL",
+   "TX-T2@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if not teq(rec, records[rec[\"symbol_id\"]]):\n                        col.emit(\"RECORD_MISMATCH_WITH_ARTIFACT\", \"query_result.records[%d]\" % i)",
+   "new": "if False:\n                        col.emit(\"RECORD_MISMATCH_WITH_ARTIFACT\", \"query_result.records[%d]\" % i)"
+  }
+ },
+ {
+  "id": "M20",
+  "desc": "G-2 uses == instead of teq (True/1/1.0 equal)",
+  "killed": true,
+  "rows_failing_v277": [
+   "E1@v277:FAIL",
+   "TX-N2b@v277:FAIL",
+   "TX-T2@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if not teq(rec, records[rec[\"symbol_id\"]]):\n                        col.emit(\"RECORD_MISMATCH_WITH_ARTIFACT\", \"query_result",
+   "new": "if not rec == records[rec[\"symbol_id\"]]:\n                        col.emit(\"RECORD_MISMATCH_WITH_ARTIFACT\", \"query_result"
+  }
+ },
+ {
+  "id": "M21",
+  "desc": "G-3 source_script_family line removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-F4@v277:FAIL",
+   "TX-T1@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "(\"source_script_family\", S, lambda r: r.get(\"script_family\")),",
+   "new": ""
+  }
+ },
+ {
+  "id": "M22",
+  "desc": "G-3 target_script_family line removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-F4@v277:FAIL",
+   "TX-T1@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "(\"target_script_family\", G, lambda r: r.get(\"script_family\")),",
+   "new": ""
+  }
+ },
+ {
+  "id": "M23",
+  "desc": "G-3 meaning_invariant line removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-F4@v277:FAIL",
+   "TX-T1@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "(\"meaning_invariant\", S, lambda r: r.get(\"meaning_invariant\", [])),",
+   "new": ""
+  }
+ },
+ {
+  "id": "M24",
+  "desc": "G-3 symbolic_role line removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-F4@v277:FAIL",
+   "TX-N2a@v277:FAIL",
+   "TX-T1@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "(\"symbolic_role\", S, lambda r: role_norm(r.get(\"symbolic_role\", \"\"), stamp)),",
+   "new": ""
+  }
+ },
+ {
+  "id": "M25",
+  "desc": "G-4 role line removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-N2a@v277:FAIL",
+   "TX-T1@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "not teq(tr[\"symbolic_role\"], role_norm(Srec.get(\"symbolic_role\", \"\"), stamp)):",
+   "new": "False:"
+  }
+ },
+ {
+  "id": "M26",
+  "desc": "G-4 candidate visible_symbol line removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-T1@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if not teq(c[\"visible_symbol\"],\n                                   records[c[\"symbol_id\"]].get(\"visible_symbol\")):",
+   "new": "if False:"
+  }
+ },
+ {
+  "id": "M27",
+  "desc": "G-5 removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "M7@v277:FAIL",
+   "TX-T6@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if not teq(receipt.get(\"frozen_artifact_id\"), artifact[\"frozen_artifact_id\"]):",
+   "new": "if False:"
+  }
+ },
+ {
+  "id": "M28",
+  "desc": "G-5: absent receipt.frozen_artifact_id tolerated",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-T6@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if not teq(receipt.get(\"frozen_artifact_id\"), artifact[\"frozen_artifact_id\"]):",
+   "new": "if \"frozen_artifact_id\" in receipt and not teq(receipt[\"frozen_artifact_id\"], artifact[\"frozen_artifact_id\"]):"
+  }
+ },
+ {
+  "id": "M29",
+  "desc": "R-1 membership check removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-T3@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "            if G not in C:\n                r1_bad = True\n",
+   "new": ""
+  }
+ },
+ {
+  "id": "M30",
+  "desc": "R-1 ambiguity (distinct surfaces) check removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "VS1@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "                if len(surfaces) > 1:\n                    r1_bad = True\n",
+   "new": ""
+  }
+ },
+ {
+  "id": "M31",
+  "desc": "R-1 first-by-str(symbol_id) check removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "O3@v277:FAIL",
+   "R2@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "                if first is not G:\n                    r1_bad = True\n",
+   "new": ""
+  }
+ },
+ {
+  "id": "M32",
+  "desc": "R-2 removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "R4@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "            if len(C) != 0:",
+   "new": "            if False:"
+  }
+ },
+ {
+  "id": "M33",
+  "desc": "R-3 pairwise-distinct check removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "F08a@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "            if len(set(ids)) != len(ids):\n                r3_bad = True\n",
+   "new": ""
+  }
+ },
+ {
+  "id": "M34",
+  "desc": "R-3 distinct-surface check removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "VS1@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "            if len({normalized_surface(r) for r in C}) <= 1:\n                r3_bad = True\n",
+   "new": ""
+  }
+ },
+ {
+  "id": "M35",
+  "desc": "R-3 set equality removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "R3@v277:FAIL",
+   "VS1@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "            if set(ids) != {r[\"symbol_id\"] for r in C}:\n                r3_bad = True\n",
+   "new": ""
+  }
+ },
+ {
+  "id": "M36",
+  "desc": "role_norm ignores stamp (no NFC for current stamps)",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-N2a@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "return str(x).upper() if stamp == \"2.7.4\" else nfc(x).upper()\n\ndef family_norm",
+   "new": "return str(x).upper()\n\ndef family_norm"
+  }
+ },
+ {
+  "id": "M37",
+  "desc": "L4.2 uses != instead of is (1 accepted for True)",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-T6@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if bmap.get(k) is not expected:",
+   "new": "if bmap.get(k) != expected:"
+  }
+ },
+ {
+  "id": "M38",
+  "desc": "L4.3 module_id pairing not checked",
+  "killed": true,
+  "rows_failing_v277": [
+   "N3@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "elif pair not in ALLOW_LIST:",
+   "new": "elif False:"
+  }
+ },
+ {
+  "id": "M39",
+  "desc": "L4.5 UTC offset not checked",
+  "killed": true,
+  "rows_failing_v277": [
+   "N3@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "ts_ok = (off is not None and off == timedelta(0))",
+   "new": "ts_ok = True"
+  }
+ },
+ {
+  "id": "M40",
+  "desc": "2.7.7 removed from allow-list",
+  "killed": true,
+  "rows_failing_v277": [
+   "N4@v277:FAIL",
+   "TX-N1@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "(\"2.7.7\", \"EIT_PROGRAM_LANG_NOVA_Q_ANALYZER_V2_7_7\"),",
+   "new": ""
+  }
+ },
+ {
+  "id": "M41",
+  "desc": "L4.4 removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "N3@v277:FAIL",
+   "T8@v277:FAIL",
+   "TX-F5@v277:FAIL",
+   "TX-N1@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if packet_is_mapping and not teq(P.get(\"packet_version\"), stamp):  # L4.4",
+   "new": "if False:  # L4.4"
+  }
+ },
+ {
+  "id": "M42",
+  "desc": "collector cap 32 -> 31",
+  "killed": true,
+  "rows_failing_v277": [
+   "S4@v277:FAIL",
+   "S4a@v277:FAIL",
+   "S4b@v277:FAIL",
+   "S4c@v277:FAIL",
+   "TX-INV@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "FAILURE_CAP = 32",
+   "new": "FAILURE_CAP = 31"
+  }
+ },
+ {
+  "id": "M43",
+  "desc": "collector P-2 dedupe removed",
+  "killed": false,
+  "rows_failing_v277": [],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 0,
+  "diff": {
+   "old": "        if (code, detail) in self.seen:\n            return\n",
+   "new": ""
+  }
+ },
+ {
+  "id": "M44",
+  "desc": "scan depth limit 32 -> 33",
+  "killed": true,
+  "rows_failing_v277": [
+   "T3@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "DEPTH_LIMIT = 32",
+   "new": "DEPTH_LIMIT = 33"
+  }
+ },
+ {
+  "id": "M45",
+  "desc": "integer range check removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "BI1@v277:FAIL",
+   "BI2@v277:FAIL",
+   "BI4@v277:FAIL",
+   "RT1@v277:FAIL",
+   "Z1@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if node < INT_MIN or node > INT_MAX:",
+   "new": "if False:"
+  }
+ },
+ {
+  "id": "M46",
+  "desc": "0.10 record-key identity removed",
+  "killed": true,
+  "rows_failing_v277": [
+   "D3@v277:FAIL",
+   "F09a@v277:FAIL",
+   "F09b@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if \"symbol_id\" not in rec or type(rec[\"symbol_id\"]) is not str or not teq(rec[\"symbol_id\"], k):",
+   "new": "if False:"
+  }
+ },
+ {
+  "id": "M47",
+  "desc": "0.5 boundary None accepted",
+  "killed": true,
+  "rows_failing_v277": [
+   "B1@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if type(boundary) is not dict and \"boundary\" in receipt:",
+   "new": "if type(boundary) is not dict and receipt.get(\"boundary\") is not None:"
+  }
+ },
+ {
+  "id": "M48",
+  "desc": "S-5 order: anchor before strict_mode",
+  "killed": true,
+  "rows_failing_v277": [
+   "SM2@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "    if type(strict_mode) is not bool:  # 0.1a",
+   "new": "    if type(strict_mode) is not bool and expected_artifact_sha256 is None:  # 0.1a"
+  }
+ },
+ {
+  "id": "M49",
+  "desc": "REVERT F2: 1a.1 requires lowercase hex",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-F2@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "    if not (type(rs) is str and len(rs) == 64):  # 1a.1",
+   "new": "    if not _well_formed_hash(rs):  # 1a.1"
+  }
+ },
+ {
+  "id": "M50",
+  "desc": "L2 reported PASS when L2b skipped",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-T6@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "        layers[\"L2\"] = \"NOT_EVALUATED\" if not l2a_fail else \"FAIL\"",
+   "new": "        layers[\"L2\"] = \"PASS\""
+  }
+ },
+ {
+  "id": "M51",
+  "desc": "L3_ANCHOR PASS without artifact",
+  "killed": true,
+  "rows_failing_v277": [
+   "AN1@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "    elif expected_artifact_sha256 is not None and ah_ok:",
+   "new": "    elif expected_artifact_sha256 is not None:"
+  }
+ },
+ {
+  "id": "M52",
+  "desc": "assurance ignores L3_STATE",
+  "killed": true,
+  "rows_failing_v277": [
+   "N4@v277:FAIL",
+   "TX-INV@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "    elif layers[\"L3_STATE\"] != \"PASS\":\n        assurance = \"ARTIFACT_ANCHORED\"",
+   "new": "    elif False:\n        assurance = \"ARTIFACT_ANCHORED\""
+  }
+ },
+ {
+  "id": "M53",
+  "desc": "X.4 also reports packet_sha256 (key-ownership violation)",
+  "killed": true,
+  "rows_failing_v277": [
+   "X4o@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "\"symbolic_role\", \"meaning_invariant\", \"restored_state_sha256\"]),",
+   "new": "\"symbolic_role\", \"meaning_invariant\", \"restored_state_sha256\", \"packet_sha256\"]),"
+  }
+ },
+ {
+  "id": "M54",
+  "desc": "Q.1 applied to legacy stamp too",
+  "killed": true,
+  "rows_failing_v277": [
+   "LQ1@v277:FAIL",
+   "LQ2@v277:FAIL",
+   "N4@v277:FAIL",
+   "NC19@v277:FAIL",
+   "NC9@v277:FAIL",
+   "TX-T3@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if not legacy and \"status\" not in qr:  # Q.1",
+   "new": "if \"status\" not in qr:  # Q.1"
+  }
+ },
+ {
+  "id": "M55",
+  "desc": "teq: NaN not equal to NaN",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-N2b@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "        return math.isnan(a) and math.isnan(b)",
+   "new": "        return False"
+  }
+ },
+ {
+  "id": "M57",
+  "desc": "REVERT F1: L0 path reads declared receipt_sha256 from unscanned receipt",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-F1@v277:FAIL",
+   "TX-F1b@v277:FAIL",
+   "Z1@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "    declared = None\n    return {\n        \"check_type\": \"VERIFY_RESTORED_QUERY_RECEIPT\",\n        \"verified\": False,",
+   "new": "    declared = receipt.get(\"receipt_sha256\") if type(receipt) is dict else None\n    return {\n        \"check_type\": \"VERIFY_RESTORED_QUERY_RECEIPT\",\n        \"verified\": False,"
+  }
+ },
+ {
+  "id": "M58",
+  "desc": "F1 variant: L0 returns declared value only after a successful scan (Q4 narrowing violated)",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-F1@v277:FAIL",
+   "TX-F1b@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "    declared = None\n    return {\n        \"check_type\": \"VERIFY_RESTORED_QUERY_RECEIPT\",\n        \"verified\": False,",
+   "new": "    declared = \"0\" * 64\n    return {\n        \"check_type\": \"VERIFY_RESTORED_QUERY_RECEIPT\",\n        \"verified\": False,"
+  }
+ },
+ {
+  "id": "M59",
+  "desc": "REVERT F4: G-3 S-lines before G-lines",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-F4@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "                (\"target_script_family\", G, lambda r: r.get(\"script_family\")),\n                (\"source_visible_symbol\", S, lambda r: r.get(\"visible_symbol\")),",
+   "new": "                (\"source_visible_symbol\", S, lambda r: r.get(\"visible_symbol\")),\n                (\"target_script_family\", G, lambda r: r.get(\"script_family\")),"
+  }
+ },
+ {
+  "id": "M60",
+  "desc": "REVERT F5: L4.4 skipped when packet_version absent",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-F5@v277:FAIL",
+   "TX-N1@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "if packet_is_mapping and not teq(P.get(\"packet_version\"), stamp):  # L4.4",
+   "new": "if packet_is_mapping and \"packet_version\" in P and not teq(P[\"packet_version\"], stamp):  # L4.4"
+  }
+ },
+ {
+  "id": "M61",
+  "desc": "F5 variant: L4.4 failure emitted but layers.L4 left PASS",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-N1@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "            col.emit(\"POLICY_RECEIPT_VERSION_NOT_ALLOWED\", \"translation_packet.packet_version\")\n            layers[\"L4\"] = \"FAIL\"",
+   "new": "            col.emit(\"POLICY_RECEIPT_VERSION_NOT_ALLOWED\", \"translation_packet.packet_version\")"
+  }
+ },
+ {
+  "id": "M62",
+  "desc": "Q4 broken on L1+: returned receipt_sha256 = None everywhere",
+  "killed": true,
+  "rows_failing_v277": [
+   "TX-Q4@v277:FAIL"
+  ],
+  "K1": [
+   "RISK_PRESENT"
+  ],
+  "existing_v277_rc": 0,
+  "existing_v277_failed": [],
+  "rg4_rc": 1,
+  "diff": {
+   "old": "    declared = receipt.get(\"receipt_sha256\")\n    return {",
+   "new": "    declared = None\n    return {"
+  }
+ }
+]

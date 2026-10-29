@@ -1,0 +1,171 @@
+{
+ "artifact": {
+  "frozen_artifact_id": "FROZEN-LEG",
+  "frozen_registry_snapshot": {
+   "registry_records": {
+    "LAT-SRC": {
+     "symbol_id": "LAT-SRC",
+     "script_family": "LATIN",
+     "visible_symbol": "SOURCE",
+     "symbolic_role": "SOURCE_NODE",
+     "meaning_invariant": [
+      "source",
+      "origin"
+     ],
+     "aliases": [
+      "origin"
+     ]
+    },
+    "CYR-SRC": {
+     "symbol_id": "CYR-SRC",
+     "script_family": "CYRILLIC",
+     "visible_symbol": "ИЗВОР",
+     "symbolic_role": "SOURCE_NODE",
+     "meaning_invariant": [
+      "source",
+      "origin"
+     ],
+     "aliases": [
+      "извор"
+     ]
+    },
+    "LAT-BANK": {
+     "symbol_id": "LAT-BANK",
+     "script_family": "LATIN",
+     "visible_symbol": "BANK",
+     "symbolic_role": "BANK_NODE",
+     "meaning_invariant": [
+      "money"
+     ],
+     "aliases": []
+    },
+    "CYR-BANK2": {
+     "symbol_id": "CYR-BANK2",
+     "script_family": "CYRILLIC",
+     "visible_symbol": "БРЕГ",
+     "symbolic_role": "BANK_NODE",
+     "meaning_invariant": [
+      "river edge"
+     ],
+     "aliases": []
+    },
+    "CYR-BANK1": {
+     "symbol_id": "CYR-BANK1",
+     "script_family": "CYRILLIC",
+     "visible_symbol": "БАНКА",
+     "symbolic_role": "BANK_NODE",
+     "meaning_invariant": [
+      "money"
+     ],
+     "aliases": []
+    },
+    "LAT-OTHER": {
+     "symbol_id": "LAT-OTHER",
+     "script_family": "LATIN",
+     "visible_symbol": "OTHER",
+     "symbolic_role": "OTHER_NODE",
+     "meaning_invariant": [
+      "m-lat-other"
+     ],
+     "aliases": []
+    },
+    "LAT-KEYX": {
+     "symbol_id": "LAT-KEYY",
+     "script_family": "LATIN",
+     "visible_symbol": "KEYX",
+     "symbolic_role": "KEY_NODE",
+     "meaning_invariant": [
+      "m-lat-keyy"
+     ],
+     "aliases": []
+    }
+   }
+  }
+ },
+ "receipt": {
+  "receipt_type": "EIT_RESTORED_REGISTRY_QUERY_RECEIPT",
+  "receipt_version": "2.7.4",
+  "generated_at_utc": "2026-10-23T13:37:06.405348+00:00",
+  "module_id": "EIT_PROGRAM_LANG_NOVA_Q_ANALYZER_V2_7_4",
+  "author": "Mr. Toni Mladenovski",
+  "project_origin_date": "18 April 2026",
+  "restored_state_id": "RS-LEG",
+  "release_id": "REL-LEG",
+  "frozen_artifact_id": "FROZEN-LEG",
+  "frozen_artifact_sha256": "87a77fc3ff0d11ccdef344568f53cda5778245bbd75da4615d78f2fe3f74157d",
+  "restored_state_sha256": "7a5c89f682bd555b3c78edc0be19a954ccbe879028249200d4794e53e539a083",
+  "current_version_id": "V-LEG",
+  "query_result": {
+   "query": "SOURCE",
+   "mode": "visible_symbol",
+   "reason": "MATCH_VISIBLE_SYMBOL",
+   "found": true,
+   "match_count": 1,
+   "symbol_ids": [
+    "LAT-SRC"
+   ],
+   "records": [
+    {
+     "symbol_id": "LAT-SRC",
+     "script_family": "LATIN",
+     "visible_symbol": "SOURCE",
+     "symbolic_role": "SOURCE_NODE",
+     "meaning_invariant": [
+      "source",
+      "origin"
+     ],
+     "aliases": [
+      "origin"
+     ]
+    }
+   ],
+   "index_sha256": "3274bbda8261aa1fb68b5ca32577dc32dd30dc709f7ab41d91bac4ce93223bd4",
+   "frozen_artifact_sha256": "87a77fc3ff0d11ccdef344568f53cda5778245bbd75da4615d78f2fe3f74157d",
+   "read_only": true,
+   "safety": {
+    "restored_registry_query_runtime": true,
+    "read_only_query_mode": true,
+    "restored_registry_remains_frozen": true,
+    "mutation_guard_enforced": true,
+    "not_blockchain": true,
+    "not_legal_authority": true,
+    "not_official_linguistic_authority": true,
+    "not_perfect_translation_claim": true,
+    "zero_error_is_model_axiom": true,
+    "not_empirical_claim": true,
+    "not_biological_consciousness": true,
+    "not_sentience": true,
+    "not_asi_proof": true,
+    "not_physical_quantum_os": true,
+    "real_world_control": false,
+    "not_proof": true
+   }
+  },
+  "translation_result": {},
+  "boundary": {
+   "restored_registry_query_runtime": true,
+   "read_only_query_mode": true,
+   "restored_registry_remains_frozen": true,
+   "mutation_guard_enforced": true,
+   "not_blockchain": true,
+   "not_legal_authority": true,
+   "not_official_linguistic_authority": true,
+   "not_perfect_translation_claim": true,
+   "zero_error_is_model_axiom": true,
+   "not_empirical_claim": true,
+   "not_biological_consciousness": true,
+   "not_sentience": true,
+   "not_asi_proof": true,
+   "not_physical_quantum_os": true,
+   "real_world_control": false,
+   "not_proof": true
+  },
+  "receipt_sha256": "f208e29075b7a8128bf8e2789ff6021ea4ebe6c0aa84b07b5968d0dfe8a53e9f"
+ },
+ "provenance": {
+  "commit": "2b7dd628de411b5bb421310ead16b998d61a7f54",
+  "package_version": "2.7.5",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "call": "query_restored_registry(st,'SOURCE') over an artifact whose record key LAT-KEYX stores symbol_id LAT-KEYY"
+ }
+}

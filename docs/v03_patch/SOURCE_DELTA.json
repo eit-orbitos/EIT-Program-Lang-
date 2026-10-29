@@ -1,0 +1,36 @@
+{
+  "baseline_sha256": "df60039d15207ee526cd8045e5abea2694c781ccb7a27a15a285c2f42872168d",
+  "delta": [
+    {
+      "path": "successor_tree/eit_program_lang/eit_v277_builder_candidate.py",
+      "action": "MODIFY",
+      "baseline_sha256": "3c1f3ac799211c298d378ad87556975c38447023f92cc3d18d4bda7dd48ab331",
+      "candidate_sha256": "fe305aabe6e4b773ceef5100d8d4eed7a9820f8ba199735e0d3d7cce504be590",
+      "size_bytes": 10189
+    },
+    {
+      "path": "successor_tree/eit_program_lang/frozen_translation_lookup.py",
+      "action": "MODIFY",
+      "baseline_sha256": "6b8d649e58ae4ff694d9bec0a9a8aa13b269cc5f6d73a1868ddf1b8159081d63",
+      "candidate_sha256": "6c7bf16547f527782a746371fa5fc375b1b38c1c873e8178b145312eb1bf89b7",
+      "size_bytes": 6274
+    },
+    {
+      "path": "successor_tree/eit_program_lang/s1_sp1_adapter.py",
+      "action": "ADD",
+      "baseline_sha256": null,
+      "candidate_sha256": "caf16413d42a3ffa737b2ea719c38c7d882d27aea5183163c9c52f10542641a3",
+      "size_bytes": 23058
+    },
+    {
+      "path": "successor_tree/eit_program_lang/s1_sp1_core.py",
+      "action": "ADD",
+      "baseline_sha256": null,
+      "candidate_sha256": "a2a9551e9354ee4912aa98567b57685ef4d6fdcbd6721fcf466193185123c7b6",
+      "size_bytes": 13053
+    }
+  ],
+  "unchanged_original_files": 123,
+  "deleted_files": [],
+  "check_scope": "byte comparison only, not project execution or semantic verification"
+}

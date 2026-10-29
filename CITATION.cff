@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "RESEARCH_CANDIDATE — NOT FINAL — KNOWN BLOCKERS LISTED. If you use this candidate, cite this exact version and the archive SHA-256 recorded in its external R2 custody receipt."
+title: "EIT Program Lang V2.7.7 — Research Candidate R2 (receipt verifier, NOT FINAL)"
+type: software
+authors:
+  - family-names: "Mladenovski"
+    given-names: "Toni"
+    orcid: "https://orcid.org/0009-0009-8343-662X"
+version: "2.7.7-research.1"
+license: "PolyForm-Noncommercial-1.0.0"
+repository-code: "https://github.com/eit-orbitos/EIT-Program-Lang-"
+keywords:
+  - "receipt verification"
+  - "provenance anchoring"
+  - "research software"
+  - "deterministic validation"
+abstract: "Unpublished R2 research candidate with six historical Tasklet-path documents excluded and disclosed. R2 runtime NOT_RUN; Tasklet independently replayed only exact R1 bytes. Code = V2.7.7 Tasklet Fix Candidate V0.3 unchanged; verifier contract V0.5.9 (immutable). FINAL_V277_RELEASE HOLD; C3-E NOT_IMPLEMENTED; F01 0/19 operationally verified; B4 NOT_CLOSED; RG6 OPEN; Gate-4 NOT_SATISFIED. 55 derived blockers listed. Software/documentary validation is not physical-law or external scientific validation."

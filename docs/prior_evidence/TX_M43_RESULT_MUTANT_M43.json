@@ -1,0 +1,93 @@
+{
+ "target": "/tmp/m43dir/receipt_verifier_candidate.py",
+ "expected_sha256": "225db49a8b7df7f12984f15779e5831ad124d918f70185b9818094547089b376",
+ "cases": {
+  "TX-M43-a": {
+   "outcome": "FAIL",
+   "expected": {
+    "n_entries": 32,
+    "truncated": false,
+    "occurred": 34,
+    "last": [
+     "C",
+     "d31"
+    ]
+   },
+   "observed": {
+    "n_entries": 33,
+    "truncated": true,
+    "occurred": 34,
+    "last": [
+     "FAILURES_TRUNCATED",
+     "failures"
+    ]
+   }
+  },
+  "TX-M43-b": {
+   "outcome": "FAIL",
+   "expected": {
+    "n_entries": 32,
+    "truncated": false,
+    "occurred": 33,
+    "last": [
+     "C",
+     "d31"
+    ]
+   },
+   "observed": {
+    "n_entries": 33,
+    "truncated": true,
+    "occurred": 33,
+    "last": [
+     "FAILURES_TRUNCATED",
+     "failures"
+    ]
+   }
+  },
+  "TX-M43-c": {
+   "outcome": "PASS",
+   "expected": {
+    "n_entries": 33,
+    "truncated": true,
+    "occurred": 33,
+    "last": [
+     "FAILURES_TRUNCATED",
+     "failures"
+    ]
+   },
+   "observed": {
+    "n_entries": 33,
+    "truncated": true,
+    "occurred": 33,
+    "last": [
+     "FAILURES_TRUNCATED",
+     "failures"
+    ]
+   }
+  },
+  "TX-M43-d": {
+   "outcome": "FAIL",
+   "expected": {
+    "n_entries": 1,
+    "truncated": false,
+    "occurred": 2,
+    "last": [
+     "C",
+     "x"
+    ]
+   },
+   "observed": {
+    "n_entries": 2,
+    "truncated": false,
+    "occurred": 2,
+    "last": [
+     "C",
+     "x"
+    ]
+   }
+  }
+ },
+ "row": "TX-M43",
+ "observed_sha256": "225db49a8b7df7f12984f15779e5831ad124d918f70185b9818094547089b376",
+ "outcome": "FAIL"
+}

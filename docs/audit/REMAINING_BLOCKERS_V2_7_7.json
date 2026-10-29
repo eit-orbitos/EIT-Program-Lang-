@@ -1,0 +1,1567 @@
+{
+ "document_class": "REMAINING_BLOCKERS_REGISTER_GENERATED_BY_CLAUDE_FROM_DERIVED_EXTRACT",
+ "label": "RESEARCH_CANDIDATE — NOT FINAL — KNOWN BLOCKERS LISTED",
+ "version": "2.7.7-research.1",
+ "generated": "2026-10-29",
+ "status_constants": {
+  "FINAL_V277_RELEASE": "HOLD",
+  "C3_E": "NOT_IMPLEMENTED",
+  "F01": "0/19 OPERATIONALLY_VERIFIED",
+  "B4": "NOT_CLOSED",
+  "RG6": "OPEN",
+  "GATE_4": "NOT_SATISFIED"
+ },
+ "source_derived_extract": {
+  "file": "55_BLOCKER_BASELINE_DERIVED_FOR_REVIEW.json",
+  "sha256": "9b3f233e24fa281604944fb499fba879f612e3d9aa9992d29773c53a4d1700b9",
+  "class": "DERIVED_EXTRACT_FROM_55_BLOCKER_TRACEABILITY_ADDENDUM_NOT_ORIGINAL_64_RECORD_REGISTER"
+ },
+ "source_traceability_addendum": {
+  "file": "55_BLOCKER_TRACEABILITY_ADDENDUM_ORIGINAL_COPY.json",
+  "sha256": "fb8bdcce108c848db24546594661faade0f4473afb3841626d3edda296c674d0",
+  "included": false,
+  "reason": "contains Tasklet sandbox paths; referenced by hash only"
+ },
+ "original_register": {
+  "file": "FINAL_BLOCKER_MATRIX_V0.1.json",
+  "sha256_reported": "1c2b4fe5b6c7ff81733384a44d20bb601d95021e395be41c466201d9daba88c9",
+  "bytes_reported": 143163,
+  "supplied": false,
+  "prior_reported_verified_rows": 9,
+  "verified_rows_status": "REPORTED_NOT_REVERIFIED"
+ },
+ "not_the_original_64_record_register": true,
+ "gate_counts": {
+  "B4": 16,
+  "F01": 19,
+  "GATE4": 11,
+  "IR04-O": 20,
+  "IR04-P": 20,
+  "PUBLICATION": 3,
+  "RG6": 31
+ },
+ "blocked_rows": [
+  {
+   "requirement_id": "F01-01",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Included offline operation/reliance scope and owner-bound context/version correspondence. Candidate selection F01-OS-001 and exact preserved archive bytes are already evidenced; do not request them again.",
+   "next_action": "Included offline operation/reliance scope and owner-bound context/version correspondence. Candidate selection F01-OS-001 and exact preserved archive bytes are already evidenced; do not request them again.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "F01-02",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Identity and explicit role/authority of the actual controller/custodian for the selected application/context/root; bind that statement to actual resources.",
+   "next_action": "Identity and explicit role/authority of the actual controller/custodian for the selected application/context/root; bind that statement to actual resources.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "F01-03",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Owner-selected context ID, operation boundaries and lifetime; do not use a Tasklet evidence-folder ID as the operational context.",
+   "next_action": "Owner-selected context ID, operation boundaries and lifetime; do not use a Tasklet evidence-folder ID as the operational context.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "F01-04",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Selected B query/B translation/B joint/T translation routes, actual caller/call-site mapping, native-versus-wire boundary and explicit excluded-Q disposition.",
+   "next_action": "Selected B query/B translation/B joint/T translation routes, actual caller/call-site mapping, native-versus-wire boundary and explicit excluded-Q disposition.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "F01-05",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Owner-attested complete direct/wrapper/dynamic/external caller inventory, intended migration and explicit unknown/uninspected caller disposition.",
+   "next_action": "Owner-attested complete direct/wrapper/dynamic/external caller inventory, intended migration and explicit unknown/uninspected caller disposition.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "F01-06",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Exact owner-selected bootstrap path/hash, transitive offline dependency bytes/load order/namespaces and evidence all selected B/T routes/catch sites share one core/error class object.",
+   "next_action": "Exact owner-selected bootstrap path/hash, transitive offline dependency bytes/load order/namespaces and evidence all selected B/T routes/catch sites share one core/error class object.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "F01-07",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Actual independently controlled root/descriptor locator, original bytes, SHA-256 and authenticated context binding; do not derive authority from a receipt's own claimed hash.",
+   "next_action": "Actual independently controlled root/descriptor locator, original bytes, SHA-256 and authenticated context binding; do not derive authority from a receipt's own claimed hash.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "F01-08",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Actual root custodian/operator, access permissions/custody, update authority, revocation, rollback and version/lifetime controls.",
+   "next_action": "Actual root custodian/operator, access permissions/custody, update authority, revocation, rollback and version/lifetime controls.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "F01-09",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Original selected registry artifact/state files, byte-level digests, origin/custody and owner-context provenance; do not substitute the Analyzer software ZIP hash.",
+   "next_action": "Original selected registry artifact/state files, byte-level digests, origin/custody and owner-context provenance; do not substitute the Analyzer software ZIP hash.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "F01-10",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Actual mapped artifact, explicit sort/separator/encoding/exclusion domain, trusted expected digest and owner-approved caller/domain correspondence.",
+   "next_action": "Actual mapped artifact, explicit sort/separator/encoding/exclusion domain, trusted expected digest and owner-approved caller/domain correspondence.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "F01-11",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Actual IV input artifact bytes/object identity, serializer descriptor, expected digest and independently trusted binding to the same selected context.",
+   "next_action": "Actual IV input artifact bytes/object identity, serializer descriptor, expected digest and independently trusted binding to the same selected context.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "F01-12",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Actual state body, compact serializer/default/encoding/exclusion description, expected digest and owner-approved direct-B/nested-T correspondence.",
+   "next_action": "Actual state body, compact serializer/default/encoding/exclusion description, expected digest and owner-approved direct-B/nested-T correspondence.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "F01-13",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Owner-selected declared layout and real artifact/state identities, complete B-direct correspondence predicates and their reviewed invalid-input behavior.",
+   "next_action": "Owner-selected declared layout and real artifact/state identities, complete B-direct correspondence predicates and their reviewed invalid-input behavior.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "F01-14",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Original operation intent, exact query/source/target bytes, request-to-context/artifact binding and approved boundary encoding.",
+   "next_action": "Original operation intent, exact query/source/target bytes, request-to-context/artifact binding and approved boundary encoding.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "F01-15",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Owner-selected actual snapshot/locking/ownership mechanism and lifetime, check-before-use identity/mutation exclusion, applicable concurrency/cancellation evidence.",
+   "next_action": "Owner-selected actual snapshot/locking/ownership mechanism and lifetime, check-before-use identity/mutation exclusion, applicable concurrency/cancellation evidence.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "F01-16",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Chosen caller-visible API/serializer, output-byte domain and ceiling, buffer ownership, success commit/cancellation/diagnostic channels and complete no-partial-output oracle.",
+   "next_action": "Chosen caller-visible API/serializer, output-byte domain and ceiling, buffer ownership, success commit/cancellation/diagnostic channels and complete no-partial-output oracle.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "F01-17",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Owner-selected absolute isolated workspace, permissions, protected source inventory and operation lifetime.",
+   "next_action": "Owner-selected absolute isolated workspace, permissions, protected source inventory and operation lifetime.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "F01-18",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Actual absolute output directory, allowed filenames/write paths and exact permitted operations; distinguish review artifacts from future operational outputs.",
+   "next_action": "Actual absolute output directory, allowed filenames/write paths and exact permitted operations; distinguish review artifacts from future operational outputs.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "F01-19",
+   "mapped_gates": [
+    "F01",
+    "IR04-P",
+    "IR04-O"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual offline context/root controller; independently provisioned executor supplies observations",
+   "missing_evidence": "Context-bound actual owner scope decision referencing selected routes/root/workspace and exact reviewed plan/source pins. F01-OS-001 is already valid for documentary preparation; prior S1/CN/Option-A decisions remain valid within their scopes.",
+   "next_action": "Context-bound actual owner scope decision referencing selected routes/root/workspace and exact reviewed plan/source pins. F01-OS-001 is already valid for documentary preparation; prior S1/CN/Option-A decisions remain valid within their scopes.",
+   "source_artifacts": [
+    {
+     "artifact": "F01_OWNER_BINDING_MATRIX.json",
+     "sha256": "cb697bd4341205a6ca4e3ebffec46adf600455ac5760a5b1735e0e718883f792"
+    }
+   ]
+  },
+  {
+   "requirement_id": "IR04-P",
+   "mapped_gates": [
+    "IR04-P",
+    "B4",
+    "RG6",
+    "GATE4"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Independent plan reviewer plus actual controller; author authorizes scoped preparation",
+   "missing_evidence": "Actual owner/context/routes/root/workspace bindings; Exact complete plan/source/dependency/allowlist/output pins; Loader/shared-exception-class and atomic-publication requirements; Independent non-drafter review, contributions/conflicts, exact hashes, findings and dispositions",
+   "next_action": "Review exact runtime-build and current fixture preparation; obtain actual owner/context/route/environment/allowlist pins and independent plan disposition. Do not repeat the controlled-preparation approval.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "IR04-O",
+   "mapped_gates": [
+    "IR04-O",
+    "B4",
+    "RG6",
+    "GATE4"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Independent fixture/oracle reviewer; fixture/runner drafter; actual controller",
+   "missing_evidence": "Owner-bound artifact/state/request/anchor bytes with provenance/time; Independently established expected outcomes and phase/error mappings; Per-case controls and expected rejection versus functional failure/invalid fixture/harness error/global stop; Runner/instrumentation/environment pins and independent fixture/oracle approval",
+   "next_action": "Review the separate IR04-O candidate; instantiate/pin runner/provider/supervisor and owner inputs, independently establish expected outcomes, then issue scoped oracle disposition. Execution GO remains separate.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "N-1",
+   "mapped_gates": [
+    "B4",
+    "RG6",
+    "GATE4"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Exact owner-bound included B/T source matching fixtures: adopted global ID→visible→aliases→sound_hint tiers, full winning-tier candidate set, distinct-raw-ID ambiguity and no insertion-order selection; identify applicable/excluded endpoints and §13/B4 causal consequences.",
+   "next_action": "Exact owner-bound included B/T source matching fixtures: adopted global ID→visible→aliases→sound_hint tiers, full winning-tier candidate set, distinct-raw-ID ambiguity and no insertion-order selection; identify applicable/excluded endpoints and §13/B4 causal consequences. Obtain IR04-P/O and separately authorized execution where needed.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "N-5",
+   "mapped_gates": [
+    "B4",
+    "RG6",
+    "GATE4"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Exact owner-bound raw-ID/NFC/source-resolution AND translation fixtures, including named-target/ambiguity/no-source/negative-equivalence controls. Preserve stored raw IDs and bind unchanged verifier semantics; no blanket raw-ID NO_MATCH waiver.",
+   "next_action": "Exact owner-bound raw-ID/NFC/source-resolution AND translation fixtures, including named-target/ambiguity/no-source/negative-equivalence controls. Preserve stored raw IDs and bind unchanged verifier semantics; no blanket raw-ID NO_MATCH waiver. Obtain IR04-P/O and separately authorized execution where needed.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "N-6",
+   "mapped_gates": [
+    "B4",
+    "RG6",
+    "GATE4"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Exact full-record/optional-field expectations for None/string-alias/rendering cases under accepted rules, including unrelated record validation and applicable endpoints. Do not replace typed rejection/allowed null behavior with str(None).",
+   "next_action": "Exact full-record/optional-field expectations for None/string-alias/rendering cases under accepted rules, including unrelated record validation and applicable endpoints. Do not replace typed rejection/allowed null behavior with str(None). Obtain IR04-P/O and separately authorized execution where needed.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "N-7",
+   "mapped_gates": [
+    "B4",
+    "RG6",
+    "GATE4"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Actual owner caller snapshot/publication evidence: private copies/no aliasing, one joint source decision, mutation/cancellation/structural-failure controls and no partial publication at the selected real boundary.",
+   "next_action": "Actual owner caller snapshot/publication evidence: private copies/no aliasing, one joint source decision, mutation/cancellation/structural-failure controls and no partial publication at the selected real boundary. Obtain IR04-P/O and separately authorized execution where needed.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "M6",
+   "mapped_gates": [
+    "B4",
+    "RG6",
+    "GATE4"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Actual owner state/hash-domain evidence and approved missing-hash denial fixtures; demonstrate correct pre-serving/integrity order on included routes, not merely a consistent synthetic state.",
+   "next_action": "Actual owner state/hash-domain evidence and approved missing-hash denial fixtures; demonstrate correct pre-serving/integrity order on included routes, not merely a consistent synthetic state. Obtain IR04-P/O and separately authorized execution where needed.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "M13",
+   "mapped_gates": [
+    "B4",
+    "RG6",
+    "GATE4"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Original audited provenance-check mutant definition/bytes and applicable approved kill/control/regression evidence, or an explicit evidenced disposition. Distinguish it from synthetic callback/provenance guard controls; do not relabel synthetic control as original mutant closure.",
+   "next_action": "Original audited provenance-check mutant definition/bytes and applicable approved kill/control/regression evidence, or an explicit evidenced disposition. Distinguish it from synthetic callback/provenance guard controls; do not relabel synthetic control as original mutant closure. Obtain IR04-P/O and separately authorized execution where needed.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "M15",
+   "mapped_gates": [
+    "B4",
+    "RG6",
+    "GATE4"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Original audited required-field-check mutant definition/bytes and applicable approved incomplete-receipt/record kill/control/regression evidence, or explicit evidenced disposition. Distinguish original obligation from synthetic field-removal/guard controls.",
+   "next_action": "Original audited required-field-check mutant definition/bytes and applicable approved incomplete-receipt/record kill/control/regression evidence, or explicit evidenced disposition. Distinguish original obligation from synthetic field-removal/guard controls. Obtain IR04-P/O and separately authorized execution where needed.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "B4-FORGED-ACCEPTANCE",
+   "mapped_gates": [
+    "B4",
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "No unresolved mandatory §13 forged-acceptance defect on the exact changed candidate",
+   "next_action": "Provide item-level causal nexus, exact independent evidence and no-unresolved-mandatory-blocker confirmation; R-2 nonreplay remains a risk, not universal blocker by label.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "SCHEDULE-B-B1-A-D",
+   "mapped_gates": [
+    "B4",
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Affirmative item-level causal evidence for B1(a)–(d), direct low-level construction and correct normal-serving HIT on identical inputs",
+   "next_action": "UNKNOWN_OR_MIXED remains OPEN_BLOCKING. No CAPTURE-02 exemption or inferred design-residual waiver.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "C3E-CONSUMER-BINDINGS",
+   "mapped_gates": [
+    "B4",
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual producer/verifier/enforcing-consumer controller and independent technical reviewer",
+   "missing_evidence": "Actual producer/verifier/enforcing consumer, entrypoints/config/root ownership/deployment/routing bindings",
+   "next_action": "Supply authentic bindings; F01 candidate selection is not enforcing consumer deployment. No C3-D election inferred.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "CE-10A-STAMPS",
+   "mapped_gates": [
+    "B4",
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual producer/verifier/enforcing-consumer controller and independent technical reviewer",
+   "missing_evidence": "Independently approved exact-consumer controls for 2.7.4/2.7.6/2.7.7/unknown and stamp validation",
+   "next_action": "Provide pinned fixtures and gate-specific stage/error/side-effect oracle. Stamp pass is not C5 or authenticity.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "CE-10B-C5",
+   "mapped_gates": [
+    "B4",
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual producer/verifier/enforcing-consumer controller and independent technical reviewer",
+   "missing_evidence": "Applicable semantic absence/source truth on independently trusted committed inputs or fail-closed reliance",
+   "next_action": "Approve exact C5 applicability and semantic oracle; preserve producer-authenticity nonclaim.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "C3E-BYPASS-ROLLBACK",
+   "mapped_gates": [
+    "B4",
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Actual producer/verifier/enforcing-consumer controller and independent technical reviewer",
+   "missing_evidence": "Consumer enforcement across bypass/downgrade/restamping/cache/batch/replay/restart/config rollback",
+   "next_action": "Supply routing/lifetime/control evidence; risks unverified, not proven exploits.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "B4-CLOSURE-AUTHORITY",
+   "mapped_gates": [
+    "B4",
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Author/governance; authorized operator only after exact scoped GO",
+   "missing_evidence": "All mandatory criteria supported, independent final confirmation/receipt/closure sheet and separate author closure",
+   "next_action": "Do not generate a B4 Closure Attestation until substantive evidence AND required authority are present.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "S13-N-3",
+   "mapped_gates": [
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Malformed restored state can crash (denial) in query path. — individually establish applicable §13 disposition and changed-path consequences",
+   "next_action": "Record per-item failure/affected/mitigation/risk/disposition and mandatory-forged-acceptance nexus. Resolve only applicable obligations; no invented production test mandate.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "S13-N-4",
+   "mapped_gates": [
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Canonicalization collisions; distinct values may serialize alike; index hash order-dependent. — individually establish applicable §13 disposition and changed-path consequences",
+   "next_action": "Record per-item failure/affected/mitigation/risk/disposition and mandatory-forged-acceptance nexus. Resolve only applicable obligations; no invented production test mandate.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "S13-N-8",
+   "mapped_gates": [
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "(a) upload-time inventory break; (b) pin-check weakness; (d) supply-chain drift; (e) checkout credential exposure. N-8(b) defined, not executed; (a),(d),(e) not addressed; (d) regression. — individually establish applicable §13 disposition and changed-path consequences",
+   "next_action": "Record per-item failure/affected/mitigation/risk/disposition and mandatory-forged-acceptance nexus. Resolve only applicable obligations; no invented production test mandate.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "S13-N-9",
+   "mapped_gates": [
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Audit N-9, LOW; runtime/test-hygiene item; inherited silence. — individually establish applicable §13 disposition and changed-path consequences",
+   "next_action": "Preserve existing AUTHOR_ACCEPTED REMAIN_OPEN disposition; reconcile only applicable changed-path evidence and exact remaining criteria. No repeat blanket author decision.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "S13-N-10",
+   "mapped_gates": [
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Audit N-10; runtime/test-hygiene item; inherited silence. — individually establish applicable §13 disposition and changed-path consequences",
+   "next_action": "Preserve existing AUTHOR_ACCEPTED REMAIN_OPEN disposition; reconcile only applicable changed-path evidence and exact remaining criteria. No repeat blanket author decision.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "S13-N-11",
+   "mapped_gates": [
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Audit N-11, LOW; runtime/test-hygiene item; inherited silence. — individually establish applicable §13 disposition and changed-path consequences",
+   "next_action": "Preserve existing AUTHOR_ACCEPTED REMAIN_OPEN disposition; reconcile only applicable changed-path evidence and exact remaining criteria. No repeat blanket author decision.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "S13-N-12",
+   "mapped_gates": [
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Audit N-12, INFO; runtime/test-hygiene item; inherited silence. — individually establish applicable §13 disposition and changed-path consequences",
+   "next_action": "Preserve existing AUTHOR_ACCEPTED REMAIN_OPEN disposition; reconcile only applicable changed-path evidence and exact remaining criteria. No repeat blanket author decision.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "S13-M1",
+   "mapped_gates": [
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "History fallback may serve pre-frozen state. — individually establish applicable §13 disposition and changed-path consequences",
+   "next_action": "Record per-item failure/affected/mitigation/risk/disposition and mandatory-forged-acceptance nexus. Resolve only applicable obligations; no invented production test mandate.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "S13-M10",
+   "mapped_gates": [
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Tampered state may be served as matching. — individually establish applicable §13 disposition and changed-path consequences",
+   "next_action": "Record per-item failure/affected/mitigation/risk/disposition and mandatory-forged-acceptance nexus. Resolve only applicable obligations; no invented production test mandate.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "S13-M12",
+   "mapped_gates": [
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Index lookup misses NFD/NFC variant. — individually establish applicable §13 disposition and changed-path consequences",
+   "next_action": "Record per-item failure/affected/mitigation/risk/disposition and mandatory-forged-acceptance nexus. Resolve only applicable obligations; no invented production test mandate.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "S13-M16",
+   "mapped_gates": [
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Runtime mutation goes undetected by integrity battery. — individually establish applicable §13 disposition and changed-path consequences",
+   "next_action": "Record per-item failure/affected/mitigation/risk/disposition and mandatory-forged-acceptance nexus. Resolve only applicable obligations; no invented production test mandate.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "14A-1",
+   "mapped_gates": [
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Independent review of this text by a non-drafter who received the file itself and quotes clause text; SHA-256 computed by a party other than drafter; review states sections read in full and not read, and does not claim unread sections.",
+   "next_action": "Use existing approvals/evidence within scope; resolve only actual gaps under separate authority.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "14A-2",
+   "mapped_gates": [
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Separate author authorization for implementation.",
+   "next_action": "Use existing approvals/evidence within scope; resolve only actual gaps under separate authority.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "14A-3",
+   "mapped_gates": [
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Implementation on an isolated candidate; V2.7.5 untouched.",
+   "next_action": "Use existing approvals/evidence within scope; resolve only actual gaps under separate authority.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "14A-4",
+   "mapped_gates": [
+    "GATE4"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "All CONTROL tests pass on V2.7.6 and V2.7.7; all FAIL_FIRST fail on V2.7.6 and pass on V2.7.7; applicable NEW_API and CONTROL_FOR_V277 pass on V2.7.7; KNOWN_RISK outcomes recorded; existing 33 tests pass with §11.1 fixture change. Only S4d may be NOT_APPLICABLE under its row condition, not counted as pass. Report separately passes, failures, not-run, non-applicable, known-risk characterizations, harness errors. Missing required execution or harness error does not satisfy gate.",
+   "next_action": "Use existing approvals/evidence within scope; resolve only actual gaps under separate authority.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "14A-5",
+   "mapped_gates": [
+    "GATE4"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "Independent reproduction.",
+   "next_action": "Use existing approvals/evidence within scope; resolve only actual gaps under separate authority.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "14A-6",
+   "mapped_gates": [
+    "RG6"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — MISSING EVIDENCE",
+   "responsible_role": "Requirement evidence custodian and independent reviewer; author/governance for final applicable disposition",
+   "missing_evidence": "For LIMITED release, §13 reconciliation: each item CLOSED with evidence or OPEN with failure mode, affected party, acceptance rationale, mitigation/caller obligation; record B4 check that no OPEN item yields verified=True for forged receipt through pinned verifier; per-mutant status for both series included. Full evidence closure remains required for future versions modifying affected paths.",
+   "next_action": "Use existing approvals/evidence within scope; resolve only actual gaps under separate authority.",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "FORMAL-FREEZE",
+   "mapped_gates": [
+    "PUBLICATION"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — AUTHORIZATION REQUIRED",
+   "responsible_role": "Author/governance; authorized operator only after exact scoped GO",
+   "missing_evidence": "Separate scoped freeze approval after gates",
+   "next_action": "Separate scoped freeze approval after gates",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "GITHUB-PUBLISH",
+   "mapped_gates": [
+    "PUBLICATION"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — AUTHORIZATION REQUIRED",
+   "responsible_role": "Author/governance; authorized operator only after exact scoped GO",
+   "missing_evidence": "Separate GO for exact paths/removals/branch/tag/release-tree commit; reread live default branch/HEAD and protections/checks before any remote action",
+   "next_action": "Separate GO for exact paths/removals/branch/tag/release-tree commit; reread live default branch/HEAD and protections/checks before any remote action",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  },
+  {
+   "requirement_id": "ZENODO-PUBLISH",
+   "mapped_gates": [
+    "PUBLICATION"
+   ],
+   "status": "BLOCKED",
+   "closure_verdict": "OPEN — AUTHORIZATION REQUIRED",
+   "responsible_role": "Author/governance; authorized operator only after exact scoped GO",
+   "missing_evidence": "Authenticated inventory and approved single archive route/no duplicate DOI, then separate exact draft/upload/deposit GO",
+   "next_action": "Authenticated inventory and approved single archive route/no duplicate DOI, then separate exact draft/upload/deposit GO",
+   "source_artifacts": [
+    {
+     "artifact": "NORMATIVE_V060_DRAFT_V05.md",
+     "sha256": "a753ece9932c43937c58349dc580f59e2eafcb544b408cf3f8194a2ed2235788"
+    },
+    {
+     "artifact": "NORMATIVE_V03_DRAFT_PRESERVED.md",
+     "sha256": "e29272303dbe9bf72dd3ae4a35710f5aef7591041285d0b7414540bf35c74b44"
+    },
+    {
+     "artifact": "V277_TASKLET_FIX_CANDIDATE_V0.3.zip",
+     "sha256": "b73b15c7fed0ca5aa4e5ce33c97888a29ae49f6a96e99b1f37d836d5f945f027"
+    }
+   ]
+  }
+ ],
+ "f01_fields": {
+  "document_class": "DERIVED_19_FIELDS_FROM_PROVIDED_IR04_P_OWNER_EVIDENCE_MATRIX_V0.2",
+  "source_sha256": "cb7587bc9dfe3b50a5df68570530fce9828afd270701c8ac824a1c2fcb53a59f",
+  "count": 19,
+  "operationally_verified": 0,
+  "fields": [
+   {
+    "field": 1,
+    "name": "intended_offline_application",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "PARTIAL_DOCUMENTARY_EVIDENCE"
+   },
+   {
+    "field": 2,
+    "name": "owner_authenticated_identity",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "NEEDS_OWNER_EVIDENCE"
+   },
+   {
+    "field": 3,
+    "name": "offline_context_id",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "NEEDS_OWNER_EVIDENCE"
+   },
+   {
+    "field": 4,
+    "name": "entrypoint_routes",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "NEEDS_OWNER_EVIDENCE"
+   },
+   {
+    "field": 5,
+    "name": "direct_wrapper_dynamic_callers_inventory",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "NEEDS_OWNER_EVIDENCE"
+   },
+   {
+    "field": 6,
+    "name": "module_loader_and_dependency_closure",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "NEEDS_OWNER_EVIDENCE"
+   },
+   {
+    "field": 7,
+    "name": "trusted_root_locator_bytes_digest",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "NEEDS_OWNER_EVIDENCE"
+   },
+   {
+    "field": 8,
+    "name": "root_custodian_permissions_update_revocation_rollback",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "NEEDS_OWNER_EVIDENCE"
+   },
+   {
+    "field": 9,
+    "name": "artifact_wire_sha256_and_provenance",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "NEEDS_OWNER_EVIDENCE"
+   },
+   {
+    "field": 10,
+    "name": "artifact_mapping_digest_domain",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "NEEDS_OWNER_EVIDENCE"
+   },
+   {
+    "field": 11,
+    "name": "runtime_IV_artifact_hash_domain",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "NEEDS_OWNER_EVIDENCE"
+   },
+   {
+    "field": 12,
+    "name": "restored_state_body_hash_domain",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "NEEDS_OWNER_EVIDENCE"
+   },
+   {
+    "field": 13,
+    "name": "state_layout_and_identity",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "NEEDS_OWNER_EVIDENCE"
+   },
+   {
+    "field": 14,
+    "name": "request_source_query_target_binding",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "NEEDS_OWNER_EVIDENCE"
+   },
+   {
+    "field": 15,
+    "name": "check_before_use_snapshot_mutation_exclusion",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "NEEDS_OWNER_EVIDENCE"
+   },
+   {
+    "field": 16,
+    "name": "caller_visible_publication_boundary",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "NEEDS_OWNER_EVIDENCE"
+   },
+   {
+    "field": 17,
+    "name": "absolute_isolated_workspace",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "NEEDS_OWNER_EVIDENCE"
+   },
+   {
+    "field": 18,
+    "name": "absolute_output_dir_and_static_ops",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "NEEDS_OWNER_EVIDENCE"
+   },
+   {
+    "field": 19,
+    "name": "owner_signed_or_chat_confirmed_scope_decision",
+    "operational_value": null,
+    "binding_verified": false,
+    "evidence_class": "NEEDS_OWNER_EVIDENCE"
+   }
+  ]
+ },
+ "audit_findings_2026_10_29": [
+  {
+   "id": "AUD-01",
+   "status": "BLOCKED",
+   "title": "Original 64-record register FINAL_BLOCKER_MATRIX_V0.1.json not supplied",
+   "detail": "Reported sha256 1c2b4fe5b6c7ff81733384a44d20bb601d95021e395be41c466201d9daba88c9, 143163 bytes. The 9 previously VERIFIED rows are REPORTED_NOT_REVERIFIED. The 55 rows are a derived extract.",
+   "owner": "author / Tasklet custodian"
+  },
+  {
+   "id": "AUD-02",
+   "status": "OPEN_NEEDS_AUTHORIZATION",
+   "title": "Preserved oracle conflict",
+   "detail": "test_builder_envelope_overrun_and_runtime_smaller_envelope FAIL (S1ResolutionError not raised); 50 PASS + 1 FAIL of 51; ORACLE_CONFLICT_CONFIRMED_BY_STATIC_PATH_ACCOUNTING; oracle_correction_status NEEDS_AUTHORIZATION.",
+   "owner": "author"
+  },
+  {
+   "id": "AUD-03",
+   "status": "OPEN",
+   "title": "P0-03 §2 reimplementation of sha256_json/artifact_sha256",
+   "detail": "Behaviourally equal on probed samples; normative MUST not met. Needs an import of the existing function in a new candidate, or an author-ratified deviation. No P0-03 patch is claimed.",
+   "owner": "author / implementer"
+  },
+  {
+   "id": "AUD-04",
+   "status": "OPEN",
+   "title": "§11.3 (24) / §11.4 (99) not present as in-tree executable tests",
+   "detail": "In-tree: 40 self-checks + 7 pytest. RG-4 V1.4 (121 PASS) is external and was not re-run. Claude probe (100 rows) is partial and non-authoritative.",
+   "owner": "implementer + independent reviewer"
+  },
+  {
+   "id": "AUD-05",
+   "status": "CARRIED",
+   "title": "Historical Q4/D-6 declared vs recomputed receipt_sha256 behaviour",
+   "detail": "Unchanged, not re-adjudicated.",
+   "owner": "author"
+  },
+  {
+   "id": "AUD-06",
+   "status": "NEEDS_AUTHOR_DECISION",
+   "title": "Tasklet sandbox paths/thread IDs in 6 historical docs",
+   "detail": "docs/author_decisions/EIT_V277_TASKLET_CLOSURES_AIAssessmentReceipt_V0.1.json, docs/prior_evidence/CUSTODY.json, docs/prior_evidence/INSPECTED_EVIDENCE.json, docs/governance_review/{AIAssessmentReceipt.json,CONTROL_REVIEW_RECEIPT.json,REPORT.md}. Not credentials; not rewritten. Publish as-is or exclude with disclosure.",
+   "owner": "author"
+  },
+  {
+   "id": "AUD-07",
+   "status": "RESOLVED_IN_R1_RELEASE_LAYER",
+   "title": "V0.3 stale inherited root manifest / inventory FAIL",
+   "detail": "3 mismatches + 3 unlisted; regenerated in R1; original preserved in docs/historical_rc12/SHA256SUMS_INHERITED_STALE.txt. Requires independent replay to confirm.",
+   "owner": "independent replayer"
+  },
+  {
+   "id": "AUD-08",
+   "status": "BLOCKED",
+   "title": "Existing Research Preview V0.1 not reconcilable",
+   "detail": "70 V0.3 files missing, 2 modified, 7 preview-only. Must not be released.",
+   "owner": "author"
+  },
+  {
+   "id": "AUD-09",
+   "status": "OPEN",
+   "title": "Broker bypass and by-design acceptance (production)",
+   "detail": "Kimi: 22/23 source routes bypassable without Separate-UID broker; R-2/R-3/R-5 can yield verified=True. Production NOT_READY.",
+   "owner": "C3-E implementer"
+  },
+  {
+   "id": "AUD-13",
+   "status": "OPEN_NEEDS_AUTHORIZATION",
+   "title": "V0.3 regression runner refuses R1 tree",
+   "detail": "run_regressions.py pins the exact 127-file V0.3 inventory and fails closed on R1 (BLOCKED_SOURCE_INTEGRITY), correctly. 50+1 transfers to R1 only by byte identity of all code/test/fixture files. A runner accepting the R1 release layer needs authorization.",
+   "owner": "author / Tasklet"
+  },
+  {
+   "id": "AUD-10",
+   "status": "PENDING",
+   "title": "Independent Tasklet replay of exact R1 bytes",
+   "detail": "Requested; not received.",
+   "owner": "Tasklet"
+  },
+  {
+   "id": "AUD-11",
+   "status": "NOT_RUN",
+   "title": "GitHub Actions on R1 bytes",
+   "detail": "CI evidence only when run; never owner-host evidence.",
+   "owner": "author"
+  },
+  {
+   "id": "AUD-12",
+   "status": "PENDING",
+   "title": "Author separate final GO for tag / GitHub pre-release / Zenodo",
+   "detail": "FINAL_V277_RELEASE = HOLD.",
+   "owner": "author"
+  }
+ ]
+}

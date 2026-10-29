@@ -1,0 +1,39 @@
+{
+  "classification": "ORACLE_CONFLICT_CONFIRMED_BY_STATIC_PATH_ACCOUNTING",
+  "method": "Static root1/value-edge accounting of pinned fixture and producer schema, not project execution.",
+  "nested_definition": "nested(d) has depth d; terminal depth = extension_root_depth + d - 1",
+  "paths": [
+    {
+      "path": "BUILDER_STATE_TO_JOINT_RECEIPT",
+      "input_record_depth": 4,
+      "extension_nested_depth": 28,
+      "input_extension_root_depth": 5,
+      "input_deepest": 32,
+      "output_record_depth": 4,
+      "output_extension_root_depth": 5,
+      "output_deepest": 32,
+      "allowed_limit_inclusive": 32
+    },
+    {
+      "path": "RUNTIME_STATE_TO_DIRECT_TRANSLATION",
+      "input_record_depth": 5,
+      "extension_nested_depth": 27,
+      "input_extension_root_depth": 6,
+      "input_deepest": 32,
+      "output_record_depth": 2,
+      "output_extension_root_depth": 3,
+      "output_deepest": 29,
+      "allowed_limit_inclusive": 32
+    }
+  ],
+  "guard_locations": [
+    "s1_sp1_adapter.S1Adapter._receipt: core.guard_output(receipt)",
+    "s1_sp1_adapter.S1Adapter._publish: core.guard_output(result)",
+    "s1_sp1_core.guard_output: rejects depth > MAX_DEPTH, not depth == MAX_DEPTH"
+  ],
+  "expected_current_contract": "Builder receipt32 accepted; runtime output29 accepted; true output33 rejected P8; native input33 rejected P1.",
+  "prohibited_workaround": "No arbitrary builder depth31 limit or test-specific rejection.",
+  "original_oracle_preserved": true,
+  "oracle_correction_status": "NEEDS_AUTHORIZATION",
+  "report_depth39_claim": "Not supported by the pinned fixture expression or native admission step."
+}

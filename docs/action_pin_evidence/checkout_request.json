@@ -1,0 +1,1 @@
+{"action_pending":"Проверувам checkout commit pin","action_finished":"Checkout pin е проверен на GitHub","action_error":"Checkout pin не е потврден","connectionId":"conn_862c0x08a3dfhcfcsyah","toolName":"github_get_tree","args":{"owner":"actions","repo":"checkout","ref":"11d5960a326750d5838078e36cf38b85af677262","recursive":false}}

@@ -1,0 +1,153 @@
+{
+  "sha": "a26af69be951a213d495a4c3e4e4022e16d87065",
+  "entries": [
+    {
+      "repoPath": ".eslintignore",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "06939361e3a1460298d30d65c809887eb87ddb9c",
+      "size": 66
+    },
+    {
+      "repoPath": ".eslintrc.js",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "293128e6e327c9379fb28395bfe1075e7387780e",
+      "size": 1474
+    },
+    {
+      "repoPath": ".gitattributes",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "693f0bcb983b14c86eed3f9b2b7e668f9ae87358",
+      "size": 61
+    },
+    {
+      "repoPath": ".github",
+      "type": "tree",
+      "mode": "040000",
+      "sha": "f0db9b2c3ea877f4eedce7d4fff018d6518fc53b",
+      "size": null
+    },
+    {
+      "repoPath": ".gitignore",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "c087a78f29a12c32507e84b4b6ab8a8f09acd446",
+      "size": 1591
+    },
+    {
+      "repoPath": ".licensed.yml",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "5e51e1000347eb151a990a1daa747c78ab2f2c29",
+      "size": 148
+    },
+    {
+      "repoPath": ".licenses",
+      "type": "tree",
+      "mode": "040000",
+      "sha": "4b0221b132b39f2fa5919a0e44b0d2607a83074d",
+      "size": null
+    },
+    {
+      "repoPath": ".prettierignore",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "a3c81cb01b7712e98a459b883254ecb405b61a27",
+      "size": 76
+    },
+    {
+      "repoPath": ".prettierrc.js",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "468cdb1e23012c9a54121c35e855150154b24d92",
+      "size": 398
+    },
+    {
+      "repoPath": "CODE_OF_CONDUCT.md",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "e859bbacb89ae60d52e5926c1eae64939c50548c",
+      "size": 3391
+    },
+    {
+      "repoPath": "LICENSE",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "a426ef259d6c5d705e9c1405075c3b318093c65e",
+      "size": 1096
+    },
+    {
+      "repoPath": "README.md",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "a91964a73c3e7551352e566a9ff818590101c456",
+      "size": 6956
+    },
+    {
+      "repoPath": "__tests__",
+      "type": "tree",
+      "mode": "040000",
+      "sha": "8be5657a78b4e09baf81cdff7f30083dae493ea0",
+      "size": null
+    },
+    {
+      "repoPath": "action.yml",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "efa8de904209196588db1453bdb44079b3c393d7",
+      "size": 2364
+    },
+    {
+      "repoPath": "dist",
+      "type": "tree",
+      "mode": "040000",
+      "sha": "a249bee425d82b0d665ac72bb47f0f88239cd5c1",
+      "size": null
+    },
+    {
+      "repoPath": "docs",
+      "type": "tree",
+      "mode": "040000",
+      "sha": "13e2ab650720973d244160dcea14bea1b21ae467",
+      "size": null
+    },
+    {
+      "repoPath": "jest.config.js",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "563d4ccb83243b5db814d0d9a8bf160d0adf494a",
+      "size": 235
+    },
+    {
+      "repoPath": "package-lock.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "6b05a120102011adbcff08268da05dfb6689a8ac",
+      "size": 203042
+    },
+    {
+      "repoPath": "package.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "a21ccb9f37289b09db1cc77a0e631de89b8801a0",
+      "size": 1833
+    },
+    {
+      "repoPath": "src",
+      "type": "tree",
+      "mode": "040000",
+      "sha": "44ff15940604d55b7d00148908d590ac1a46fb3c",
+      "size": null
+    },
+    {
+      "repoPath": "tsconfig.json",
+      "type": "blob",
+      "mode": "100644",
+      "sha": "d780193fa3585a4e1a09cf3b6718c35fe86412b5",
+      "size": 5830
+    }
+  ],
+  "truncated": false
+}

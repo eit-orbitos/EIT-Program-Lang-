@@ -1,0 +1,9 @@
+# RC11 canonical inventory policy
+
+Only root SHA256SUMS.txt is the current content manifest. It contains exactly one lowercase SHA-256, two ASCII spaces and one exact relative UTF-8 path per LF-terminated record, sorted by UTF-8 path bytes. No normalization, path coercion, duplicate entries, unsafe components or control characters. The manifest intentionally does not hash itself; its external archive identity is bound by the audit receipt. No circular hash claim.
+
+Only root SHA256SUMS.txt and a real root .git/ directory are excluded. A root .git file/worktree pointer or symlink is rejected. Nested SHA256SUMS.txt files are included; prior manifests retain their original evidence domains and do not replace this root manifest. Nonregular files/symlinks are rejected. Any .pyc/.pyo file, __pycache__ or .pytest_cache directory is rejected even if listed. No .gitkeep or cache exclusion. Unexpected regular files fail. Empty directories have no content identity, except forbidden cache/symlink directories are explicitly rejected.
+
+Explicit core-required paths are in tools/ci_inventory_check.py. All other packaged regular files, including historical docs/manifests, must be listed. ARTIFACT_REGISTRY.json describes all current files except itself and root SHA256SUMS.txt; those exclusions avoid digest cycles. Root SHA256SUMS.txt hashes the registry. Neither is an authenticity anchor if an attacker can rewrite both: use an independently controlled external archive digest.
+
+Local and GitHub CI both call bash tools/ci_release.sh against this same manifest. Evidence, dependency venv and negative-control trees stay outside the source tree. Do not overlay on an existing repository without explicitly reconciling tracked extra files; do not silently delete unrelated user files. Exact clean candidate tree required for any future authorized push.
